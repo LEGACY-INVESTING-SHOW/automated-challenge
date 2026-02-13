@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth overflow-x-hidden">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tax-Free Income 3-Day Challenge VIP Ticket | Preston Seo</title>
+  <meta name="description" content="Join the 3-Day Tax-Free Income Challenge VIP Experience. Get lifetime replay access, 3 exclusive roundtables with Preston, and 15 live training sessions.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Design System -->
+  <link rel="stylesheet" href="design-system.css">
+
+  <style>
+    /* ========== CSS VARIABLES ========== */
+    :root {
+      --bg-primary: #0a0a0b;
+      --bg-secondary: #121214;
+      --bg-tertiary: #1a1a1d;
+      --accent-gold: #c9a962;
+      --accent-gold-light: #e0c078;
+      --accent-gold-dark: #a68b4b;
+      --accent-copper: #b87333;
+      --text-primary: #fafafa;
+      --text-secondary: #a1a1aa;
+      --text-muted: #71717a;
+      --danger: #dc2626;
+      --success: #16a34a;
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --radius-xl: 24px;
+      --container: min(1200px, calc(100% - 2rem));
+    }
+
+    /* ========== BASE STYLES ========== */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    html, body {
+      overflow-x: hidden;
+      width: 100%;
+      max-width: 100vw;
+    }
+
+    body {
+      font-family: 'Sora', system-ui, sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    img, video, iframe, svg {
+      max-width: 100%;
+      height: auto;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Crimson Pro', Georgia, serif;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    .font-serif {
+      font-family: 'Crimson Pro', Georgia, serif;
+    }
+
+    .font-mono {
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .text-gold-gradient {
+      background: linear-gradient(135deg, #e0c078 0%, #c9a962 50%, #a68b4b 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Noise overlay */
+    .noise-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1000;
+      opacity: 0.03;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--bg-secondary);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--accent-gold-dark);
+      border-radius: 4px;
+    }
+
+    /* ========== UTILITY CLASSES ========== */
+    .container {
+      width: var(--container);
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    /* ========== PROGRESS BAR ========== */
+    .progress-section {
+      background: var(--bg-primary);
+      padding: 0.5rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid rgba(201, 169, 98, 0.1);
+    }
+
+    .progress-bar-container {
+      background: var(--bg-secondary);
+      border-radius: var(--radius-full);
+      border: 1px solid rgba(201, 169, 98, 0.3);
+      overflow: hidden;
+      height: 40px;
+      position: relative;
+    }
+
+    .progress-bar {
+      height: 100%;
+      background: linear-gradient(90deg, var(--accent-gold) 0%, var(--accent-gold-dark) 100%);
+      width: 75%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: width 0.3s ease;
+      box-shadow: 0 0 20px rgba(201, 169, 98, 0.3);
+    }
+
+    .progress-label {
+      color: var(--bg-primary);
+      font-weight: 600;
+      font-size: 1rem;
+      text-align: center;
+    }
+
+    /* ========== HERO SECTION ========== */
+    .hero {
+      background: linear-gradient(180deg, rgba(26, 26, 29, 0.9) 0%, var(--bg-primary) 100%);
+      padding: 4rem 0 3rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50%;
+      height: 100%;
+      background: radial-gradient(circle at 80% 20%, rgba(201, 169, 98, 0.1) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-gold-dark) 100%);
+      color: var(--bg-primary);
+      padding: 0.5rem 1.5rem;
+      border-radius: var(--radius-full);
+      font-weight: 700;
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 15px rgba(201, 169, 98, 0.3);
+    }
+
+    .hero h1 {
+      font-size: clamp(1.75rem, 5vw, 2.75rem);
+      color: var(--text-primary);
+      letter-spacing: 0.01rem;
+      margin: 0;
+      position: relative;
+    }
+
+    .hero-subtitle {
+      color: var(--text-secondary);
+      font-size: 1.25rem;
+      margin-top: 1rem;
+    }
+
+    /* ========== EVENT DETAILS BAR ========== */
+    .event-details {
+      background: var(--bg-secondary);
+      padding: 2rem 0;
+      border-bottom: 1px solid rgba(201, 169, 98, 0.1);
+    }
+
+    .details-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .detail-card {
+      text-align: center;
+      padding: 1.5rem;
+      border-right: 1px solid rgba(201, 169, 98, 0.1);
+    }
+
+    .detail-card:last-child {
+      border-right: none;
+    }
+
+    .detail-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent-gold);
+      margin-bottom: 0.5rem;
+    }
+
+    .detail-content {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--text-secondary);
+    }
+
+    .detail-content strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    /* ========== SCARCITY SECTION ========== */
+    .scarcity-section {
+      background: linear-gradient(180deg, rgba(26, 26, 29, 0.9) 0%, var(--bg-primary) 100%);
+      padding: 2rem 0;
+      text-align: center;
+      position: relative;
+    }
+
+    .scarcity-text {
+      font-family: 'Crimson Pro', serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--accent-gold);
+      margin-bottom: 1.5rem;
+    }
+
+    .countdown {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .countdown-item {
+      background: var(--bg-secondary);
+      border: 1px solid rgba(201, 169, 98, 0.2);
+      border-radius: var(--radius-md);
+      padding: 1rem 1.5rem;
+      text-align: center;
+      min-width: 80px;
+    }
+
+    .countdown-value {
+      font-family: 'Crimson Pro', serif;
+      font-size: 2rem;
+      font-weight: 600;
+      color: var(--accent-gold);
+      line-height: 1;
+    }
+
+    .countdown-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-top: 0.25rem;
+    }
+
+    /* ========== CHECKOUT SECTION ========== */
+    .checkout-section {
+      background: var(--bg-primary);
+      padding: 4rem 0;
+    }
+
+    .checkout-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    .checkout-form {
+      background: var(--bg-secondary);
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(201, 169, 98, 0.1);
+      padding: 2rem;
+    }
+
+    .checkout-placeholder {
+      background: linear-gradient(145deg, rgba(201, 169, 98, 0.05) 0%, rgba(18, 18, 20, 0.8) 100%);
+      border: 1px solid rgba(201, 169, 98, 0.2);
+      border-radius: var(--radius-md);
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .checkout-placeholder h3 {
+      color: var(--text-primary);
+      margin-bottom: 1rem;
+    }
+
+    .checkout-placeholder p {
+      color: var(--text-muted);
+    }
+
+    .vip-badge-large {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-gold-dark) 100%);
+      color: var(--bg-primary);
+      padding: 0.75rem 2rem;
+      border-radius: var(--radius-full);
+      font-weight: 700;
+      font-size: 1.125rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 15px rgba(201, 169, 98, 0.3);
+    }
+
+    .whats-included h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+      color: var(--text-primary);
+    }
+
+    .feature-image {
+      width: 100%;
+      max-width: 400px;
+      margin-bottom: 1.5rem;
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(201, 169, 98, 0.1);
+    }
+
+    .session-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .session-list li {
+      padding: 0.75rem 0;
+      border-bottom: 1px solid rgba(201, 169, 98, 0.1);
+      font-size: 0.95rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      color: var(--text-secondary);
+    }
+
+    .session-list li::before {
+      content: "";
+      flex-shrink: 0;
+      margin-top: 0.25rem;
+    }
+
+    .session-list li.vip-session {
+      background: linear-gradient(90deg, rgba(201, 169, 98, 0.1) 0%, transparent 100%);
+      padding: 0.75rem;
+      border-radius: var(--radius-sm);
+      border-left: 3px solid var(--accent-gold);
+    }
+
+    .vip-highlight {
+      display: inline-block;
+      background: var(--accent-gold);
+      color: var(--bg-primary);
+      padding: 0.25rem 0.75rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-right: 0.5rem;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .benefit-box {
+      background: linear-gradient(145deg, rgba(201, 169, 98, 0.05) 0%, rgba(18, 18, 20, 0.8) 100%);
+      border: 1px solid rgba(201, 169, 98, 0.2);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .benefit-box h4 {
+      color: var(--accent-gold);
+      margin-bottom: 0.5rem;
+      font-size: 1.125rem;
+    }
+
+    .benefit-box p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin: 0;
+    }
+
+    /* ========== TESTIMONIALS SECTION ========== */
+    .testimonials-section {
+      background: var(--bg-secondary);
+      padding: 4rem 0;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .section-header h2 {
+      font-size: 2rem;
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .section-header p {
+      color: var(--text-muted);
+      font-size: 1rem;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .testimonial-card {
+      background: var(--bg-primary);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid rgba(201, 169, 98, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(201, 169, 98, 0.2);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+    }
+
+    .testimonial-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .testimonial-content {
+      padding: 1.5rem;
+    }
+
+    .testimonial-quote {
+      font-family: 'Crimson Pro', serif;
+      font-style: italic;
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      color: var(--text-secondary);
+    }
+
+    .testimonial-name {
+      font-weight: 600;
+      color: var(--accent-gold);
+      margin-bottom: 0.25rem;
+    }
+
+    .testimonial-result {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+    }
+
+    /* ========== SOCIAL PROOF GRID ========== */
+    .social-proof-section {
+      background: var(--bg-primary);
+      padding: 3rem 0;
+    }
+
+    .social-proof-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+
+    .social-proof-item {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid rgba(201, 169, 98, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .social-proof-item:hover {
+      border-color: rgba(201, 169, 98, 0.3);
+    }
+
+    .social-proof-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* ========== GUARANTEE SECTION ========== */
+    .guarantee-section {
+      background: var(--bg-secondary);
+      padding: 3rem 0;
+    }
+
+    .guarantee-card {
+      background: var(--bg-primary);
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(201, 169, 98, 0.1);
+      padding: 3rem 2rem;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .guarantee-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 200px;
+      height: 4px;
+      background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
+    }
+
+    .guarantee-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(22, 163, 74, 0.1);
+      border: 1px solid rgba(22, 163, 74, 0.3);
+      color: var(--success);
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius-full);
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      font-size: 0.875rem;
+    }
+
+    .guarantee-card h2 {
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+      color: var(--text-primary);
+    }
+
+    .guarantee-card p {
+      color: var(--text-muted);
+      line-height: 1.8;
+      font-size: 1rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .guarantee-card p strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    /* ========== URGENCY SECTION ========== */
+    .urgency-section {
+      background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+      padding: 3rem 0;
+      text-align: center;
+      position: relative;
+    }
+
+    .urgency-section h2 {
+      color: var(--text-primary);
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    /* ========== FAQ SECTION ========== */
+    .faq-section {
+      background: var(--bg-primary);
+      padding: 4rem 0;
+    }
+
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      background: var(--bg-secondary);
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(201, 169, 98, 0.1);
+      margin-bottom: 1rem;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      width: 100%;
+      padding: 1.25rem;
+      background: none;
+      border: none;
+      text-align: left;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: color 0.2s;
+      font-family: 'Sora', sans-serif;
+    }
+
+    .faq-question:hover {
+      color: var(--accent-gold);
+    }
+
+    .faq-icon {
+      color: var(--accent-gold);
+      transition: transform 0.2s;
+    }
+
+    .faq-item.active .faq-icon {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 500px;
+    }
+
+    .faq-answer-content {
+      padding: 0 1.25rem 1.25rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      font-size: 0.95rem;
+    }
+
+    /* ========== FOOTER ========== */
+    footer {
+      background: var(--bg-secondary);
+      color: var(--text-secondary);
+      padding: 3rem 0 2rem;
+      border-top: 1px solid rgba(201, 169, 98, 0.1);
+    }
+
+    .footer-content {
+      text-align: center;
+    }
+
+    .footer-text {
+      font-size: 0.8rem;
+      line-height: 1.7;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.875rem;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent-gold);
+    }
+
+    /* ========== BUTTONS ========== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      border: none;
+      border-radius: var(--radius-full);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-family: 'Sora', sans-serif;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-gold-dark) 100%);
+      color: var(--bg-primary);
+      box-shadow: 0 4px 14px rgba(201, 169, 98, 0.3);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(201, 169, 98, 0.4);
+    }
+
+    .btn-primary::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.5s;
+    }
+
+    .btn-primary:hover::before {
+      left: 100%;
+    }
+
+    .btn-large {
+      padding: 1.25rem 3rem;
+      font-size: 1.125rem;
+    }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 768px) {
+      html {
+        font-size: 16px;
+      }
+
+      .details-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .detail-card {
+        border-right: none;
+        border-bottom: 1px solid rgba(201, 169, 98, 0.1);
+      }
+
+      .detail-card:last-child {
+        border-bottom: none;
+      }
+
+      .checkout-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .social-proof-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .countdown-item {
+        padding: 0.75rem 1rem;
+        min-width: 60px;
+      }
+
+      .countdown-value {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+  <!-- Event Date Automation -->
+  <script src="event-automation.js"></script>
+</head>
+
+<body>
+  <!-- Noise overlay -->
+  <div class="noise-overlay"></div>
+
+  <!-- Progress Bar -->
+  <div class="progress-section">
+    <div class="container">
+      <div class="progress-bar-container">
+        <div class="progress-bar">
+          <span class="progress-label">Order Processing</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-badge">
+        <i data-lucide="crown" class="w-4 h-4"></i>
+        VIP Experience
+      </div>
+      <h1>Join The <span class="text-gold-gradient">Tax-Free Income Challenge</span></h1>
+      <p class="hero-subtitle">Get Lifetime Access + 3 Exclusive Roundtables with Preston</p>
+    </div>
+  </section>
+
+  <!-- Event Details -->
+  <section class="event-details">
+    <div class="container">
+      <div class="details-grid">
+        <div class="detail-card">
+          <div class="detail-label">When</div>
+          <div class="detail-content">
+            <strong>Feb 20th - Feb 22nd, 2026</strong><br>
+            Starting From 10 AM EST | 4-6 Hours Daily
+          </div>
+        </div>
+
+        <div class="detail-card">
+          <div class="detail-label">Where</div>
+          <div class="detail-content">
+            <strong>Streaming online on Zoom</strong> so you can join from anywhere. Once you grab your ticket, we'll send you a private link with all the details.
+          </div>
+        </div>
+
+        <div class="detail-card">
+          <div class="detail-label">Why</div>
+          <div class="detail-content">
+            Because in just 3 days, you'll see <strong>how to cut your tax bill in half, wipe out high-interest debt, and start building $5K–$15K</strong> in monthly income (without leaving your job or risking your family's stability)
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scarcity Section -->
+  <section class="scarcity-section">
+    <div class="container">
+      <div class="scarcity-text">ONLY 8 VIP SPOTS LEFT...</div>
+      
+      <div class="countdown" id="countdown">
+        <div class="countdown-item">
+          <div class="countdown-value" id="days">00</div>
+          <div class="countdown-label">Days</div>
+        </div>
+        <div class="countdown-item">
+          <div class="countdown-value" id="hours">00</div>
+          <div class="countdown-label">Hours</div>
+        </div>
+        <div class="countdown-item">
+          <div class="countdown-value" id="minutes">00</div>
+          <div class="countdown-label">Minutes</div>
+        </div>
+        <div class="countdown-item">
+          <div class="countdown-value" id="seconds">00</div>
+          <div class="countdown-label">Seconds</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Checkout Section -->
+  <section class="checkout-section">
+    <div class="container">
+      <div class="checkout-grid">
+        <!-- Left: Checkout Form -->
+        <div class="checkout-form">
+          <div class="checkout-placeholder">
+            <div class="vip-badge-large">
+              <i data-lucide="crown" class="w-5 h-5"></i>
+              VIP Access
+            </div>
+            <h3>Secure VIP Checkout</h3>
+            <p>Checkout form would be embedded here (Spiffy/Stripe integration)</p>
+            <div style="margin-top: 2rem;">
+              <button class="btn btn-primary btn-large">
+                Get VIP Access - $297
+                <i data-lucide="arrow-right" class="w-5 h-5"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: What's Included -->
+        <div class="whats-included">
+          <h2>When you join today, here's what you're getting inside the VIP Experience:</h2>
+          
+          <img src="https://images.clickfunnels.com/cdn-cgi/image/width=1000px,fit=scale-down,f=auto,q=80/https://statics.myclickfunnels.com/workspace/JDNxNX/image/18197478/file/e1056dc1158f9817ed1e46c12bc0b033.jpg" alt="Wealth Pyramid Framework" class="feature-image">
+
+          <div class="benefit-box">
+            <h4><i data-lucide="play-circle" class="w-5 h-5 inline-block mr-2"></i>Lifetime Access to Replays + Notes</h4>
+            <p>Rewatch every session, review detailed notes, and implement at your own pace — forever. This VIP exclusive benefit means you'll never miss a strategy.</p>
+          </div>
+
+          <ul class="session-list">
+            <li><i data-lucide="check" class="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5"></i><strong>The Wealth Pyramid Framework</strong> — See how taxes, debt, income, investing, and protection all connect into one clear plan you can follow.</li>
+            <li><i data-lucide="check" class="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5"></i><strong>15 Live Trainings + Q&A</strong> — Learn directly from Preston and his team across 3 days and get your questions answered on the spot.</li>
+            <li><i data-lucide="check" class="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5"></i>The Middle-Class Money Trap: Why Working Harder Isn't Making You Richer</li>
+            <li><i data-lucide="check" class="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5"></i>Why Your 401(k) Is Bleeding Money & What To Do Instead</li>
+            <li><i data-lucide="check" class="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5"></i>Debt Elimination & Credit Mastery: From High-Interest Trap to Smart Funding</li>
+            <li><i data-lucide="check" class="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5"></i>Expert Deep Dive - Entity Structure & Business Credit with Tommy Thornburgh</li>
+            <li class="vip-session"><span class="vip-highlight">VIP Exclusive</span><strong>Round Table With Preston</strong> — Get All Your Questions Answered Directly By Preston</li>
+            <li><i data-lucide="check" class="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5"></i>The W-2 Taxes Playbook: How High-Earners Keep Losing Half Their Income</li>
+            <li><i data-lucide="check" class="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5"></i>The Investor Playbook: How to Build Wealth Without Paying Taxes</li>
+            <li><i data-lucide="check" class="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5"></i>How To Start A 100% Tax-Free Airbnb Business (Without Buying Property)</li>
+            <li><i data-lucide="check" class="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5"></i>The Complete Wealth Acceleration System: How Everything Works Together To Add $100K</li>
+            <li class="vip-session"><span class="vip-highlight">VIP Exclusive</span><strong>Round Table With Preston</strong> — Get All Your Questions Answered Directly By Preston</li>
+            <li><i data-lucide="check" class="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5"></i>Beyond the Basics: Advanced Tax Optimization with Garrett Maughan</li>
+            <li><i data-lucide="check" class="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5"></i>Your 12-Month Wealth Implementation Roadmap</li>
+            <li><i data-lucide="check" class="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5"></i>How Students Hit $100K+ Net Worth (Real Numbers, Real Strategies)</li>
+            <li><i data-lucide="check" class="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5"></i>Your Next Steps and Beyond</li>
+            <li class="vip-session"><span class="vip-highlight">VIP Exclusive</span><strong>Round Table With Preston</strong> — Get All Your Questions Answered Directly By Preston</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials-section">
+    <div class="container">
+      <div class="section-header">
+        <p class="font-mono text-sm text-gold uppercase tracking-wider mb-3">Success Stories</p>
+        <h2>Real People, Real Results</h2>
+        <p>See what past challenge participants have achieved</p>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <img src="https://images.clickfunnels.com/cdn-cgi/image/width=1000px,fit=scale-down,f=auto,q=80/https://statics.myclickfunnels.com/workspace/JDNxNX/image/17837960/file/d9184caaf06cf40dc04b0794749c427e.png" alt="Dustin" class="testimonial-image">
+          <div class="testimonial-content">
+            <div class="flex gap-1 text-gold mb-3">
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            </div>
+            <p class="testimonial-quote">"I didn't want to work my whole life just to be told I couldn't use my own money."</p>
+            <div class="testimonial-name">Dustin</div>
+            <div class="testimonial-result">Breaking Out of the W2 Trap</div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <img src="https://images.clickfunnels.com/cdn-cgi/image/width=1000px,fit=scale-down,f=auto,q=80/https://statics.myclickfunnels.com/workspace/JDNxNX/image/18197690/file/5ac324c992b717212c1a7555111d1a18.png" alt="Abigail" class="testimonial-image">
+          <div class="testimonial-content">
+            <div class="flex gap-1 text-gold mb-3">
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            </div>
+            <p class="testimonial-quote">Turning Taxes Into Cash Flow & Growth</p>
+            <div class="testimonial-name">Abigail</div>
+            <div class="testimonial-result">$50K–$100K in year-one ROI by shifting taxes into cash flow and long-term wealth</div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <img src="https://images.clickfunnels.com/cdn-cgi/image/width=1000px,fit=scale-down,f=auto,q=80/https://statics.myclickfunnels.com/workspace/JDNxNX/image/18197688/file/1965672907e45a222161bb3832ff8b3a.png" alt="Gailin" class="testimonial-image">
+          <div class="testimonial-content">
+            <div class="flex gap-1 text-gold mb-3">
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            </div>
+            <p class="testimonial-quote">Eliminating Taxes and Building Early Freedom</p>
+            <div class="testimonial-name">Gailin</div>
+            <div class="testimonial-result">$150K+ ROI through tax savings, paper losses, and new income streams</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Proof Grid -->
+  <section class="social-proof-section">
+    <div class="container">
+      <div class="section-header">
+        <p class="font-mono text-sm text-gold uppercase tracking-wider mb-3">Social Proof</p>
+        <h2>Why Attend This Challenge?</h2>
+        <p>See what people are saying after attending our 3-Day Live Tax-Free Income Challenge</p>
+      </div>
+
+      <div class="social-proof-grid">
+        <div class="social-proof-item">
+          <img src="https://images.clickfunnels.com/cdn-cgi/image/width=1000px,fit=scale-down,f=auto,q=80/https://statics.myclickfunnels.com/workspace/JDNxNX/image/19998773/file/01be738d7d2b521db9e40f0670d86bbf.png" alt="Testimonial">
+        </div>
+        <div class="social-proof-item">
+          <img src="https://images.clickfunnels.com/cdn-cgi/image/width=1000px,fit=scale-down,f=auto,q=80/https://statics.myclickfunnels.com/workspace/JDNxNX/image/19998800/file/57e486484429a9590da050254b63b81c.png" alt="Testimonial">
+        </div>
+        <div class="social-proof-item">
+          <img src="https://images.clickfunnels.com/cdn-cgi/image/width=1000px,fit=scale-down,f=auto,q=80/https://statics.myclickfunnels.com/workspace/JDNxNX/image/19998831/file/c2f1c987d260de1681f44435cbd7e6df.png" alt="Testimonial">
+        </div>
+        <div class="social-proof-item">
+          <img src="https://images.clickfunnels.com/cdn-cgi/image/width=1000px,fit=scale-down,f=auto,q=80/https://statics.myclickfunnels.com/workspace/JDNxNX/image/19998774/file/4b10606be09f7c5620701b55dff7ef8a.png" alt="Testimonial">
+        </div>
+        <div class="social-proof-item">
+          <img src="https://images.clickfunnels.com/cdn-cgi/image/width=1000px,fit=scale-down,f=auto,q=80/https://statics.myclickfunnels.com/workspace/JDNxNX/image/19998801/file/0778f982114f02ff452979f70fe1f31a.png" alt="Testimonial">
+        </div>
+        <div class="social-proof-item">
+          <img src="https://images.clickfunnels.com/cdn-cgi/image/width=1000px,fit=scale-down,f=auto,q=80/https://statics.myclickfunnels.com/workspace/JDNxNX/image/19998841/file/04f43c7ebf2d20f2e692e29ec69549d5.png" alt="Testimonial">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Guarantee Section -->
+  <section class="guarantee-section">
+    <div class="container">
+      <div class="guarantee-card">
+        <img src="https://images.clickfunnels.com/cdn-cgi/image/width=1000px,fit=scale-down,f=auto,q=80/https://statics.myclickfunnels.com/workspace/JDNxNX/image/18060688/file/25f4baf4d5fdfef60d8675af6efe8f8b.webp" alt="Money Back Guarantee" style="max-width: 120px; margin: 0 auto 1.5rem; display: block;">
+        
+        <div class="guarantee-badge">
+          <i data-lucide="shield-check" class="w-4 h-4"></i>
+          100% Risk-Free Guarantee
+        </div>
+        
+        <h2>100% Risk-Free Guarantee</h2>
+        <p>
+          We're confident that in just <strong>3 days</strong> you'll walk away with a real plan to finally take control of your money. 
+          That means knowing where it's going, how to stop the leaks, and how to put it to work building wealth.
+        </p>
+        <p style="margin-top: 1.5rem;">
+          Join the full challenge. Go through every session. Take the notes, do the exercises, see what your plan looks like.
+        </p>
+        <p style="margin-top: 1.5rem;">
+          If you don't leave with total clarity on what to do next and the confidence to actually move forward... 
+          just email us at <strong style="color: var(--accent-gold);">preston@legacyinvestingshow.com</strong> within 7 days of the challenge ending and we'll refund you.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Urgency Section -->
+  <section class="urgency-section">
+    <div class="container">
+      <h2>VIP Early Bird Pricing Expires In...</h2>
+      
+      <div class="countdown" id="countdown-footer">
+        <div class="countdown-item">
+          <div class="countdown-value" id="days2">00</div>
+          <div class="countdown-label">Days</div>
+        </div>
+        <div class="countdown-item">
+          <div class="countdown-value" id="hours2">00</div>
+          <div class="countdown-label">Hours</div>
+        </div>
+        <div class="countdown-item">
+          <div class="countdown-value" id="minutes2">00</div>
+          <div class="countdown-label">Minutes</div>
+        </div>
+        <div class="countdown-item">
+          <div class="countdown-value" id="seconds2">00</div>
+          <div class="countdown-label">Seconds</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-header">
+        <p class="font-mono text-sm text-gold uppercase tracking-wider mb-3">FAQ</p>
+        <h2>Still Got Questions? We Got You!</h2>
+      </div>
+
+      <div class="faq-container">
+        <div class="faq-item">
+          <button class="faq-question">
+            Where will the event be held?
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5"></i>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              This is a live online event held on Zoom you can join from anywhere. All you need is internet and the commitment to actually change your finances. We made it interactive even though it's online. You'll work through real examples, get feedback, and start implementing strategies right away.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            How interactive is this event?
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5"></i>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              This isn't some video you watch passively. Each day includes: Live Q&A with Preston and our experts, hands-on exercises where you run your own numbers, and real-time implementation of strategies. We designed this to keep you engaged and active. You'll be putting these strategies to work immediately, not just learning about them.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            How long is each day of the challenge?
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5"></i>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              Each day runs about 3 to 5 hours with breaks built in. Day 1 and Day 3 are shorter. Day 2 is the longest since we cover the most ground. We include stretch breaks and lunch breaks so you don't get burned out. The time flies when you're actually making progress on your finances.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            What if I can't make it all 3 days? Are there replays?
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5"></i>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              Life happens. Work emergencies, family stuff, unexpected things come up. The live experience is best because you can ask questions and get real-time feedback. But we don't want you missing out on strategies that could change your finances because of scheduling. VIP ticket holders get lifetime replay access. You can watch at your own pace and go back to the strategies as you implement them.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Is there a money back guarantee?
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5"></i>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              Yes! If you don't leave with total clarity on what to do next and the confidence to actually move forward, just email us at preston@legacyinvestingshow.com within 7 days of the challenge ending and we'll refund you.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Can I bring my spouse/partner?
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5"></i>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              Yes, and you SHOULD. Money decisions affect both of you. Having your partner on the same page eliminates those "I don't know if we should do this" conversations that kill momentum. One ticket covers both of you on the same device. If you need separate logins or want to watch from different locations, grab two tickets.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Can I still join if I don't own a business yet?
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5"></i>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              You don't need a business to start building wealth like the wealthy do. In fact, many of the biggest wins come before someone ever launches a business. Just by maxing out your 401(k) or Solo 401(k), you could save $4,004 a year in taxes. IRA contributions can save another $1,540. Using an HSA properly adds $913 in triple-tax savings. That's over $8,000 in annual tax savings using strategies available to non-business owners. Whether you're W-2, freelancing, or just starting to think about entrepreneurship—this program meets you where you are.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            What if I'm not good at finance stuff?
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5"></i>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              You don't become financially confident before you start. You become confident because you start—and you finally see how it all fits together. No one was born knowing how to manage wealth. It's a learned skill. You just need the right teacher and the right roadmap. If you've ever thought, "I'm not built for this"—you're exactly who this challenge was built for.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <p class="footer-text">
+          This site is not a part of the Facebook website or Facebook Inc. Additionally, this site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc.
+        </p>
+        <p class="footer-text">
+          Income Disclaimer: Although we make every effort to accurately represent the services and/or products presented on this website, Preston Seo makes no assurance, representation or promise regarding future earnings or income, or that you will make any specific amount of money, or any money at all, or that you will not lose money.
+        </p>
+        <p class="footer-text">
+          <strong style="color: var(--text-secondary);">Legacy Investing Show LLC</strong><br>
+          1993 Dewar Dr, Suite 256, Rock Springs, WY 82901
+        </p>
+        <div class="footer-links">
+          <a href="https://www.firstairbnb.com/contactus" target="_blank" rel="noopener noreferrer">Contact Us</a>
+          <a href="https://www.firstairbnb.com/privacypolicy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+          <a href="https://managemoney101.com/challengeterms" target="_blank" rel="noopener noreferrer">Terms and Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    (function() {
+      // Initialize Lucide icons
+      lucide.createIcons();
+
+      // Countdown Timer
+      let targetDate = Number(window.eventTargetDate) || new Date('February 19, 2026 05:00:00 UTC').getTime();
+
+      function updateCountdown() {
+        if (Number(window.eventTargetDate)) {
+          targetDate = Number(window.eventTargetDate);
+        }
+
+        const now = new Date().getTime();
+        const distance = targetDate - now;
+
+        if (distance > 0) {
+          const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+          // Update both countdowns
+          document.getElementById('days').textContent = String(days).padStart(2, '0');
+          document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+          document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+          document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+          
+          document.getElementById('days2').textContent = String(days).padStart(2, '0');
+          document.getElementById('hours2').textContent = String(hours).padStart(2, '0');
+          document.getElementById('minutes2').textContent = String(minutes).padStart(2, '0');
+          document.getElementById('seconds2').textContent = String(seconds).padStart(2, '0');
+        }
+      }
+
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+
+      // FAQ Accordion
+      document.querySelectorAll('.faq-question').forEach(button => {
+        button.addEventListener('click', () => {
+          const faqItem = button.parentElement;
+          const isActive = faqItem.classList.contains('active');
+          
+          // Close all FAQ items
+          document.querySelectorAll('.faq-item').forEach(item => {
+            item.classList.remove('active');
+          });
+          
+          // Open clicked item if it wasn't active
+          if (!isActive) {
+            faqItem.classList.add('active');
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

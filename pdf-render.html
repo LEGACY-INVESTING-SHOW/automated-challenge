@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PDF Renderer</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    }
+
+    .wrap {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    canvas {
+      display: block;
+      background: #fff;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    }
+
+    #status {
+      position: fixed;
+      top: 8px;
+      left: 8px;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      background: rgba(0, 0, 0, 0.75);
+      color: #fff;
+      z-index: 10;
+    }
+  </style>
+</head>
+<body>
+  <div id="status">LOADING</div>
+  <div class="wrap">
+    <canvas id="pdf-canvas"></canvas>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+  <script>
+    (async function renderPdfPage() {
+      const params = new URLSearchParams(window.location.search);
+      const file = params.get("file");
+      const pageNum = Number(params.get("page") || "1");
+
+      if (!file) {
+        document.getElementById("status").textContent = "ERROR: missing file param";
+        return;
+      }
+
+      pdfjsLib.GlobalWorkerOptions.workerSrc =
+        "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js";
+
+      try {
+        const loadingTask = pdfjsLib.getDocument({ url: file });
+        const pdf = await loadingTask.promise;
+        const page = await pdf.getPage(pageNum);
+
+        const viewport = page.getViewport({ scale: 1.8 });
+        const canvas = document.getElementById("pdf-canvas");
+        const context = canvas.getContext("2d", { alpha: false });
+
+        canvas.width = Math.floor(viewport.width);
+        canvas.height = Math.floor(viewport.height);
+
+        await page.render({ canvasContext: context, viewport }).promise;
+
+        const statusEl = document.getElementById("status");
+        statusEl.textContent = "READY";
+        statusEl.style.display = "none";
+        document.title = "PDF Page " + pageNum;
+      } catch (error) {
+        document.getElementById("status").textContent = "ERROR: " + error.message;
+      }
+    })();
+  </script>
+</body>
+</html>

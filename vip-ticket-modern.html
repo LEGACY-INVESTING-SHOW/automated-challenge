@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth overflow-x-hidden">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get The VIP Ticket - Legacy Investing Show</title>
+  <meta name="description" content="Upgrade to VIP for the Tax-Free Income Challenge. Get lifetime replays, exclusive Q&A sessions, and bonus expert training.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Design System -->
+  <link rel="stylesheet" href="design-system.css">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            gold: {
+              DEFAULT: '#c9a962',
+              light: '#e0c078',
+              dark: '#a68b4b',
+            },
+            copper: '#b87333',
+            dark: {
+              DEFAULT: '#0a0a0b',
+              secondary: '#121214',
+              tertiary: '#1a1a1d',
+            },
+            slate: {
+              50: '#f8fafc',
+              100: '#f1f5f9',
+              200: '#e2e8f0',
+              300: '#cbd5e1',
+              400: '#a1a1aa',
+              500: '#71717a',
+              600: '#52525b',
+            },
+            rose: {
+              400: '#fb7185',
+              500: '#f43f5e',
+            },
+            emerald: {
+              400: '#34d399',
+              500: '#16a34a',
+            },
+          },
+          fontFamily: {
+            display: ['Crimson Pro', 'Georgia', 'serif'],
+            body: ['Sora', 'system-ui', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+        },
+      },
+    }
+  </script>
+
+  <style>
+    /* Base styles */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    
+    html, body {
+      overflow-x: hidden;
+      width: 100%;
+      max-width: 100vw;
+    }
+    
+    body {
+      font-family: 'Sora', system-ui, sans-serif;
+      background-color: #0a0a0b;
+      color: #fafafa;
+      line-height: 1.6;
+    }
+
+    img, video, iframe, svg {
+      max-width: 100%;
+      height: auto;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Crimson Pro', Georgia, serif;
+      font-weight: 600;
+    }
+
+    .font-display { font-family: 'Crimson Pro', Georgia, 'Times New Roman', serif; }
+    .font-body { font-family: 'Sora', system-ui, sans-serif; }
+    .font-mono { font-family: 'JetBrains Mono', monospace; }
+
+    /* Noise overlay */
+    .noise-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1000;
+      opacity: 0.03;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #121214;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #a68b4b;
+      border-radius: 4px;
+    }
+
+    .text-gradient-gold {
+      background: linear-gradient(135deg, #e0c078 0%, #c9a962 50%, #a68b4b 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .btn-glow {
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-glow:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(201, 169, 98, 0.4);
+    }
+    .btn-glow::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.5s;
+    }
+    .btn-glow:hover::before {
+      left: 100%;
+    }
+
+    .card-glow {
+      transition: all 0.3s ease;
+    }
+    .card-glow:hover {
+      box-shadow: 0 25px 50px -12px rgba(201, 169, 98, 0.15);
+      transform: translateY(-4px);
+    }
+
+    @media (max-width: 640px) {
+      .btn-glow { width: 100%; justify-content: center; }
+      h1 { font-size: 1.75rem !important; }
+      h2 { font-size: 1.5rem !important; }
+    }
+  </style>
+  <!-- Event Date Automation -->
+  <script src="event-automation.js"></script>
+</head>
+
+<body class="font-body bg-dark text-slate-200 antialiased overflow-x-hidden">
+
+<!-- Noise overlay -->
+<div class="noise-overlay"></div>
+
+<!-- Sticky Header -->
+<header id="sticky-header" class="fixed top-0 left-0 right-0 z-40 -translate-y-full opacity-0 transition-[transform,opacity] duration-300" style="background: rgba(10, 10, 11, 0.95); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(201, 169, 98, 0.1);">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+    <div class="flex items-center gap-2">
+      <div class="w-8 h-8 border border-gold flex items-center justify-center">
+        <span class="font-serif text-gold text-lg font-bold">L</span>
+      </div>
+      <span class="hidden md:block text-sm font-medium text-slate-400">
+        Legacy Investing Show <span class="text-gold font-semibold">Limited Time</span>
+      </span>
+    </div>
+    <div class="flex items-center gap-3 sm:gap-4 ml-auto">
+      <div class="flex items-center gap-2 text-sm text-slate-400">
+        <span class="w-2.5 h-2.5 bg-rose-500 rounded-full animate-pulse"></span>
+        <span class="hidden sm:inline">Offer Ends:</span>
+        <span id="sticky-countdown" class="font-bold text-rose-400 tabular-nums font-mono">--</span>
+      </div>
+      <a href="https://managemoney101.com/vip" class="btn-glow px-4 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm font-bold rounded-full transition-all shadow-lg" style="background: linear-gradient(to right, #c9a962, #a68b4b); color: #0a0a0b;">
+        Upgrade Now
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- Urgency Banner -->
+<div class="bg-gradient-to-r from-rose-600 to-rose-700 text-white py-3 px-4 text-center mt-0">
+  <span class="font-bold">WAIT!</span> Don't close this page — Your VIP upgrade expires when the timer hits zero
+</div>
+
+<!-- Hero Section -->
+<section class="relative py-16 sm:py-24 overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-br from-dark via-dark-tertiary to-dark-secondary"></div>
+  <div class="absolute top-0 right-0 w-1/2 h-1/2 bg-gradient-to-bl from-copper/20 to-transparent rounded-full blur-3xl"></div>
+
+  <div class="relative max-w-4xl mx-auto px-4 sm:px-6 text-center">
+    <!-- Badge -->
+    <div class="inline-flex items-center gap-2 px-4 py-2 bg-gold/20 rounded-full mb-6 border border-gold/20 shadow-gold">
+      <span class="w-2 h-2 bg-gold rounded-full animate-pulse"></span>
+      <span class="text-sm font-semibold text-gold uppercase tracking-wider font-mono">VIP Upgrade</span>
+    </div>
+
+    <h1 class="font-display text-3xl sm:text-5xl md:text-6xl font-semibold text-white leading-tight mb-6">
+      Get The <span class="text-gradient-gold">VIP Ticket</span>
+    </h1>
+
+    <p class="text-lg sm:text-xl text-slate-400 mb-2">
+      Watch This Video Before You Go Further...
+    </p>
+    <p class="text-gold font-semibold flex items-center justify-center gap-2">
+      <span class="w-2 h-2 bg-rose-500 rounded-full animate-pulse"></span>
+      ATTENTION: Once You Leave This Page, This Offer Disappears
+    </p>
+  </div>
+</section>
+
+<!-- Video Section -->
+<section class="py-8 sm:py-12 bg-dark">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6">
+    <div class="relative aspect-video rounded-2xl overflow-hidden bg-dark-secondary shadow-2xl border border-slate-700/50 group cursor-pointer">
+      <div class="absolute inset-0 bg-gradient-to-br from-dark-secondary via-dark-tertiary to-dark"></div>
+      
+      <div class="absolute inset-0 flex items-center justify-center">
+        <div class="w-20 h-20 bg-gold rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+          <i data-lucide="play" class="w-8 h-8 text-dark ml-1"></i>
+        </div>
+      </div>
+      
+      <div class="absolute top-4 left-4 w-12 h-12 border-l-2 border-t-2 border-gold/30 rounded-tl-lg"></div>
+      <div class="absolute top-4 right-4 w-12 h-12 border-r-2 border-t-2 border-gold/30 rounded-tr-lg"></div>
+      <div class="absolute bottom-4 left-4 w-12 h-12 border-l-2 border-b-2 border-gold/30 rounded-bl-lg"></div>
+      <div class="absolute bottom-4 right-4 w-12 h-12 border-r-2 border-b-2 border-gold/30 rounded-br-lg"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Main Content -->
+<section class="py-16 sm:py-20 bg-dark">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6">
+    <div class="space-y-6 text-lg text-slate-300 leading-relaxed">
+      <p>
+        Hey, first off, <strong class="text-white">congrats on grabbing your ticket</strong> for the Challenge. You're going to spend 3 days with us breaking down taxes, debt, credit, income, investing, and protection.
+      </p>
+      
+      <p>
+        We're covering <strong class="text-white">15 sessions in total</strong>... it's going to be packed. And you'll finally find out how to manage your money like the top 1%.
+      </p>
+      
+      <p class="text-white font-semibold text-xl">So you've already done the right thing.</p>
+    </div>
+
+    <!-- Highlight Box -->
+    <div class="mt-12 bg-dark-secondary border border-gold/20 rounded-2xl p-8">
+      <h2 class="font-display text-2xl sm:text-3xl font-semibold text-gold mb-4">But... Here's What I Know</h2>
+      
+      <p class="text-slate-300 leading-relaxed mb-4">
+        15 sessions in 3 days is <strong class="text-white">INTENSE</strong>. I'm going to walk you through everything I've learned in the last 10 years...
+      </p>
+      
+      <p class="text-slate-300 leading-relaxed">
+        The same steps that took me from making $100K a year in sales to <strong class="text-white">becoming financially free at 28</strong>... and building a <strong class="text-white">$20 million portfolio by 33</strong>.
+      </p>
+    </div>
+
+    <div class="mt-12 space-y-6 text-lg text-slate-300 leading-relaxed">
+      <p>Some people join to "see what it's about"... Maybe take some notes, and plan to circle back someday later if and when they feel like they have time.</p>
+      
+      <p>And then there are others who know they're not here to passively watch. They're here because they want to <strong class="text-white">make a change immediately</strong>.</p>
+      
+      <p>They want to ask questions, get clarity on their own numbers, and leave with confidence that they're doing this the right way.</p>
+      
+      <p class="text-white font-semibold">If you're in that second group — and the fact you're already in tells me you're serious — I want to make it even easier for you to take the next step.</p>
+    </div>
+  </div>
+</section>
+
+<!-- VIP Benefits Section -->
+<section class="py-20 sm:py-28 bg-gradient-to-br from-dark via-dark-tertiary to-dark-secondary">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <p class="text-sm font-semibold text-gold uppercase tracking-wider mb-3 font-mono">Exclusive Access</p>
+      <h2 class="font-display text-3xl sm:text-4xl font-semibold text-white">
+        That's Why I Created <span class="text-gradient-gold">The VIP Option!</span>
+      </h2>
+      <p class="text-slate-400 mt-4 text-lg">Here's what you'll get as a VIP</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Benefit 1 -->
+      <div class="card-glow bg-dark-secondary border border-slate-700/50 rounded-2xl p-8">
+        <div class="w-16 h-16 bg-gold/10 rounded-2xl flex items-center justify-center text-3xl mb-6 border border-gold/20">
+          <i data-lucide="target" class="w-8 h-8 text-gold"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-white mb-4">Extra Coaching Time Every Day</h3>
+        <p class="text-slate-400 leading-relaxed">After each main session ends, the general audience logs off. But as a VIP, you'll stay for a private <strong class="text-white">30-minute hot seat Q&A</strong>. That's 3 full extra sessions across the Challenge where you can get your questions answered directly.</p>
+      </div>
+
+      <!-- Benefit 2 -->
+      <div class="card-glow bg-dark-secondary border border-slate-700/50 rounded-2xl p-8">
+        <div class="w-16 h-16 bg-gold/10 rounded-2xl flex items-center justify-center text-3xl mb-6 border border-gold/20">
+          <i data-lucide="repeat" class="w-8 h-8 text-gold"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-white mb-4">Lifetime Replays + Notes</h3>
+        <p class="text-slate-400 leading-relaxed">You'll never have to worry about missing a single detail. Rewatch the sessions, pause, rewind, and implement at your own pace. <strong class="text-white">Forever access.</strong></p>
+      </div>
+
+      <!-- Benefit 3 -->
+      <div class="card-glow bg-dark-secondary border border-slate-700/50 rounded-2xl p-8">
+        <div class="w-16 h-16 bg-gold/10 rounded-2xl flex items-center justify-center text-3xl mb-6 border border-gold/20">
+          <i data-lucide="briefcase" class="w-8 h-8 text-gold"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-white mb-4">Exclusive Bonus Session</h3>
+        <p class="text-slate-400 leading-relaxed">Join my personal Tax Strategist (the same expert I trust with my own tax planning). He'll walk you through advanced strategies that could <strong class="text-white">save you tens of thousands</strong>.</p>
+      </div>
+    </div>
+
+    <!-- Additional Benefits -->
+    <div class="mt-12 grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
+      <div class="flex items-start gap-4 p-6 bg-dark-secondary/50 rounded-xl border border-slate-700/30">
+        <div class="w-10 h-10 bg-emerald-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
+          <i data-lucide="check" class="w-5 h-5 text-emerald-400"></i>
+        </div>
+        <div>
+          <h4 class="font-semibold text-white mb-1">Priority Support</h4>
+          <p class="text-slate-400 text-sm">Get your questions answered first during live Q&A</p>
+        </div>
+      </div>
+      <div class="flex items-start gap-4 p-6 bg-dark-secondary/50 rounded-xl border border-slate-700/30">
+        <div class="w-10 h-10 bg-emerald-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
+          <i data-lucide="check" class="w-5 h-5 text-emerald-400"></i>
+        </div>
+        <div>
+          <h4 class="font-semibold text-white mb-1">Implementation Worksheets</h4>
+          <p class="text-slate-400 text-sm">Step-by-step guides to apply what you learn</p>
+        </div>
+      </div>
+      <div class="flex items-start gap-4 p-6 bg-dark-secondary/50 rounded-xl border border-slate-700/30">
+        <div class="w-10 h-10 bg-emerald-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
+          <i data-lucide="check" class="w-5 h-5 text-emerald-400"></i>
+        </div>
+        <div>
+          <h4 class="font-semibold text-white mb-1">Private VIP Community</h4>
+          <p class="text-slate-400 text-sm">Connect with other serious wealth builders</p>
+        </div>
+      </div>
+      <div class="flex items-start gap-4 p-6 bg-dark-secondary/50 rounded-xl border border-slate-700/30">
+        <div class="w-10 h-10 bg-emerald-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
+          <i data-lucide="check" class="w-5 h-5 text-emerald-400"></i>
+        </div>
+        <div>
+          <h4 class="font-semibold text-white mb-1">Resource Library</h4>
+          <p class="text-slate-400 text-sm">Templates, checklists, and bonus materials</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Countdown Section -->
+<section class="py-20 bg-dark">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6">
+    <div class="bg-dark-secondary border border-slate-700/50 rounded-3xl p-8 sm:p-12 text-center">
+      <div class="flex items-center justify-center gap-2 text-gold font-semibold mb-8">
+        <span class="w-2 h-2 bg-rose-500 rounded-full animate-pulse"></span>
+        <span class="text-lg uppercase tracking-wider font-mono">Early Bird Pricing Expires In...</span>
+      </div>
+
+      <div class="flex justify-center gap-4 sm:gap-6">
+        <div class="text-center bg-dark rounded-2xl p-4 sm:p-6 border border-slate-700/50">
+          <div id="days" class="text-4xl sm:text-6xl font-bold text-white tabular-nums font-display">00</div>
+          <div class="text-xs sm:text-sm text-slate-400 uppercase tracking-wider mt-2 font-mono">Days</div>
+        </div>
+        <div class="text-gold/40 text-3xl sm:text-5xl font-light self-center">:</div>
+        <div class="text-center bg-dark rounded-2xl p-4 sm:p-6 border border-slate-700/50">
+          <div id="hours" class="text-4xl sm:text-6xl font-bold text-white tabular-nums font-display">00</div>
+          <div class="text-xs sm:text-sm text-slate-400 uppercase tracking-wider mt-2 font-mono">Hours</div>
+        </div>
+        <div class="text-gold/40 text-3xl sm:text-5xl font-light self-center">:</div>
+        <div class="text-center bg-dark rounded-2xl p-4 sm:p-6 border border-slate-700/50">
+          <div id="minutes" class="text-4xl sm:text-6xl font-bold text-white tabular-nums font-display">00</div>
+          <div class="text-xs sm:text-sm text-slate-400 uppercase tracking-wider mt-2 font-mono">Minutes</div>
+        </div>
+        <div class="text-gold/40 text-3xl sm:text-5xl font-light self-center hidden sm:block">:</div>
+        <div class="text-center bg-dark rounded-2xl p-4 sm:p-6 border border-slate-700/50 hidden sm:block">
+          <div id="seconds" class="text-4xl sm:text-6xl font-bold text-rose-400 tabular-nums font-display">00</div>
+          <div class="text-xs sm:text-sm text-slate-400 uppercase tracking-wider mt-2 font-mono">Seconds</div>
+        </div>
+      </div>
+
+      <div class="mt-8 text-slate-400 text-sm">
+        <span class="inline-flex items-center gap-2">
+          <span class="w-2 h-2 bg-rose-500 rounded-full animate-pulse"></span>
+          Only 8 VIP spots remaining at this price
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pricing Section -->
+<section id="pricing" class="py-20 sm:py-28 bg-gradient-to-br from-dark via-dark-tertiary to-dark-secondary">
+  <div class="max-w-xl mx-auto px-4 sm:px-6">
+    <div class="bg-dark-secondary border-2 border-gold/30 rounded-3xl p-8 sm:p-12 text-center relative overflow-hidden">
+      <!-- Glow effect -->
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-64 h-32 bg-gold/10 rounded-full blur-3xl"></div>
+      
+      <div class="relative z-10">
+        <!-- VIP Badge -->
+        <div class="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-gold to-gold-dark rounded-full mb-6">
+          <span class="text-sm font-bold text-dark uppercase tracking-wider">Most Popular</span>
+        </div>
+
+        <div class="mb-8">
+          <div class="flex items-center justify-center gap-3 mb-2">
+            <span class="text-2xl text-slate-500 line-through">$199</span>
+            <span class="text-6xl sm:text-7xl font-bold text-gold font-display">$99</span>
+          </div>
+          <div class="text-slate-400">One-time payment — Lifetime access</div>
+        </div>
+
+        <!-- What's Included -->
+        <div class="text-left mb-8 space-y-3">
+          <div class="flex items-center gap-3 text-slate-300">
+            <i data-lucide="check" class="w-5 h-5 text-emerald-400 flex-shrink-0"></i>
+            <span>Lifetime access to all challenge replays</span>
+          </div>
+          <div class="flex items-center gap-3 text-slate-300">
+            <i data-lucide="check" class="w-5 h-5 text-emerald-400 flex-shrink-0"></i>
+            <span>3 exclusive VIP Q&A sessions (90 min total)</span>
+          </div>
+          <div class="flex items-center gap-3 text-slate-300">
+            <i data-lucide="check" class="w-5 h-5 text-emerald-400 flex-shrink-0"></i>
+            <span>Bonus session with Preston's Tax Strategist</span>
+          </div>
+          <div class="flex items-center gap-3 text-slate-300">
+            <i data-lucide="check" class="w-5 h-5 text-emerald-400 flex-shrink-0"></i>
+            <span>Implementation worksheets & templates</span>
+          </div>
+          <div class="flex items-center gap-3 text-slate-300">
+            <i data-lucide="check" class="w-5 h-5 text-emerald-400 flex-shrink-0"></i>
+            <span>Private VIP community access</span>
+          </div>
+          <div class="flex items-center gap-3 text-slate-300">
+            <i data-lucide="check" class="w-5 h-5 text-emerald-400 flex-shrink-0"></i>
+            <span>Priority support during the challenge</span>
+          </div>
+        </div>
+
+        <div class="space-y-4">
+          <a href="https://managemoney101.com/vip" class="btn-glow w-full py-5 px-8 rounded-full font-bold text-lg text-dark flex items-center justify-center gap-3" style="background: linear-gradient(to right, #c9a962, #a68b4b); box-shadow: 0 4px 20px rgba(201, 169, 98, 0.3); text-decoration: none;">
+            Upgrade to VIP Now
+            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+          </a>
+
+          <a href="https://managemoney101.com/ticket" class="block w-full text-center text-sm text-slate-400 hover:text-slate-200 transition-colors" style="text-decoration: underline; text-underline-offset: 4px;">
+            No thanks, I'll stick with the regular ticket
+          </a>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-6 mt-10">
+          <div class="flex items-center gap-2 text-slate-400 text-sm">
+            <i data-lucide="shield-check" class="w-5 h-5 text-emerald-400"></i>
+            Secure Checkout
+          </div>
+          <div class="flex items-center gap-2 text-slate-400 text-sm">
+            <i data-lucide="clock" class="w-5 h-5 text-emerald-400"></i>
+            Instant Access
+          </div>
+          <div class="flex items-center gap-2 text-slate-400 text-sm">
+            <i data-lucide="check-circle" class="w-5 h-5 text-emerald-400"></i>
+            7-Day Guarantee
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Guarantee Section -->
+<section class="py-20 bg-dark">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6">
+    <div class="bg-dark-secondary border border-slate-700/50 rounded-3xl p-8 sm:p-12 text-center relative overflow-hidden">
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-64 h-64 bg-emerald-500/10 rounded-full blur-3xl"></div>
+      
+      <div class="relative z-10">
+        <div class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/10 border border-emerald-500/30 rounded-full mb-6">
+          <i data-lucide="shield-check" class="w-5 h-5 text-emerald-400"></i>
+          <span class="text-emerald-400 font-semibold">100% Risk-Free Guarantee</span>
+        </div>
+
+        <h2 class="font-display text-2xl sm:text-3xl font-semibold text-white mb-4">
+          Love It Or Get Your Money Back
+        </h2>
+        
+        <p class="text-slate-300 leading-relaxed mb-6">
+          We're confident the VIP upgrade will transform how you approach your finances. But if you go through the Challenge and don't feel it was worth every penny, just email us within 7 days and we'll refund you in full.
+        </p>
+        
+        <p class="text-slate-400 text-sm">
+          No questions asked. No hassle. You either love it or you don't pay.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Trust Section -->
+<section class="py-20 bg-dark">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+    <h2 class="font-display text-3xl sm:text-4xl font-semibold text-white mb-6">Here's The Way I See It</h2>
+    
+    <p class="text-slate-400 leading-relaxed text-lg mb-8">
+      If you're fine just watching and picking up what you can, the regular ticket is enough. But if you're the type who wants to go deeper — if you know you'll benefit from the extra time, the access, the coaching, and the ability to rewatch everything later — then <span class="text-gold font-semibold">VIP is for you</span>.
+    </p>
+
+    <div class="inline-flex items-center gap-2 text-gold">
+      <span class="w-2 h-2 bg-gold rounded-full animate-pulse"></span>
+      <span class="font-semibold">This offer expires when the timer hits zero</span>
+    </div>
+  </div>
+</section>
+
+<!-- Final CTA -->
+<section class="py-20 bg-gradient-to-br from-dark via-dark-tertiary to-dark-secondary">
+  <div class="max-w-xl mx-auto px-4 sm:px-6 text-center">
+    <h2 class="font-display text-2xl sm:text-3xl font-semibold text-white mb-6">
+      Ready to Go VIP?
+    </h2>
+    <a href="https://managemoney101.com/vip" class="btn-glow inline-flex items-center gap-2 px-8 py-4 rounded-full font-bold text-lg text-dark" style="background: linear-gradient(to right, #c9a962, #a68b4b); box-shadow: 0 4px 20px rgba(201, 169, 98, 0.3);">
+      Upgrade to VIP Now - $99
+      <i data-lucide="arrow-right" class="w-5 h-5"></i>
+    </a>
+    <p class="text-slate-500 mt-4 text-sm">Regular price $199 — Save $100 today</p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="border-t border-dark-tertiary/50 py-16 bg-dark">
+  <div class="max-w-4xl mx-auto px-4 text-center">
+    <p class="text-slate-500 text-sm mb-6 max-w-2xl mx-auto">
+      <strong class="text-slate-400">Income Disclaimer:</strong> Although we make every effort to accurately represent the services and/or products presented on this website, Preston Seo makes no assurance, representation or promise regarding future earnings or income, or that you will make any specific amount of money, or any money at all, or that you will not lose money.
+    </p>
+    
+    <p class="text-slate-600 text-xs mb-8 max-w-2xl mx-auto">
+      This site is not a part of the Facebook website or Facebook Inc. Additionally, This site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc.
+    </p>
+    
+    <div class="mb-6">
+      <p class="text-slate-400 font-semibold mb-1">Legacy Investing Show LLC</p>
+      <p class="text-slate-600 text-sm">1993 Dewar Dr Suite 256<br>Rock Springs, WY 82901</p>
+    </div>
+    
+    <div class="flex flex-wrap justify-center gap-6 text-sm">
+      <a href="https://www.firstairbnb.com/privacypolicy" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-gold transition-colors">Privacy Policy</a>
+      <a href="https://managemoney101.com/challengeterms" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-gold transition-colors">Terms and Conditions</a>
+      <a href="https://www.firstairbnb.com/contactus" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-gold transition-colors">Contact Us</a>
+    </div>
+  </div>
+</footer>
+
+<!-- JavaScript -->
+<script>
+  (function() {
+    // Initialize Lucide icons
+    lucide.createIcons();
+
+    // Countdown Timer
+    let targetDate = Number(window.eventTargetDate) || new Date('February 19, 2026 05:00:00 UTC').getTime();
+
+    function updateCountdown() {
+      if (Number(window.eventTargetDate)) {
+        targetDate = Number(window.eventTargetDate);
+      }
+
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      if (distance > 0) {
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        const daysEl = document.getElementById('days');
+        const hoursEl = document.getElementById('hours');
+        const minutesEl = document.getElementById('minutes');
+        const secondsEl = document.getElementById('seconds');
+        
+        if (daysEl) daysEl.textContent = String(days).padStart(2, '0');
+        if (hoursEl) hoursEl.textContent = String(hours).padStart(2, '0');
+        if (minutesEl) minutesEl.textContent = String(minutes).padStart(2, '0');
+        if (secondsEl) secondsEl.textContent = String(seconds).padStart(2, '0');
+        
+        const stickyCountdown = document.getElementById('sticky-countdown');
+        if (stickyCountdown) {
+          stickyCountdown.textContent = `${days}d ${hours}h ${minutes}m`;
+        }
+      }
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    // Sticky Header
+    const stickyHeader = document.getElementById('sticky-header');
+    
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.pageYOffset;
+      
+      if (currentScroll > 100) {
+        stickyHeader.classList.remove('-translate-y-full', 'opacity-0');
+      } else {
+        stickyHeader.classList.add('-translate-y-full', 'opacity-0');
+      }
+    }, { passive: true });
+  })();
+</script>
+
+</body>
+</html>

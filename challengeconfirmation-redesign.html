@@ -1,0 +1,1361 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth overflow-x-hidden">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tax-Free Income Challenge Confirmation By Preston Seo</title>
+  <meta name="description" content="Your Tax-Free Income Challenge seat is confirmed. Access your Zoom links, calendar dates, and support details.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Design System -->
+  <link rel="stylesheet" href="design-system.css">
+
+  <style>
+    /* ========== CSS VARIABLES ========== */
+    :root {
+      --bg-primary: #0a0a0b;
+      --bg-secondary: #121214;
+      --bg-tertiary: #1a1a1d;
+      --accent-gold: #c9a962;
+      --accent-gold-light: #e0c078;
+      --accent-gold-dark: #a68b4b;
+      --accent-copper: #b87333;
+      --text-primary: #fafafa;
+      --text-secondary: #a1a1aa;
+      --text-muted: #71717a;
+      --danger: #dc2626;
+      --success: #16a34a;
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --radius-xl: 24px;
+      --radius-full: 9999px;
+      --container: min(1200px, calc(100% - 2rem));
+    }
+
+    /* ========== BASE STYLES ========== */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      overflow-x: hidden;
+      width: 100%;
+      max-width: 100vw;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Sora', system-ui, sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    img, video, iframe, svg {
+      max-width: 100%;
+      height: auto;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      hyphens: auto;
+    }
+
+    p {
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+
+    section {
+      width: 100%;
+      max-width: 100vw;
+      overflow-x: hidden;
+    }
+
+    /* Typography */
+    .font-serif {
+      font-family: 'Crimson Pro', Georgia, serif;
+    }
+
+    .font-mono {
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .text-gold-gradient {
+      background: linear-gradient(135deg, #e0c078 0%, #c9a962 50%, #a68b4b 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* ========== NOISE OVERLAY ========== */
+    .noise-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1000;
+      opacity: 0.03;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    }
+
+    /* ========== BACKGROUND ========== */
+    .bg-gradient-subtle {
+      position: fixed;
+      inset: 0;
+      background: 
+        radial-gradient(ellipse at 20% 10%, rgba(201, 169, 98, 0.08) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 90%, rgba(184, 115, 51, 0.05) 0%, transparent 50%),
+        var(--bg-primary);
+      z-index: -2;
+      pointer-events: none;
+    }
+
+    /* ========== SCROLLBAR ========== */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--bg-secondary);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--accent-gold-dark);
+      border-radius: 4px;
+    }
+
+    /* ========== SECTION LABEL ========== */
+    .section-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--accent-gold);
+    }
+
+    /* ========== DATA CARD ========== */
+    .data-card {
+      background: linear-gradient(145deg, rgba(201,169,98,0.05) 0%, rgba(18,18,20,0.8) 100%);
+      border: 1px solid rgba(201,169,98,0.1);
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+    }
+
+    .data-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(201,169,98,0.2);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+    }
+
+    /* ========== ALERT BAR ========== */
+    .alert-bar {
+      position: sticky;
+      top: 65px;
+      z-index: 40;
+      background: linear-gradient(90deg, rgba(201, 169, 98, 0.1), rgba(184, 115, 51, 0.05));
+      border-bottom: 1px solid rgba(201, 169, 98, 0.15);
+      backdrop-filter: blur(12px);
+    }
+
+    .alert-content {
+      width: var(--container);
+      margin: 0 auto;
+      padding: 0.875rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .alert-text {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.875rem;
+      color: var(--accent-gold);
+    }
+
+    .alert-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--accent-gold);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.7; transform: scale(0.9); }
+    }
+
+    /* ========== NAVIGATION ========== */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 50;
+      background: rgba(10, 10, 11, 0.9);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(201, 169, 98, 0.1);
+    }
+
+    .nav-wrap {
+      width: var(--container);
+      margin: 0 auto;
+      padding: 1rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: var(--text-primary);
+      font-weight: 600;
+      font-size: 1.125rem;
+    }
+
+    .brand-icon {
+      width: 32px;
+      height: 32px;
+      border: 1px solid var(--accent-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .brand-icon span {
+      font-family: 'Crimson Pro', serif;
+      color: var(--accent-gold);
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-secondary);
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent-gold);
+    }
+
+    /* ========== BUTTONS ========== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.875rem 1.5rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+      text-decoration: none;
+      border: none;
+      border-radius: var(--radius-full);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-primary {
+      background: var(--accent-gold);
+      color: var(--bg-primary);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-gold-light);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(201, 169, 98, 0.3);
+    }
+
+    .btn-primary::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.5s;
+    }
+
+    .btn-primary:hover::before {
+      left: 100%;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--text-secondary);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--accent-gold);
+      color: var(--accent-gold);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--accent-gold);
+      border: 1px solid rgba(201, 169, 98, 0.3);
+    }
+
+    .btn-ghost:hover {
+      background: rgba(201, 169, 98, 0.1);
+    }
+
+    /* ========== HERO SECTION ========== */
+    .hero {
+      width: var(--container);
+      margin: 0 auto;
+      padding: calc(65px + 3rem) 0 clamp(2rem, 4vw, 3rem);
+    }
+
+    .hero-card {
+      background: linear-gradient(180deg, rgba(26, 26, 29, 0.8), rgba(18, 18, 20, 0.9));
+      border: 1px solid rgba(201, 169, 98, 0.1);
+      border-radius: var(--radius-xl);
+      padding: clamp(2rem, 5vw, 4rem);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      right: -100px;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(201, 169, 98, 0.15), transparent 60%);
+      pointer-events: none;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: rgba(201, 169, 98, 0.1);
+      border: 1px solid rgba(201, 169, 98, 0.2);
+      border-radius: var(--radius-full);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent-gold);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero h1 {
+      font-family: 'Crimson Pro', Georgia, serif;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 600;
+      line-height: 1.15;
+      margin-bottom: 1rem;
+      color: var(--text-primary);
+    }
+
+    .hero-subtitle {
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      color: var(--text-secondary);
+      max-width: 600px;
+      margin-bottom: 2rem;
+      line-height: 1.7;
+    }
+
+    .hero-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    /* ========== MAIN CONTENT ========== */
+    main {
+      width: var(--container);
+      margin: 0 auto;
+      padding: 2rem 0 4rem;
+    }
+
+    section {
+      margin-bottom: 4rem;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .section-eyebrow {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--accent-gold);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      font-family: 'Crimson Pro', Georgia, serif;
+      font-size: clamp(1.75rem, 4vw, 2.75rem);
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-subtitle {
+      color: var(--text-secondary);
+      font-size: 1rem;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* ========== CARDS ========== */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: linear-gradient(180deg, rgba(201, 169, 98, 0.03), rgba(18, 18, 20, 0.8));
+      border: 1px solid rgba(201, 169, 98, 0.1);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem;
+      transition: all 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(201, 169, 98, 0.2);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .card-icon {
+      width: 44px;
+      height: 44px;
+      background: rgba(201, 169, 98, 0.1);
+      border: 1px solid rgba(201, 169, 98, 0.2);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+    }
+
+    .card-step {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent-gold);
+    }
+
+    .card-title {
+      font-family: 'Crimson Pro', Georgia, serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 0.75rem;
+    }
+
+    .card-body {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin-bottom: 1.25rem;
+    }
+
+    .checklist {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .checklist li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+    }
+
+    .check-icon {
+      width: 18px;
+      height: 18px;
+      background: var(--accent-gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .check-icon svg {
+      width: 10px;
+      height: 10px;
+      color: var(--bg-primary);
+    }
+
+    /* ========== ZOOM LINKS SECTION ========== */
+    .zoom-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .zoom-card {
+      background: linear-gradient(180deg, rgba(201, 169, 98, 0.03), rgba(18, 18, 20, 0.8));
+      border: 1px solid rgba(201, 169, 98, 0.1);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .zoom-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(201, 169, 98, 0.2);
+    }
+
+    .zoom-header {
+      background: linear-gradient(90deg, rgba(201, 169, 98, 0.1), transparent);
+      border-bottom: 1px solid rgba(201, 169, 98, 0.1);
+      padding: 1.25rem;
+    }
+
+    .zoom-day {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent-gold);
+    }
+
+    .zoom-title {
+      font-family: 'Crimson Pro', Georgia, serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-top: 0.25rem;
+    }
+
+    .zoom-content {
+      padding: 1.25rem;
+    }
+
+    .zoom-time {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .zoom-desc {
+      color: var(--text-muted);
+      font-size: 0.875rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .zoom-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.25rem;
+      background: rgba(201, 169, 98, 0.1);
+      border: 1px solid rgba(201, 169, 98, 0.3);
+      border-radius: var(--radius-full);
+      color: var(--accent-gold);
+      font-size: 0.875rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .zoom-link:hover {
+      background: var(--accent-gold);
+      color: var(--bg-primary);
+      border-color: transparent;
+    }
+
+    /* ========== CALENDAR SECTION ========== */
+    .calendar-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.25rem;
+      align-items: start;
+    }
+
+    .calendar-options {
+      background: var(--bg-secondary);
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(201, 169, 98, 0.1);
+      padding: 1.5rem 1.25rem;
+      height: fit-content;
+    }
+
+    .calendar-label {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .calendar-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: center;
+      margin-bottom: 0;
+    }
+
+    .calendar-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1rem;
+      background: var(--bg-tertiary);
+      border: 1px solid rgba(201, 169, 98, 0.2);
+      border-radius: var(--radius-md);
+      color: var(--text-primary);
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+
+    .calendar-btn:hover {
+      transform: translateY(-2px);
+      border-color: rgba(201, 169, 98, 0.4);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .calendar-icon {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 640px) {
+      .calendar-buttons {
+        flex-direction: column;
+      }
+      
+      .calendar-btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+    .countdown-card {
+      background: linear-gradient(180deg, rgba(201, 169, 98, 0.03), rgba(18, 18, 20, 0.8));
+      border: 1px solid rgba(201, 169, 98, 0.1);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem;
+    }
+
+    .countdown-title {
+      font-family: 'Crimson Pro', Georgia, serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .countdown-subtitle {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .timer {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .timer-block {
+      background: rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(201, 169, 98, 0.1);
+      border-radius: var(--radius-md);
+      padding: 1rem 0.5rem;
+      text-align: center;
+    }
+
+    .timer-value {
+      font-family: 'Crimson Pro', Georgia, serif;
+      font-size: 1.75rem;
+      font-weight: 600;
+      color: var(--accent-gold);
+      line-height: 1;
+    }
+
+    .timer-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      margin-top: 0.5rem;
+    }
+
+    /* ========== COMMUNITY SECTION ========== */
+    .community-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .info-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 2rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(201, 169, 98, 0.1);
+    }
+
+    .info-pill {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1rem;
+      background: rgba(201, 169, 98, 0.05);
+      border: 1px solid rgba(201, 169, 98, 0.1);
+      border-radius: var(--radius-md);
+      color: var(--text-secondary);
+      font-size: 0.875rem;
+    }
+
+    .info-pill-icon {
+      color: var(--accent-gold);
+    }
+
+    /* ========== FOOTER ========== */
+    footer {
+      border-top: 1px solid rgba(201, 169, 98, 0.1);
+      background: rgba(10, 10, 11, 0.8);
+      padding: 3rem 0;
+      margin-top: 4rem;
+    }
+
+    .footer-wrap {
+      width: var(--container);
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .footer-text {
+      color: var(--text-muted);
+      font-size: 0.875rem;
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .footer-links a {
+      color: var(--text-secondary);
+      font-size: 0.875rem;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent-gold);
+    }
+
+    /* ========== ANIMATIONS ========== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      .card-grid,
+      .zoom-grid,
+      .calendar-grid,
+      .community-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .timer {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .alert-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.75rem;
+      }
+
+      .hero {
+        padding-top: calc(65px + 5rem);
+      }
+    }
+  </style>
+  <!-- Event Date Automation -->
+  <script src="event-automation.js"></script>
+</head>
+
+<body id="top">
+  <!-- Noise overlay -->
+  <div class="noise-overlay"></div>
+  
+  <!-- Background -->
+  <div class="bg-gradient-subtle" aria-hidden="true"></div>
+
+  <!-- Alert Bar -->
+  <div class="alert-bar" role="status">
+    <div class="alert-content">
+      <div class="alert-text">
+        <span class="alert-dot"></span>
+        <span><strong>Important:</strong> Complete each step below to secure your challenge access</span>
+      </div>
+      <a href="mailto:support@legacyinvestingshow.com" class="btn btn-ghost" style="padding: 0.5rem 1rem; font-size: 0.8rem;">Need Help?</a>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav aria-label="Main navigation">
+    <div class="nav-wrap">
+      <a href="#top" class="brand">
+        <div class="brand-icon">
+          <span>L</span>
+        </div>
+        <span class="font-serif">Legacy Investing Show</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#steps">Steps</a></li>
+        <li><a href="#zoom">Zoom Links</a></li>
+        <li><a href="#calendar">Calendar</a></li>
+        <li><a href="#community">Community</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-card reveal">
+      <div class="badge">
+        <i data-lucide="check-circle" class="w-3 h-3"></i>
+        Challenge Confirmation 2026
+      </div>
+      <h1>Congratulations! <span class="text-gold-gradient">Your seat is confirmed.</span></h1>
+      <p class="hero-subtitle">
+        You are officially in the Tax-Free Income Challenge by Preston Seo. 
+        Follow the steps below to complete your setup and join us for 3 days of wealth-building strategies.
+      </p>
+      <div class="hero-cta">
+        <a href="#zoom" class="btn btn-primary">
+          Register for Zoom
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+        <a href="mailto:support@legacyinvestingshow.com" class="btn btn-secondary">Contact Support</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Steps Section -->
+    <section id="steps" class="reveal">
+      <div class="section-header">
+        <p class="section-eyebrow">Getting Started</p>
+        <h2 class="section-title">Follow These Steps</h2>
+        <p class="section-subtitle">Complete each action in order to ensure full access to all challenge materials and live sessions.</p>
+      </div>
+
+      <div class="card-grid">
+        <!-- Step 1 -->
+        <article class="card">
+          <div class="card-header">
+            <div class="card-icon">📧</div>
+            <span class="card-step">Step One</span>
+          </div>
+          <h3 class="card-title">Check Your Email</h3>
+          <p class="card-body">We just sent you a confirmation email with your private login details. Look for the subject line: "Your Challenge Login Details".</p>
+          <ul class="checklist">
+            <li>
+              <span class="check-icon">
+                <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              </span>
+              <span>Check your inbox, promotions, and spam folders</span>
+            </li>
+            <li>
+              <span class="check-icon">
+                <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              </span>
+              <span>Move emails to Primary and whitelist our address</span>
+            </li>
+            <li>
+              <span class="check-icon">
+                <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              </span>
+              <span>Contact support if you cannot locate the email</span>
+            </li>
+          </ul>
+        </article>
+
+        <!-- Step 2 -->
+        <article class="card">
+          <div class="card-header">
+            <div class="card-icon">🔗</div>
+            <span class="card-step">Step Two</span>
+          </div>
+          <h3 class="card-title">Register for Zoom</h3>
+          <p class="card-body">Register for each day of the challenge now. You will receive join details directly from Zoom after each registration.</p>
+          <ul class="checklist">
+            <li>
+              <span class="check-icon">
+                <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              </span>
+              <span>Day 1 - Friday, February 20th at 10 AM EST</span>
+            </li>
+            <li>
+              <span class="check-icon">
+                <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              </span>
+              <span>Day 2 - Saturday, February 21st at 10 AM EST</span>
+            </li>
+            <li>
+              <span class="check-icon">
+                <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              </span>
+              <span>Day 3 - Sunday, February 22nd at 10 AM EST</span>
+            </li>
+          </ul>
+        </article>
+
+        <!-- Step 3 -->
+        <article class="card">
+          <div class="card-header">
+            <div class="card-icon">📅</div>
+            <span class="card-step">Step Three</span>
+          </div>
+          <h3 class="card-title">Calendar & Community</h3>
+          <p class="card-body">Add the challenge dates to your calendar and join our community to get reminders and connect with other participants.</p>
+          <ul class="checklist">
+            <li>
+              <span class="check-icon">
+                <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              </span>
+              <span data-date-type="range">Friday, February 20th - Sunday, February 22nd, 2026</span>
+            </li>
+            <li>
+              <span class="check-icon">
+                <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              </span>
+              <span>10 AM - 4 PM EST daily</span>
+            </li>
+            <li>
+              <span class="check-icon">
+                <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              </span>
+              <span>Post your intro in the community after joining</span>
+            </li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- Zoom Links Section -->
+    <section id="zoom" class="reveal">
+      <div class="section-header">
+        <p class="section-eyebrow">Live Access</p>
+        <h2 class="section-title">Your Zoom Registration Links</h2>
+        <p class="section-subtitle">Register for each day to receive your private access links and calendar invites.</p>
+      </div>
+
+      <div class="zoom-grid">
+        <!-- Day 1 -->
+        <article class="zoom-card">
+          <div class="zoom-header">
+            <span class="zoom-day">Day 1</span>
+            <h3 class="zoom-title">Find & Fix the Leaks</h3>
+          </div>
+          <div class="zoom-content">
+            <p class="zoom-time" data-date-type="day1">Friday, February 20th at 10:00 AM EST</p>
+            <p class="zoom-desc">Kickoff session covering foundational tax strategies and wealth-building principles.</p>
+            <a href="https://us06web.zoom.us/meeting/register/CQXxb3ekS_qPwgPGRU5y4g" target="_blank" rel="noopener noreferrer" class="zoom-link">
+              Register for Day 1
+              <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Day 2 -->
+        <article class="zoom-card">
+          <div class="zoom-header">
+            <span class="zoom-day">Day 2</span>
+            <h3 class="zoom-title">Multiply Your Wealth</h3>
+          </div>
+          <div class="zoom-content">
+            <p class="zoom-time" data-date-type="day2">Saturday, February 21st at 10:00 AM EST</p>
+            <p class="zoom-desc">Advanced strategies for tax optimization and income acceleration.</p>
+            <a href="https://us06web.zoom.us/meeting/register/b4g4udbhQ4OlZ6n7GFWFiA" target="_blank" rel="noopener noreferrer" class="zoom-link">
+              Register for Day 2
+              <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Day 3 -->
+        <article class="zoom-card">
+          <div class="zoom-header">
+            <span class="zoom-day">Day 3</span>
+            <h3 class="zoom-title">Protect & Scale</h3>
+          </div>
+          <div class="zoom-content">
+            <p class="zoom-time" data-date-type="day3">Sunday, February 22nd at 10:00 AM EST</p>
+            <p class="zoom-desc">Final training and your 12-month wealth implementation roadmap.</p>
+            <a href="https://us06web.zoom.us/meeting/register/2jL2QTJUS_68WpXR88YfWw" target="_blank" rel="noopener noreferrer" class="zoom-link">
+              Register for Day 3
+              <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Calendar Section -->
+    <section id="calendar" class="reveal">
+      <div class="section-header">
+        <p class="section-eyebrow">Save the Date</p>
+        <h2 class="section-title">Add to Your Calendar</h2>
+        <p class="section-subtitle">The challenge runs for 3 days from 10:00 AM to 4:00 PM EST. Don't miss a single session.</p>
+      </div>
+
+      <div class="calendar-grid">
+        <div class="calendar-options">
+          <p class="calendar-label">Choose your calendar:</p>
+          <div class="calendar-buttons">
+            <a id="calendar-gmail" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Tax-Free%20Income%20Challenge%202026&dates=20260220T150000Z%2F20260222T210000Z&details=Join%20us%20live%20for%20the%20Tax-Free%20Income%20Challenge%20on%20Zoom.&location=Online%20via%20Zoom" target="_blank" rel="noopener noreferrer" class="calendar-btn gmail" aria-label="Add to Gmail Calendar">
+              <svg class="calendar-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22 4H2v16h20V4zM4 18V6l6 6-6 6zm8-6l6-6v12l-6-6z" fill="#EA4335"/>
+                <path d="M12 12L4 6v12l8-6z" fill="#FBBC04"/>
+                <path d="M12 12l8-6v12l-8-6z" fill="#34A853"/>
+              </svg>
+              <span>Gmail</span>
+            </a>
+            <a id="calendar-apple" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Tax-Free%20Income%20Challenge%202026&dates=20260220T150000Z%2F20260222T210000Z&details=Join%20us%20live%20for%20the%20Tax-Free%20Income%20Challenge%20on%20Zoom.&location=Online%20via%20Zoom" class="calendar-btn apple" aria-label="Add to Apple Calendar">
+              <svg class="calendar-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" fill="#999"/>
+              </svg>
+              <span>Apple</span>
+            </a>
+            <a id="calendar-outlook" href="https://outlook.live.com/calendar/0/deeplink/compose?path=%2Fcalendar%2Faction%2Fcompose&rru=addevent&subject=Tax-Free%20Income%20Challenge%202026&startdt=2026-02-20T15%3A00%3A00Z&enddt=2026-02-22T21%3A00%3A00Z&body=Join%20us%20live%20for%20the%20Tax-Free%20Income%20Challenge%20on%20Zoom.&location=Online%20via%20Zoom" target="_blank" rel="noopener noreferrer" class="calendar-btn outlook" aria-label="Add to Outlook Calendar">
+              <svg class="calendar-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21.17 3.25Q21.5 3.25 21.76 3.5 22 3.74 22 4.08V19.92Q22 20.26 21.76 20.5 21.5 20.75 21.17 20.75H7.83Q7.5 20.75 7.24 20.5 7 20.26 7 19.92V17H2.83Q2.5 17 2.24 16.76 2 16.5 2 16.17V7.83Q2 7.5 2.24 7.24 2.5 7 2.83 7H7V4.08Q7 3.74 7.24 3.5 7.5 3.25 7.83 3.25M7 13.06L8.18 15.28H9.97L8 12.06L9.93 8.89H8.22L7.13 10.9L7.09 10.96L7.06 11.03Q6.8 10.5 6.5 9.96 6.25 9.43 5.97 8.89H4.16L6.05 12.08L4 15.28H5.78M13.88 19.5V17H8.25V19.5M13.88 15.75V12.63H12V15.75M13.88 11.38V8.25H12V11.38M13.88 7V4.5H8.25V7M20.75 19.5V17H15.13V19.5M20.75 15.75V12.63H15.13V15.75M20.75 11.38V8.25H15.13V11.38M20.75 7V4.5H15.13V7Z" fill="#0078D4"/>
+              </svg>
+              <span>Outlook</span>
+            </a>
+            <a id="calendar-yahoo" href="https://calendar.yahoo.com/?v=60&view=d&type=20&title=Tax-Free%20Income%20Challenge%202026&st=20260220T150000Z&et=20260222T210000Z&desc=Join%20us%20live%20for%20the%20Tax-Free%20Income%20Challenge%20on%20Zoom.&in_loc=Online%20via%20Zoom" target="_blank" rel="noopener noreferrer" class="calendar-btn yahoo" aria-label="Add to Yahoo Calendar">
+              <svg class="calendar-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.97 2L7.99 14.09L7.62 15.19C7.57 15.06 7.53 14.93 7.5 14.79L5.04 8.2L5.03 8.19C4.83 7.68 4.38 7.68 4.18 8.19L1.72 14.81C1.69 14.91 1.69 15.02 1.72 15.12C1.75 15.23 1.81 15.32 1.89 15.4C1.97 15.47 2.07 15.53 2.17 15.56C2.28 15.59 2.39 15.59 2.49 15.56H5.02V17.44H0V15.56H0.63C0.9 15.56 1.14 15.44 1.3 15.23L5.61 4.33V4.32C5.81 3.81 6.26 3.81 6.46 4.32L9.31 11.65L9.32 11.66L10.18 13.84L10.19 13.85L12.03 8.81L12.04 8.8C12.24 8.29 12.69 8.29 12.89 8.8L15.74 16.13L15.75 16.14C15.91 16.52 16.28 16.77 16.69 16.77H17.44V18.65H12.41V16.77H14.03L12.19 11.73L12.18 11.72L10.34 6.68L10.33 6.67L12.97 2M18.25 8.81C19.55 8.81 20.6 9.86 20.6 11.16C20.6 12.46 19.55 13.51 18.25 13.51C16.95 13.51 15.9 12.46 15.9 11.16C15.9 9.86 16.95 8.81 18.25 8.81M18.25 7.5C16.23 7.5 14.59 9.14 14.59 11.16C14.59 13.18 16.23 14.82 18.25 14.82C20.27 14.82 21.91 13.18 21.91 11.16C21.91 9.14 20.27 7.5 18.25 7.5Z" fill="#6001D2"/>
+              </svg>
+              <span>Yahoo</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="countdown-card">
+          <h3 class="countdown-title">Challenge Starts In</h3>
+          <p class="countdown-subtitle">Set your reminders now. This countdown will help you stay on track.</p>
+          
+          <div class="timer" role="timer">
+            <div class="timer-block">
+              <div id="days" class="timer-value">00</div>
+              <div class="timer-label">Days</div>
+            </div>
+            <div class="timer-block">
+              <div id="hours" class="timer-value">00</div>
+              <div class="timer-label">Hours</div>
+            </div>
+            <div class="timer-block">
+              <div id="minutes" class="timer-value">00</div>
+              <div class="timer-label">Minutes</div>
+            </div>
+            <div class="timer-block">
+              <div id="seconds" class="timer-value">00</div>
+              <div class="timer-label">Seconds</div>
+            </div>
+          </div>
+
+          <a href="#zoom" class="btn btn-primary" style="width: 100%;">
+            Complete Zoom Registration
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Community Section -->
+    <section id="community" class="reveal">
+      <div class="section-header">
+        <p class="section-eyebrow">Connect</p>
+        <h2 class="section-title">Join the Community</h2>
+        <p class="section-subtitle">Connect with other challenge participants, get reminders, and ask questions.</p>
+      </div>
+
+      <div class="community-grid">
+        <article class="card">
+          <div class="card-header">
+            <div class="card-icon">👋</div>
+            <span class="card-step">Introduce Yourself</span>
+          </div>
+          <h3 class="card-title">Community Access</h3>
+          <p class="card-body">Post a quick intro after joining. Share why you're here and what you hope to achieve. The more you engage, the more you'll get out of this challenge.</p>
+          <a href="mailto:support@legacyinvestingshow.com?subject=Community%20Access%20Request" class="btn btn-primary" style="margin-top: 1rem;">
+            Join Community
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </article>
+
+        <article class="card">
+          <div class="card-header">
+            <div class="card-icon">✅</div>
+            <span class="card-step">You're All Set</span>
+          </div>
+          <h3 class="card-title">Confirmation Complete</h3>
+          <p class="card-body">Your seat is secured. Complete the email, Zoom, and calendar steps above, and we'll see you inside the challenge. Questions? We're here to help.</p>
+          <a href="mailto:support@legacyinvestingshow.com" class="btn btn-secondary" style="margin-top: 1rem;">
+            Email Support
+            <i data-lucide="mail" class="w-4 h-4"></i>
+          </a>
+        </article>
+      </div>
+
+      <div class="info-pills">
+        <div class="info-pill">
+          <span class="info-pill-icon">📅</span>
+          <span data-date-type="range">Friday, February 20 - Sunday, February 22, 2026</span>
+        </div>
+        <div class="info-pill">
+          <span class="info-pill-icon">🕐</span>
+          <span>10:00 AM - 4:00 PM EST</span>
+        </div>
+        <div class="info-pill">
+          <span class="info-pill-icon">💻</span>
+          <span>Live on Zoom</span>
+        </div>
+        <div class="info-pill">
+          <span class="info-pill-icon">👥</span>
+          <span>4,400+ Participants</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-wrap">
+      <p class="footer-text">
+        This site is not a part of the Facebook website or Facebook Inc. Additionally, this site is NOT endorsed by Facebook in any way. 
+        FACEBOOK is a trademark of FACEBOOK, Inc.
+      </p>
+      <p class="footer-text">
+        Income Disclaimer: Although we make every effort to accurately represent the services and/or products presented on this website, 
+        Preston Seo makes no assurance, representation or promise regarding future earnings or income. 
+        Individual results may vary.
+      </p>
+      <p class="footer-text" style="margin-top: 1.5rem;">
+        <strong>Legacy Investing Show LLC</strong><br>
+        1993 Dewar Dr, Suite 256, Rock Springs, WY 82901
+      </p>
+      <div class="footer-links">
+        <a href="https://www.firstairbnb.com/contactus" target="_blank" rel="noopener noreferrer">Contact Us</a>
+        <a href="https://www.firstairbnb.com/privacypolicy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+        <a href="https://managemoney101.com/challengeterms" target="_blank" rel="noopener noreferrer">Terms and Conditions</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    (function() {
+      // Initialize Lucide icons
+      lucide.createIcons();
+
+      // Countdown Timer
+      let targetDate = Number(window.eventTargetDate) || new Date('February 20, 2026 10:00:00 EST').getTime();
+      let appleCalendarBlobUrl;
+
+      function toUtcStamp(date) {
+        const year = date.getUTCFullYear();
+        const month = String(date.getUTCMonth() + 1).padStart(2, '0');
+        const day = String(date.getUTCDate()).padStart(2, '0');
+        const hours = String(date.getUTCHours()).padStart(2, '0');
+        const minutes = String(date.getUTCMinutes()).padStart(2, '0');
+        const seconds = String(date.getUTCSeconds()).padStart(2, '0');
+        return `${year}${month}${day}T${hours}${minutes}${seconds}Z`;
+      }
+
+      function buildCalendarLinks() {
+        const start = new Date(targetDate);
+        const end = new Date(start.getTime() + (54 * 60 * 60 * 1000));
+        const startStamp = toUtcStamp(start);
+        const endStamp = toUtcStamp(end);
+        const title = 'Tax-Free Income Challenge';
+        const details = 'Join us live for the Tax-Free Income Challenge on Zoom. Register for each day from the Zoom section on this page.';
+        const location = 'Online via Zoom';
+
+        const gmailLink = document.getElementById('calendar-gmail');
+        if (gmailLink) {
+          gmailLink.href = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(title)}&dates=${startStamp}%2F${endStamp}&details=${encodeURIComponent(details)}&location=${encodeURIComponent(location)}`;
+        }
+
+        const outlookLink = document.getElementById('calendar-outlook');
+        if (outlookLink) {
+          outlookLink.href = `https://outlook.live.com/calendar/0/deeplink/compose?path=%2Fcalendar%2Faction%2Fcompose&rru=addevent&subject=${encodeURIComponent(title)}&startdt=${encodeURIComponent(start.toISOString())}&enddt=${encodeURIComponent(end.toISOString())}&body=${encodeURIComponent(details)}&location=${encodeURIComponent(location)}`;
+        }
+
+        const yahooLink = document.getElementById('calendar-yahoo');
+        if (yahooLink) {
+          yahooLink.href = `https://calendar.yahoo.com/?v=60&view=d&type=20&title=${encodeURIComponent(title)}&st=${startStamp}&et=${endStamp}&desc=${encodeURIComponent(details)}&in_loc=${encodeURIComponent(location)}`;
+        }
+
+        const appleLink = document.getElementById('calendar-apple');
+        if (appleLink) {
+          const uid = `legacy-challenge-${startStamp}@legacyinvestingshow.com`;
+          const nowStamp = toUtcStamp(new Date());
+          const icsBody = [
+            'BEGIN:VCALENDAR',
+            'VERSION:2.0',
+            'PRODID:-//Legacy Investing Show//Tax-Free Income Challenge//EN',
+            'CALSCALE:GREGORIAN',
+            'METHOD:PUBLISH',
+            'BEGIN:VEVENT',
+            `UID:${uid}`,
+            `DTSTAMP:${nowStamp}`,
+            `DTSTART:${startStamp}`,
+            `DTEND:${endStamp}`,
+            `SUMMARY:${title}`,
+            `DESCRIPTION:${details}`,
+            `LOCATION:${location}`,
+            'END:VEVENT',
+            'END:VCALENDAR'
+          ].join('\r\n');
+
+          if (appleCalendarBlobUrl) {
+            URL.revokeObjectURL(appleCalendarBlobUrl);
+          }
+
+          appleCalendarBlobUrl = URL.createObjectURL(new Blob([icsBody], {
+            type: 'text/calendar;charset=utf-8'
+          }));
+
+          appleLink.href = appleCalendarBlobUrl;
+          appleLink.setAttribute('download', 'tax-free-income-challenge.ics');
+        }
+      }
+
+      function updateCountdown() {
+        if (Number(window.eventTargetDate)) {
+          targetDate = Number(window.eventTargetDate);
+        }
+
+        const now = new Date().getTime();
+        const distance = targetDate - now;
+
+        if (distance > 0) {
+          const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+          document.getElementById('days').textContent = String(days).padStart(2, '0');
+          document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+          document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+          document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+        }
+      }
+
+      buildCalendarLinks();
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+      window.addEventListener('event-target-updated', buildCalendarLinks);
+
+      // Scroll Reveal Animation
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('.reveal').forEach(el => {
+        observer.observe(el);
+      });
+    })();
+  </script>
+</body>
+</html>
