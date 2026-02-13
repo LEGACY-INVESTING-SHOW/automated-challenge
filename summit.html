@@ -87,40 +87,15 @@
   <!-- Preconnect to Vimeo for video -->
   <link rel="preconnect" href="https://player.vimeo.com" crossorigin>
 
-  <!-- Preload self-hosted fonts -->
-  <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/assets/fonts/newsreader-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+  <!-- Design System CSS - loads synchronously -->
+  <link rel="stylesheet" href="design-system.css">
 
-  <!-- Tailwind CSS - loads synchronously (only 10KB, faster than CLS fix) -->
-  <link rel="stylesheet" href="/dist/output.css">
 
-  <!-- Preload LCP image for faster initial render -->
-  <link rel="preload" as="image" href="/assets/images/hero-thumbnail.webp" fetchpriority="high">
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 
   <style>
-    /* Self-hosted fonts - eliminates 780ms Google Fonts blocking request */
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 400 700;
-      font-display: swap;
-      src: url('/assets/fonts/inter-latin.woff2') format('woff2');
-    }
-    @font-face {
-      font-family: 'Newsreader';
-      font-style: normal;
-      font-weight: 400 600;
-      font-display: swap;
-      src: url('/assets/fonts/newsreader-latin-400.woff2') format('woff2');
-    }
-    @font-face {
-      font-family: 'Newsreader';
-      font-style: italic;
-      font-weight: 400;
-      font-display: swap;
-      src: url('/assets/fonts/newsreader-latin-400i.woff2') format('woff2');
-    }
 
     /* Custom utilities not in Tailwind */
     .text-gradient-gold {
