@@ -1,10 +1,2121 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" class="dark scroll-smooth overflow-x-hidden">
 <head>
-    <meta http-equiv="refresh" content="0; url=summit.html">
-    <title>Redirecting...</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tax-Free Income Challenge | Preston Seo</title>
+  <meta name="description" content="Join the 3-Day Tax-Free Income Challenge with Preston Seo. Learn how to legally reduce your taxes, build tax-free wealth, and create monthly cash flow using proven strategies.">
+
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://tracking.managemoney101.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KQ4R2LKP');</script>
+
+  <script>
+  var head = document.head;
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src = "https://t.managemoney101.com/v1/lst/universal-script?ph=99701b257ae8a5117ba5d7b516261da603bc86a49c0c42f398c619e251026c05&tag=!clicked&ref_url=" + encodeURI(document.URL) ;
+  head.appendChild(script);
+  </script>
+
+  <script>
+  (function () {
+    if (window.location.protocol !== 'file:') return;
+
+    const path = window.location.pathname.replace(/\\/g, '/');
+    let prefix = '../';
+    if (path.includes('/challenge/challenge2/')) {
+      prefix = '../../';
+    }
+
+    const rewrite = (url) => {
+      if (!url || !url.startsWith('/') || url.startsWith('//')) return url;
+      return prefix + url.slice(1);
+    };
+
+    const patchAttr = (selector, attr) => {
+      document.querySelectorAll(selector).forEach((node) => {
+        const current = node.getAttribute(attr);
+        const next = rewrite(current);
+        if (next && next !== current) {
+          node.setAttribute(attr, next);
+        }
+      });
+    };
+
+    const patchAll = () => {
+      patchAttr('[href^="/"]', 'href');
+      patchAttr('[src^="/"]', 'src');
+      patchAttr('[poster^="/"]', 'poster');
+    };
+
+    patchAll();
+
+    // file:// cannot resolve root-relative @font-face URLs.
+    const fontOverride = document.createElement('style');
+    fontOverride.textContent = `
+      @font-face {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400 700;
+        font-display: swap;
+        src: url('${prefix}assets/fonts/inter-latin.woff2') format('woff2');
+      }
+      @font-face {
+        font-family: 'Newsreader';
+        font-style: normal;
+        font-weight: 400 600;
+        font-display: swap;
+        src: url('${prefix}assets/fonts/newsreader-latin-400.woff2') format('woff2');
+      }
+      @font-face {
+        font-family: 'Newsreader';
+        font-style: italic;
+        font-weight: 400;
+        font-display: swap;
+        src: url('${prefix}assets/fonts/newsreader-latin-400i.woff2') format('woff2');
+      }
+    `;
+    document.head.appendChild(fontOverride);
+
+    document.addEventListener('DOMContentLoaded', patchAll);
+  })();
+  </script>
+
+  <!-- Preconnect to Vimeo for video -->
+  <link rel="preconnect" href="https://player.vimeo.com" crossorigin>
+
+  <!-- Preload self-hosted fonts -->
+  <link rel="preload" href="./assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./assets/fonts/newsreader-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+
+  <!-- Tailwind CSS - loads synchronously (only 10KB, faster than CLS fix) -->
+  <link rel="stylesheet" href="./dist/output.css">
+
+  <!-- Preload LCP image for faster initial render -->
+  <link rel="preload" as="image" href="./assets/images/hero-thumbnail.webp" fetchpriority="high">
+
+
+  <style>
+    /* Self-hosted fonts - eliminates 780ms Google Fonts blocking request */
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400 700;
+      font-display: swap;
+      src: url('./assets/fonts/inter-latin.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Newsreader';
+      font-style: normal;
+      font-weight: 400 600;
+      font-display: swap;
+      src: url('./assets/fonts/newsreader-latin-400.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Newsreader';
+      font-style: italic;
+      font-weight: 400;
+      font-display: swap;
+      src: url('./assets/fonts/newsreader-latin-400i.woff2') format('woff2');
+    }
+
+    /* Custom utilities not in Tailwind */
+    .text-gradient-gold {
+      background: linear-gradient(135deg, #d4a84a 0%, #e8c86a 50%, #b89830 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* System font stack fallbacks for immediate text rendering */
+    .font-display { font-family: 'Newsreader', Georgia, 'Times New Roman', serif; }
+    .font-body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+
+    /* Ensure fonts don't cause layout shift */
+    html { font-size: 16px; }
+    body { font-synthesis: none; text-rendering: optimizeSpeed; }
+
+    /* Reveal elements - always visible, no scroll animations */
+    .reveal {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* Glass effect */
+    .glass {
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    /* ============================================
+       MOBILE OPTIMIZATIONS (Simplified)
+       ============================================ */
+
+    @media (max-width: 640px) {
+      .blur-3xl { display: none; }
+      .countdown-number { min-width: 44px; padding: 6px 8px; }
+      .btn-glow { width: 100%; justify-content: center; }
+      /* Prevent any element from causing horizontal overflow */
+      img, video, iframe { max-width: 100%; height: auto; }
+      table { display: block; overflow-x: auto; }
+      /* Better mobile text sizing */
+      h1 { font-size: 1.5rem !important; line-height: 1.25 !important; }
+      h2 { font-size: 1.5rem !important; }
+    }
+
+    /* Global overflow prevention */
+    html, body {
+      overflow-x: hidden;
+      width: 100%;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .animate-pulse { animation: none; }
+    }
+  </style>
 </head>
-<body>
-    <p>Redirecting to <a href="summit.html">summit.html</a>...</p>
+
+<body class="font-body bg-[#0a0a0f] text-slate-200 antialiased overflow-x-hidden">
+
+<!-- SVG Sprite Definitions (hidden) -->
+<svg xmlns="http://www.w3.org/2000/svg" class="hidden">
+  <symbol id="star-icon" viewBox="0 0 20 20" fill="currentColor">
+    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+  </symbol>
+  <symbol id="check-icon" viewBox="0 0 20 20" fill="currentColor">
+    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+  </symbol>
+</svg>
+
+
+<!-- Sticky Header -->
+<header id="sticky-header" class="fixed top-0 left-0 right-0 z-40 -translate-y-full opacity-0 transition-[transform,opacity] duration-300 backdrop-enhanced">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+    <span class="hidden md:block text-sm font-medium text-slate-300">
+      Tax-Free Income Challenge <span class="text-amber-400 font-semibold">Jan 30-Feb 1</span>
+    </span>
+    <div class="flex items-center gap-3 sm:gap-4 ml-auto">
+      <div class="flex items-center gap-2 text-sm text-slate-400">
+        <span class="w-2.5 h-2.5 bg-rose-500 rounded-full animate-pulse shadow-[0_0_10px_rgba(244,63,94,0.5)]"></span>
+        <span class="hidden sm:inline">Ends in:</span>
+        <span id="sticky-countdown" class="font-bold text-rose-400 tabular-nums">--</span>
+      </div>
+      <a href="#pricing" class="btn-glow px-4 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm font-bold rounded-full transition-all shadow-lg" style="background: linear-gradient(to right, #f59e0b, #d97706); color: #0f172a;">
+        Get Your Seat
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════════════════
+     HERO SECTION
+     ═══════════════════════════════════════════════════ -->
+<section class="relative min-h-screen flex items-center pt-6 sm:pt-16 pb-16 sm:pb-24 overflow-hidden">
+  <!-- Subtle gradient background -->
+  <div class="absolute inset-0 bg-gradient-to-br from-[#0a0a0f] via-[#0d0d14] to-[#12110a]"></div>
+  <div class="absolute top-0 right-0 w-1/2 h-1/2 bg-gradient-to-bl from-amber-900/20 to-transparent rounded-full blur-3xl"></div>
+
+  <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="grid lg:grid-cols-2 gap-6 sm:gap-12 lg:gap-16 items-center">
+      <!-- Left: Content -->
+      <div class="space-y-4 sm:space-y-8">
+        <!-- Badge -->
+        <div class="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-amber-500/20 to-amber-600/10 rounded-full shadow-[0_0_20px_rgba(245,158,11,0.15)]">
+          <span class="w-2 h-2 bg-amber-500 rounded-full animate-pulse"></span>
+          <span class="text-sm font-semibold text-amber-400">Live Event - Jan 30 - Feb 1, 2026</span>
+        </div>
+
+        <!-- Pre-headline -->
+        <p class="text-sm sm:text-lg text-slate-400 leading-relaxed">
+          Your 2025 Tax Bill Is About To Hit. But Your 2026 Strategy Starts Now. Join The 3-Day Challenge Where...
+        </p>
+
+        <!-- Headline -->
+        <h1 class="font-display text-[1.625rem] sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-white leading-[1.2] sm:leading-[1.15] tracking-tight [text-wrap:balance]">
+          You'll Build Your Month-By-Month 2026 Roadmap To Cut Taxes By 50%, Wipe Out Debt, And Create <span class="text-gradient-gold">$5K-$15K Monthly Cash Flow</span>
+        </h1>
+
+        <!-- Sub-headline -->
+        <p class="text-base sm:text-xl text-slate-400">
+          Not Learn About It, <span class="font-semibold text-white">Actually Build It.</span>
+        </p>
+
+        <!-- Social Proof -->
+        <p class="text-sm sm:text-base text-slate-400">
+          (4,400+ high-income earners used this system to stop losing money to taxes and start building real wealth.)
+        </p>
+      </div>
+
+      <!-- Right: Video + CTA -->
+      <div class="space-y-4 sm:space-y-6">
+        <!-- Video -->
+        <div id="vimeo-facade" class="relative aspect-video rounded-2xl overflow-hidden bg-slate-900 shadow-2xl cursor-pointer group">
+          <img src="./assets/images/hero-thumbnail.webp" alt="Watch the Tax-Free Income Challenge video" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" width="640" height="360" fetchpriority="high" decoding="async">
+          <div class="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors"></div>
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div class="w-20 h-20 bg-amber-500 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+              <svg class="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="text-center space-y-3 sm:space-y-4">
+          <a href="#pricing" class="btn-glow inline-flex items-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 text-base sm:text-lg font-bold rounded-full transition-all shadow-lg" style="background: linear-gradient(to right, #f59e0b, #d97706); color: #0f172a; box-shadow: 0 4px 20px rgba(245, 158, 11, 0.3);">
+            Claim Your Ticket Now
+            <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <p class="text-xs sm:text-sm text-slate-400">Jan 30th - Feb 1st | 10 AM - 4 PM EST</p>
+        </div>
+
+        <!-- Countdown -->
+        <div class="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-4 sm:p-6 shadow-xl border border-slate-700/50">
+          <p class="text-center text-xs sm:text-sm font-semibold text-amber-400 mb-3 sm:mb-4 tracking-wide">Early Bird Pricing Ends Soon</p>
+          <div class="flex justify-center gap-2 sm:gap-4">
+            <div class="text-center countdown-number">
+              <div id="days" class="text-2xl sm:text-4xl font-bold text-white tabular-nums">6</div>
+              <div class="text-[9px] sm:text-xs text-slate-400 uppercase tracking-wider mt-1">Days</div>
+            </div>
+            <div class="text-amber-500/60 text-xl sm:text-3xl font-light self-start mt-1 sm:mt-2">:</div>
+            <div class="text-center countdown-number">
+              <div id="hours" class="text-2xl sm:text-4xl font-bold text-white tabular-nums">20</div>
+              <div class="text-[9px] sm:text-xs text-slate-400 uppercase tracking-wider mt-1">Hours</div>
+            </div>
+            <div class="text-amber-500/60 text-xl sm:text-3xl font-light self-start mt-1 sm:mt-2">:</div>
+            <div class="text-center countdown-number">
+              <div id="mins" class="text-2xl sm:text-4xl font-bold text-white tabular-nums">11</div>
+              <div class="text-[9px] sm:text-xs text-slate-400 uppercase tracking-wider mt-1">Min</div>
+            </div>
+            <div class="text-amber-500/60 text-xl sm:text-3xl font-light self-start mt-1 sm:mt-2">:</div>
+            <div class="text-center countdown-number">
+              <div id="secs" class="text-2xl sm:text-4xl font-bold text-white tabular-nums">11</div>
+              <div class="text-[9px] sm:text-xs text-slate-400 uppercase tracking-wider mt-1">Sec</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     SOCIAL PROOF BAR
+     ═══════════════════════════════════════════════════ -->
+<section class="py-2 sm:py-4 md:py-6 bg-slate-900/60">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="flex flex-col items-center gap-2 sm:gap-3 md:gap-4">
+      <span class="text-xs sm:text-sm font-medium text-slate-400 uppercase tracking-wider">As Featured In</span>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8 md:gap-12 w-full">
+        <img src="./assets/images/04-as-featured-in-logos.webp" alt="Featured publications" class="h-12 sm:h-20 md:h-24 object-contain brightness-90 contrast-125" width="400" height="96" loading="lazy" decoding="async">
+        <img src="./assets/images/trustpilot.webp" alt="Trustpilot Rating" class="h-24 sm:h-32 md:h-40 object-contain brightness-90" width="350" height="81" loading="lazy" decoding="async">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     REAL PEOPLE REAL NUMBERS - WEALTH PLANS
+     ═══════════════════════════════════════════════════ -->
+<section class="py-10 sm:py-24 bg-[#0a0a0f]">
+  <div class="max-w-4xl mx-auto px-4">
+    <!-- Header -->
+    <div class="text-center mb-8 sm:mb-12">
+      <p class="text-xs sm:text-sm font-semibold text-amber-400 uppercase tracking-wider mb-2 sm:mb-3">Real People. Real Numbers.</p>
+      <h2 class="font-display text-xl sm:text-3xl md:text-4xl font-semibold text-white leading-tight">
+        5 Wealth Plans. 5 Different Situations. Here's What We Found.
+      </h2>
+    </div>
+
+    <!-- Wealth Plan Cards -->
+    <div class="space-y-4 sm:space-y-8">
+
+      <!-- Lauren -->
+      <div class="reveal bg-slate-900/50 border border-slate-700/50 rounded-xl sm:rounded-2xl p-4 sm:p-8">
+        <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-6">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 bg-amber-900/30 rounded-full flex items-center justify-center text-2xl">💰</div>
+            <div>
+              <h3 class="text-lg font-semibold text-white">Lauren</h3>
+              <p class="text-sm text-slate-400">$125K/year</p>
+            </div>
+          </div>
+          <div class="bg-slate-800/80 border border-slate-700/50 rounded-xl px-4 py-3 text-center sm:text-right">
+            <p class="text-xs text-slate-400 uppercase tracking-wider mb-1">Year 1 Value</p>
+            <p class="text-xl font-bold text-amber-400">$61K - $109K</p>
+          </div>
+        </div>
+        <div class="space-y-4 text-slate-300">
+          <p>She was losing <strong class="text-white">$1,237 every single month</strong> to a W-4 she filled out in 2019. That's $14,840/year, gone before she saw it.</p>
+          <p>But that was just the first leak.</p>
+          <p>Her wealth plan identified <strong class="text-white">6 strategies</strong> she qualified for but wasn't using:</p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
+            <div class="flex justify-between bg-slate-800/50 rounded-lg px-3 py-2"><span class="text-slate-300">STR Tax Loophole + Cost Seg</span><span class="text-amber-400 font-medium">$23,200-$40,600</span></div>
+            <div class="flex justify-between bg-slate-800/50 rounded-lg px-3 py-2"><span class="text-slate-300">W-4 Optimization</span><span class="text-amber-400 font-medium">+$8,000 cash flow</span></div>
+            <div class="flex justify-between bg-slate-800/50 rounded-lg px-3 py-2"><span class="text-slate-300">Backdoor Roth</span><span class="text-amber-400 font-medium">$2,030 + tax-free growth</span></div>
+            <div class="flex justify-between bg-slate-800/50 rounded-lg px-3 py-2"><span class="text-slate-300">Home Office</span><span class="text-amber-400 font-medium">$870-$1,450</span></div>
+            <div class="flex justify-between bg-slate-800/50 rounded-lg px-3 py-2"><span class="text-slate-300">Vehicle Expense</span><span class="text-amber-400 font-medium">$1,450-$2,900</span></div>
+            <div class="flex justify-between bg-slate-800/50 rounded-lg px-3 py-2"><span class="text-slate-300">Retirement Account Max</span><span class="text-amber-400 font-medium">$5,800-$7,250</span></div>
+          </div>
+          <p>The STR strategy alone, with only 3-5 hours per week to meet material participation, created more tax savings than most people's entire annual contribution to their 401(k).</p>
+          <p class="text-slate-400 text-sm"><strong class="text-slate-300">Week 1:</strong> Adjust W-4, increase 401(k) contributions. <strong class="text-slate-300">Week 2:</strong> Set up investment accounts. <strong class="text-slate-300">Week 3-4:</strong> Begin STR market research. 90 days to first property cash flow.</p>
+        </div>
+      </div>
+
+      <!-- Chad -->
+      <div class="reveal bg-slate-900/50 border border-slate-700/50 rounded-xl sm:rounded-2xl p-4 sm:p-8" style="transition-delay: 100ms">
+        <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-6">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 bg-amber-900/30 rounded-full flex items-center justify-center text-2xl">📊</div>
+            <div>
+              <h3 class="text-lg font-semibold text-white">Chad</h3>
+              <p class="text-sm text-slate-400">$180K combined</p>
+            </div>
+          </div>
+          <div class="bg-slate-800/80 border border-slate-700/50 rounded-xl px-4 py-3 text-center sm:text-right">
+            <p class="text-xs text-slate-400 uppercase tracking-wider mb-1">Year 1 Value</p>
+            <p class="text-xl font-bold text-amber-400">$18.5K - $43.5K</p>
+          </div>
+        </div>
+        <div class="space-y-4 text-slate-300">
+          <p>His CPA files taxes every year. Does a good job. Never misses a deadline.</p>
+          <p>But there's a gap between "filing" and "optimizing."</p>
+          <p class="text-white font-medium">When's the last time your CPA called you in June and said "you have $43,000 exposed here, let me show you how to keep it"?</p>
+          <p>That call never comes. Because that's not their job. CPAs file. They don't plan.</p>
+          <p>Chad's wealth plan mapped <strong class="text-white">8 strategies</strong> to his income:</p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
+            <div class="flex justify-between bg-slate-800/50 rounded-lg px-3 py-2"><span class="text-slate-300">Solo 401(k)</span><span class="text-amber-400 font-medium">$7,250-$10,875</span></div>
+            <div class="flex justify-between bg-slate-800/50 rounded-lg px-3 py-2"><span class="text-slate-300">S-Corp Election</span><span class="text-amber-400 font-medium">$4,350-$8,700</span></div>
+            <div class="flex justify-between bg-slate-800/50 rounded-lg px-3 py-2"><span class="text-slate-300">Augusta Rule</span><span class="text-amber-400 font-medium">$1,450-$2,175</span></div>
+            <div class="flex justify-between bg-slate-800/50 rounded-lg px-3 py-2"><span class="text-slate-300">QBI Deduction</span><span class="text-amber-400 font-medium">$1,740-$3,480</span></div>
+            <div class="flex justify-between bg-slate-800/50 rounded-lg px-3 py-2"><span class="text-slate-300">Accountable Plan</span><span class="text-amber-400 font-medium">$580-$870</span></div>
+            <div class="flex justify-between bg-slate-800/50 rounded-lg px-3 py-2"><span class="text-slate-300">Home Office</span><span class="text-amber-400 font-medium">$870-$1,450</span></div>
+            <div class="flex justify-between bg-slate-800/50 rounded-lg px-3 py-2"><span class="text-slate-300">Vehicle Section 179</span><span class="text-amber-400 font-medium">$2,320-$4,350</span></div>
+            <div class="flex justify-between bg-slate-800/50 rounded-lg px-3 py-2"><span class="text-slate-300">STR Loss Deductions</span><span class="text-amber-400 font-medium">$0-$11,600</span></div>
+          </div>
+          <p>Each strategy had a dollar value. Each had an implementation week. Each had the documentation required.</p>
+        </div>
+      </div>
+
+      <!-- Michelle & Trenton -->
+      <div class="reveal bg-slate-900/50 border border-slate-700/50 rounded-xl sm:rounded-2xl p-4 sm:p-8" style="transition-delay: 200ms">
+        <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-6">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 bg-amber-900/30 rounded-full flex items-center justify-center text-2xl">🧮</div>
+            <div>
+              <h3 class="text-lg font-semibold text-white">Michelle & Trenton</h3>
+              <p class="text-sm text-slate-400">$300K combined</p>
+            </div>
+          </div>
+          <div class="bg-slate-800/80 border border-slate-700/50 rounded-xl px-4 py-3 text-center sm:text-right">
+            <p class="text-xs text-slate-400 uppercase tracking-wider mb-1">Year 1 Value</p>
+            <p class="text-xl font-bold text-amber-400">$86K - $192K</p>
+          </div>
+        </div>
+        <div class="space-y-4 text-slate-300">
+          <p>They didn't want vague promises. They wanted the exact math.</p>
+          <p>Not "you could save money." Not "this works for most people."</p>
+          <p>They wanted to see where every dollar comes from. Line by line. Strategy by strategy.</p>
+          <p>At $300K combined income in San Francisco, they're in the <strong class="text-white">46% combined bracket</strong>. Every dollar of deductions saves 46 cents. That math changes everything.</p>
+          <p>Their wealth plan identified <strong class="text-white">8 strategies</strong> totaling $86,220-$192,050 in year-one value:</p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
+            <div class="flex justify-between bg-slate-800/50 rounded-lg px-3 py-2"><span class="text-slate-300">Solo 401(k) + Defined Benefit</span><span class="text-amber-400 font-medium">$31,740-$51,750</span></div>
+            <div class="flex justify-between bg-slate-800/50 rounded-lg px-3 py-2"><span class="text-slate-300">Short-Term Rental Strategy</span><span class="text-amber-400 font-medium">$23,000-$92,000</span></div>
+            <div class="flex justify-between bg-slate-800/50 rounded-lg px-3 py-2"><span class="text-slate-300">S-Corp Election</span><span class="text-amber-400 font-medium">$6,900-$13,800</span></div>
+            <div class="flex justify-between bg-slate-800/50 rounded-lg px-3 py-2"><span class="text-slate-300">Backdoor Roth IRA (both)</span><span class="text-amber-400 font-medium">$14,000 tax-free</span></div>
+            <div class="flex justify-between bg-slate-800/50 rounded-lg px-3 py-2"><span class="text-slate-300">W-4 Optimization</span><span class="text-amber-400 font-medium">+$10,500 cash flow</span></div>
+            <div class="flex justify-between bg-slate-800/50 rounded-lg px-3 py-2"><span class="text-slate-300">Home Office</span><span class="text-amber-400 font-medium">$2,300-$3,220</span></div>
+            <div class="flex justify-between bg-slate-800/50 rounded-lg px-3 py-2"><span class="text-slate-300">QBI Deduction</span><span class="text-amber-400 font-medium">$6,440-$13,800</span></div>
+            <div class="flex justify-between bg-slate-800/50 rounded-lg px-3 py-2"><span class="text-slate-300">HSA Maximum</span><span class="text-amber-400 font-medium">$1,840-$3,680</span></div>
+          </div>
+          <p class="text-slate-400 text-sm"><strong class="text-slate-300">Plus:</strong> 529 plan structure for their 9-month-old. Revocable living trust to protect assets. 75% Bitcoin allocation strategy with custody progression.</p>
+        </div>
+      </div>
+
+      <!-- Daniel -->
+      <div class="reveal bg-slate-900/50 border border-slate-700/50 rounded-xl sm:rounded-2xl p-4 sm:p-8" style="transition-delay: 300ms">
+        <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-6">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 bg-amber-900/30 rounded-full flex items-center justify-center text-2xl">📅</div>
+            <div>
+              <h3 class="text-lg font-semibold text-white">Daniel</h3>
+              <p class="text-sm text-slate-400">$250K/year</p>
+            </div>
+          </div>
+          <div class="bg-slate-800/80 border border-slate-700/50 rounded-xl px-4 py-3 text-center sm:text-right">
+            <p class="text-xs text-slate-400 uppercase tracking-wider mb-1">Year 1 Value</p>
+            <p class="text-xl font-bold text-amber-400">$55.9K - $68.3K</p>
+          </div>
+        </div>
+        <div class="space-y-4 text-slate-300">
+          <p>He'd researched for years. He knew about S-Corp elections. Solo 401(k)s. Augusta Rule. Cost segregation.</p>
+          <p>He didn't need more information. He needed a sequence.</p>
+          <p>Do this Monday. Do this Wednesday. Apply here Thursday. Wait 14 days. Then do this next.</p>
+          <p>The order matters more than the strategies. Wrong order can cost you. Right order creates immediate results.</p>
+          <p>His wealth plan broke it into a <strong class="text-white">30-Day Launch Checklist</strong>:</p>
+          <p class="text-slate-400 text-sm"><strong class="text-slate-300">Week 1:</strong> Schedule CPA consultation for S-Corp election timing. Determine Q2 vs Q3 start date. Review PLLC operating agreement.</p>
+          <p class="text-slate-400 text-sm"><strong class="text-slate-300">Week 2:</strong> Create Accountable Plan documentation. Measure home office. Install vehicle tracking app.</p>
+          <p class="text-slate-400 text-sm"><strong class="text-slate-300">Week 3:</strong> Increase Bitcoin DCA to $1,365/month. Open Solo 401(k). Review brokerage for tax-loss harvesting.</p>
+          <p class="text-slate-400 text-sm"><strong class="text-slate-300">Week 4:</strong> Research STR market. Connect with property owners. Launch cohosting outreach.</p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm mt-2">
+            <div class="flex justify-between bg-slate-800/50 rounded-lg px-3 py-2"><span class="text-slate-300">S-Corp Election</span><span class="text-amber-400 font-medium">$4,500-$6,000</span></div>
+            <div class="flex justify-between bg-slate-800/50 rounded-lg px-3 py-2"><span class="text-slate-300">Accountable Plan</span><span class="text-amber-400 font-medium">$1,800-$2,400</span></div>
+            <div class="flex justify-between bg-slate-800/50 rounded-lg px-3 py-2"><span class="text-slate-300">Solo 401(k)</span><span class="text-amber-400 font-medium">$12,000-$15,000</span></div>
+            <div class="flex justify-between bg-slate-800/50 rounded-lg px-3 py-2"><span class="text-slate-300">Augusta Rule</span><span class="text-amber-400 font-medium">$2,800-$3,600</span></div>
+            <div class="flex justify-between bg-slate-800/50 rounded-lg px-3 py-2"><span class="text-slate-300">Home Office</span><span class="text-amber-400 font-medium">$1,400-$1,800</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Elizabeth -->
+      <div class="reveal bg-slate-900/50 border border-slate-700/50 rounded-xl sm:rounded-2xl p-4 sm:p-8" style="transition-delay: 400ms">
+        <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-6">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 bg-amber-900/30 rounded-full flex items-center justify-center text-2xl">📋</div>
+            <div>
+              <h3 class="text-lg font-semibold text-white">Elizabeth</h3>
+              <p class="text-sm text-slate-400">$150K/year</p>
+            </div>
+          </div>
+          <div class="bg-slate-800/80 border border-slate-700/50 rounded-xl px-4 py-3 text-center sm:text-right">
+            <p class="text-xs text-slate-400 uppercase tracking-wider mb-1">Year 1 Value</p>
+            <p class="text-xl font-bold text-amber-400">$28K - $62K</p>
+          </div>
+        </div>
+        <div class="space-y-4 text-slate-300">
+          <p>She was paying $43,000/year in taxes. After restructuring: $28,500.</p>
+          <p>That's <strong class="text-white">$14,500 back every single year.</strong></p>
+          <p>But here's what made her plan different: she had almost no liquid capital to deploy. $0-$2,000 available. $50K+ in non-mortgage debt. Cash flow matching expenses with nothing left over.</p>
+          <p>Most advice assumes you have money to invest. She needed strategies that <strong class="text-white">cost nothing to implement</strong>.</p>
+          <p>Her wealth plan prioritized zero-capital moves first:</p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
+            <div class="flex justify-between bg-slate-800/50 rounded-lg px-3 py-2"><span class="text-slate-300">Accountable Plan Reimbursements</span><span class="text-amber-400 font-medium">$2,500-$5,500</span></div>
+            <div class="flex justify-between bg-slate-800/50 rounded-lg px-3 py-2"><span class="text-slate-300">Home Office Deduction</span><span class="text-amber-400 font-medium">$1,500-$3,000</span></div>
+            <div class="flex justify-between bg-slate-800/50 rounded-lg px-3 py-2"><span class="text-slate-300">Augusta Rule (12-14 days)</span><span class="text-amber-400 font-medium">$3,000-$6,000</span></div>
+            <div class="flex justify-between bg-slate-800/50 rounded-lg px-3 py-2"><span class="text-slate-300">W-4 Optimization</span><span class="text-amber-400 font-medium">+$3,600 cash flow</span></div>
+            <div class="flex justify-between bg-slate-800/50 rounded-lg px-3 py-2"><span class="text-slate-300">Vehicle Deduction</span><span class="text-amber-400 font-medium">$2,000-$6,000</span></div>
+          </div>
+          <p class="text-slate-400 text-sm italic">All strategies above cost $0 to implement.</p>
+          <p>Then the plan showed her how to use those tax savings to fund the next phase: <strong class="text-white">cohosting</strong> (manage others' STR properties for 20-25% revenue share, zero acquisition cost), projected at $3,000-$12,000 year-one profit.</p>
+          <p class="text-slate-400 text-sm"><strong class="text-slate-300">30-Day Launch Checklist:</strong> Week 1: Confirm LLC, open business checking, sign Accountable Plan. Week 2: Augusta Rule calendar, home office documentation. Week 3: W-4 adjustment, Solo 401(k) setup. Week 4: First cohosting outreach.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Disclaimer -->
+    <p class="text-xs text-slate-500 mt-10 max-w-3xl mx-auto text-center">*Year 1 Value includes estimated tax savings, cash flow improvements, and tax-advantaged contributions based on each person's income, filing status, and marginal tax bracket. Individual results vary based on your specific situation.</p>
+
+    <!-- Bottom CTA -->
+    <div class="text-center mt-12">
+      <p class="text-lg text-slate-300 mb-6">Different situations. Different numbers. <strong class="text-white">Same process.</strong></p>
+      <p class="text-slate-400 mb-8">One of these will click for you. Then you'll know exactly where to focus.</p>
+      <a href="#pricing" class="btn-glow inline-flex items-center gap-2 px-8 py-4 text-lg font-bold rounded-full transition-all shadow-lg" style="background: linear-gradient(to right, #f59e0b, #d97706); color: #0f172a; box-shadow: 0 4px 20px rgba(245, 158, 11, 0.3);">
+        See The Process Inside The Challenge
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     TESTIMONIALS / SUCCESS STORIES
+     ═══════════════════════════════════════════════════ -->
+<section class="py-10 sm:py-24 bg-[#0a0a0f]">
+  <div class="max-w-6xl mx-auto px-4">
+    <!-- Header -->
+    <div class="text-center max-w-3xl mx-auto mb-6 sm:mb-16">
+      <p class="text-xs sm:text-sm font-semibold text-amber-400 uppercase tracking-wider mb-2 sm:mb-3">Success Stories</p>
+      <h2 class="font-display text-2xl sm:text-4xl font-semibold text-white leading-tight">
+        4,400+ People Have Transformed Their Financial Future
+      </h2>
+    </div>
+
+    <!-- Cards -->
+    <div class="grid md:grid-cols-3 gap-4 sm:gap-6">
+      <!-- Card 1 -->
+      <div class="reveal card-glow relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl sm:rounded-3xl p-5 sm:p-8 shadow-xl border border-slate-700/30 quote-decoration">
+        <div class="flex gap-1 text-amber-400 mb-6">
+          <svg class="w-5 h-5"><use href="#star-icon"/></svg>
+          <svg class="w-5 h-5"><use href="#star-icon"/></svg>
+          <svg class="w-5 h-5"><use href="#star-icon"/></svg>
+          <svg class="w-5 h-5"><use href="#star-icon"/></svg>
+          <svg class="w-5 h-5"><use href="#star-icon"/></svg>
+        </div>
+        <p class="text-slate-300 leading-relaxed mb-8 relative z-10">
+          "We're both full-time & have a daughter. We didn't wanna just stumble around in the dark. If you wanna get out of the 9-to-5, here's how to do it. It's such a blessing."
+        </p>
+        <div class="flex items-center gap-4">
+          <img src="./assets/images/01-testimonial-stephen-ellie.webp" alt="Stephen & Ellie" class="w-12 h-12 rounded-full object-cover ring-2 ring-amber-500/20" width="48" height="48" loading="lazy" decoding="async">
+          <div>
+            <div class="font-semibold text-white">Stephen & Ellie</div>
+            <div class="text-sm text-slate-400">Full-time Nurses, Kansas City</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="reveal card-glow relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl sm:rounded-3xl p-5 sm:p-8 shadow-xl border border-slate-700/30 quote-decoration" style="transition-delay: 100ms">
+        <div class="flex gap-1 text-amber-400 mb-6">
+          <svg class="w-5 h-5"><use href="#star-icon"/></svg>
+          <svg class="w-5 h-5"><use href="#star-icon"/></svg>
+          <svg class="w-5 h-5"><use href="#star-icon"/></svg>
+          <svg class="w-5 h-5"><use href="#star-icon"/></svg>
+          <svg class="w-5 h-5"><use href="#star-icon"/></svg>
+        </div>
+        <p class="text-slate-300 leading-relaxed mb-8 relative z-10">
+          "When we talk about Preston doing an absolute masterclass on how to do this... I couldn't give it a bigger endorsement. It's about as legit as it gets."
+        </p>
+        <div class="flex items-center gap-4">
+          <img src="./assets/images/02-testimonial-rob.webp" alt="Rob" class="w-12 h-12 rounded-full object-cover ring-2 ring-amber-500/20" width="48" height="48" loading="lazy" decoding="async">
+          <div>
+            <div class="font-semibold text-white">Rob</div>
+            <div class="text-sm text-slate-400">Marketing Director, Louisville</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="reveal card-glow relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl sm:rounded-3xl p-5 sm:p-8 shadow-xl border border-slate-700/30 quote-decoration" style="transition-delay: 200ms">
+        <div class="flex gap-1 text-amber-400 mb-6">
+          <svg class="w-5 h-5"><use href="#star-icon"/></svg>
+          <svg class="w-5 h-5"><use href="#star-icon"/></svg>
+          <svg class="w-5 h-5"><use href="#star-icon"/></svg>
+          <svg class="w-5 h-5"><use href="#star-icon"/></svg>
+          <svg class="w-5 h-5"><use href="#star-icon"/></svg>
+        </div>
+        <p class="text-slate-300 leading-relaxed mb-8 relative z-10">
+          "I've never been someone who just 'gets it' the first time. It has been leaps and bounds, and worth it. Every step is well thought out."
+        </p>
+        <div class="flex items-center gap-4">
+          <img src="./assets/images/03-testimonial-kristopher.webp" alt="Kristopher" class="w-12 h-12 rounded-full object-cover ring-2 ring-amber-500/20" width="48" height="48" loading="lazy" decoding="async">
+          <div>
+            <div class="font-semibold text-white">Kristopher Bamford</div>
+            <div class="text-sm text-slate-400">Husband & Dad, Louisiana</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     VERIFY IT YOURSELF SECTION
+     ═══════════════════════════════════════════════════ -->
+<section class="py-10 sm:py-24 bg-gradient-to-br from-slate-900/50 via-[#0a0a0f] to-amber-900/10">
+  <div class="max-w-3xl mx-auto px-4">
+    <div class="reveal text-center mb-6 sm:mb-10">
+      <p class="text-xs sm:text-sm font-semibold text-amber-400 uppercase tracking-wider mb-2 sm:mb-3">Verify It Yourself</p>
+      <h2 class="font-display text-xl sm:text-3xl md:text-4xl font-semibold text-white leading-tight">
+        You Don't Have To Trust Us. You Can Check.
+      </h2>
+    </div>
+
+    <div class="reveal bg-slate-900/50 border border-slate-700/50 rounded-xl sm:rounded-2xl p-4 sm:p-8">
+      <p class="text-lg text-white font-medium mb-6">Here are 3 things you can verify right now, depending on your situation:</p>
+
+      <div class="space-y-6 mb-8">
+        <!-- W-2 -->
+        <div class="border-l-4 border-amber-500/50 bg-slate-800/50 rounded-r-lg p-4">
+          <p class="text-amber-400 font-semibold mb-2">If you're W-2:</p>
+          <p class="text-slate-300">
+            Pull up your most recent paystub. Find your federal withholding. Multiply by your pay periods. Compare to your actual tax liability from last year's return. If there's a gap, that's cash flow you're giving away interest-free.
+          </p>
+        </div>
+
+        <!-- Business / 1099 -->
+        <div class="border-l-4 border-amber-500/50 bg-slate-800/50 rounded-r-lg p-4">
+          <p class="text-amber-400 font-semibold mb-2">If you own a business or have 1099 income:</p>
+          <p class="text-slate-300">
+            Are you operating as a sole proprietor or single-member LLC paying 15.3% self-employment tax on all your profit? An S-Corp election splits income into salary and distributions. Distributions aren't subject to SE tax. The math is specific to your income, but the gap is usually <strong class="text-white">$4,000–$10,000+</strong> annually.
+          </p>
+        </div>
+
+        <!-- Business Expenses -->
+        <div class="border-l-4 border-amber-500/50 bg-slate-800/50 rounded-r-lg p-4">
+          <p class="text-amber-400 font-semibold mb-2">If you have business expenses:</p>
+          <p class="text-slate-300">
+            Home office. Vehicle mileage. Phone and internet. Equipment. Each has a specific deduction value based on your usage. Most people leave <strong class="text-white">$2,000–$6,000</strong> on the table annually because they don't track it correctly or don't know the documentation requirements.
+          </p>
+        </div>
+      </div>
+
+      <div class="bg-amber-900/20 border border-amber-500/30 rounded-lg p-4 mb-6">
+        <p class="text-white font-medium">
+          That's a free lesson. If any one of these applies to you, you just found <strong class="text-amber-400">$2,000–$10,000</strong>. That alone pays for this event 50x over.
+        </p>
+      </div>
+
+      <p class="text-lg text-slate-300">
+        These are <strong class="text-white">3 of the 40+ strategies</strong> we cover. The challenge shows you which ones apply to your income and in what order.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     PROBLEM SECTION
+     ═══════════════════════════════════════════════════ -->
+<section class="py-12 sm:py-24 bg-[#0a0a0f]">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+      <!-- Left: Text -->
+      <div class="reveal">
+        <h2 class="font-display text-3xl sm:text-4xl font-semibold text-white mb-6">
+          You Already Know What You're <em class="text-amber-400 not-italic">Supposed</em> to Do
+        </h2>
+        <p class="text-lg text-slate-400 mb-6">
+          Every guru online says the same thing. You've heard it all. And it's not that you don't get it... <strong class="text-white">It's just not practical when you're actually trying to do it.</strong>
+        </p>
+
+        <div class="space-y-4 mb-8">
+          <div class="flex gap-4 items-start">
+            <span class="flex-shrink-0 w-6 h-6 rounded-full bg-rose-900/30 text-rose-400 flex items-center justify-center text-sm">✕</span>
+            <p class="text-slate-400">Every raise comes with a bigger tax bill. You work more, earn more, and end up with less.</p>
+          </div>
+          <div class="flex gap-4 items-start">
+            <span class="flex-shrink-0 w-6 h-6 rounded-full bg-rose-900/30 text-rose-400 flex items-center justify-center text-sm">✕</span>
+            <p class="text-slate-400">Big financial goals keep getting pushed back because there's never "enough" to start.</p>
+          </div>
+          <div class="flex gap-4 items-start">
+            <span class="flex-shrink-0 w-6 h-6 rounded-full bg-rose-900/30 text-rose-400 flex items-center justify-center text-sm">✕</span>
+            <p class="text-slate-400">Every money decision feels like a coin flip. Pay off debt or invest? Max out 401k or save for a rental?</p>
+          </div>
+          <div class="flex gap-4 items-start">
+            <span class="flex-shrink-0 w-6 h-6 rounded-full bg-rose-900/30 text-rose-400 flex items-center justify-center text-sm">✕</span>
+            <p class="text-slate-400">You're hoping it'll work out instead of KNOWING it will.</p>
+          </div>
+        </div>
+
+        <div class="p-6 bg-slate-800/50 rounded-2xl border-l-4 border-amber-500">
+          <p class="text-slate-300">
+            <strong class="text-white">We're not going to give you theory.</strong> We're going step by step. Detailed how-to. Not more Rich Dad Poor Dad advice. Actual implementation.
+          </p>
+        </div>
+      </div>
+
+      <!-- Right: Visual -->
+      <div class="reveal grid grid-cols-2 gap-4" style="transition-delay: 200ms">
+        <div class="space-y-4">
+          <div class="p-4 bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl shadow-lg border border-slate-700/30 animate-float" style="--rotate: 2deg">
+            <span class="text-2xl mb-2 block">💭</span>
+            <span class="text-sm text-slate-400">"Think like a millionaire"</span>
+          </div>
+          <div class="p-4 bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl shadow-lg border border-slate-700/30 animate-float animate-float-delay-1" style="--rotate: -1deg">
+            <span class="text-2xl mb-2 block">📊</span>
+            <span class="text-sm text-slate-400">"Assets vs. Liabilities"</span>
+          </div>
+          <div class="p-4 bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl shadow-lg border border-slate-700/30 animate-float animate-float-delay-2" style="--rotate: 1deg">
+            <span class="text-2xl mb-2 block">💰</span>
+            <span class="text-sm text-slate-400">"Make your money work"</span>
+          </div>
+        </div>
+        <div class="space-y-4 mt-8">
+          <div class="p-4 bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl shadow-lg border border-slate-700/30 animate-float animate-float-delay-3" style="--rotate: -2deg">
+            <span class="text-2xl mb-2 block">📚</span>
+            <span class="text-sm text-slate-400">"Read Rich Dad Poor Dad"</span>
+          </div>
+          <div class="p-4 bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl shadow-lg border border-slate-700/30 animate-float animate-float-delay-1" style="--rotate: 2deg">
+            <span class="text-2xl mb-2 block">☕</span>
+            <span class="text-sm text-slate-400">"Cut your daily coffee"</span>
+          </div>
+          <div class="p-4 bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl shadow-lg border border-slate-700/30 animate-float animate-float-delay-2" style="--rotate: -1deg">
+            <span class="text-2xl mb-2 block">🏃</span>
+            <span class="text-sm text-slate-400">"Quit your job"</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     STORY SECTION - Preston's Journey
+     ═══════════════════════════════════════════════════ -->
+<section class="py-12 sm:py-24 bg-slate-900/30">
+  <div class="max-w-6xl mx-auto px-4">
+    <!-- Header -->
+    <div class="text-center max-w-3xl mx-auto mb-12">
+      <p class="text-sm font-semibold text-amber-400 uppercase tracking-wider mb-3">The Journey</p>
+      <h2 class="font-display text-3xl sm:text-4xl font-semibold text-white">
+        You're Making More Money Than Ever... Why Does It Feel Like You're Falling Behind?
+      </h2>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-12 items-start">
+      <!-- Images -->
+      <div class="reveal grid grid-cols-2 gap-4">
+        <div class="rounded-2xl overflow-hidden shadow-lg">
+          <img src="./assets/images/08-preston-bridget-early.webp" alt="Preston in parents' basement" class="w-full h-48 object-cover" width="300" height="192" loading="lazy" decoding="async">
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-lg">
+          <img src="./assets/images/07-preston-wife-bridget.webp" alt="Preston with wife Bridget" class="w-full h-48 object-cover" width="300" height="192" loading="lazy" decoding="async">
+        </div>
+        <div class="col-span-2 rounded-2xl overflow-hidden shadow-lg">
+          <img src="./assets/images/10-preston-family.webp" alt="Preston family" class="w-full h-64 object-cover" width="600" height="256" loading="lazy" decoding="async">
+        </div>
+      </div>
+
+      <!-- Story Text -->
+      <div class="reveal space-y-6" style="transition-delay: 100ms">
+        <p class="text-slate-300">Hi, my name's Preston. I was in my 20s doing everything "right" with money but getting nowhere.</p>
+
+        <p class="text-slate-300">I was living with my wife in my parents' basement as I was struggling with money at that time. My wife Bridget was working long shifts as a respiratory therapist. I was in sales.</p>
+
+        <p class="text-slate-300">We were both doing what we thought we were "supposed to do" but somehow still feeling financially stuck.</p>
+
+        <!-- Pain Points -->
+        <ul class="space-y-3 py-5 px-6 pain-box rounded-2xl">
+          <li class="flex gap-3 text-sm text-slate-300">
+            <span class="flex-shrink-0 w-5 h-5 rounded-full bg-rose-500/20 text-rose-400 flex items-center justify-center text-xs font-bold">✗</span>
+            Every raise came with a bigger tax bill. We worked more, earned more, and ended up with less.
+          </li>
+          <li class="flex gap-3 text-sm text-slate-300">
+            <span class="flex-shrink-0 w-5 h-5 rounded-full bg-rose-500/20 text-rose-400 flex items-center justify-center text-xs font-bold">✗</span>
+            We talked about "someday" having nice things. Someday became our favorite word.
+          </li>
+          <li class="flex gap-3 text-sm text-slate-300">
+            <span class="flex-shrink-0 w-5 h-5 rounded-full bg-rose-500/20 text-rose-400 flex items-center justify-center text-xs font-bold">✗</span>
+            We tried investing. Roth IRA, index funds, even crypto. No clue if we were doing it right.
+          </li>
+          <li class="flex gap-3 text-sm text-slate-300">
+            <span class="flex-shrink-0 w-5 h-5 rounded-full bg-rose-500/20 text-rose-400 flex items-center justify-center text-xs font-bold">✗</span>
+            Every money decision was a coin flip. Should we pay off the car loan or max out the 401k?
+          </li>
+        </ul>
+
+        <p class="text-slate-300"><strong class="text-white">None of this means you lack discipline or intelligence.</strong> It just means... You're Doing What Everyone Else Does With Money. So, you also struggle like everyone else.</p>
+
+        <p class="text-slate-300">Until... we started learning everything we could about how money really worked. We changed the plan and...</p>
+
+        <!-- Results -->
+        <div class="p-6 results-box rounded-2xl">
+          <h4 class="font-bold text-emerald-400 mb-4 text-lg">The Results</h4>
+          <ul class="space-y-3">
+            <li class="flex gap-3 text-sm text-slate-300">
+              <span class="flex-shrink-0 w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xs font-bold">✓</span>
+              By 28, we became financially free. We both quit our jobs.
+            </li>
+            <li class="flex gap-3 text-sm text-slate-300">
+              <span class="flex-shrink-0 w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xs font-bold">✓</span>
+              Built a $20M+ investment portfolio from scratch
+            </li>
+            <li class="flex gap-3 text-sm text-slate-300">
+              <span class="flex-shrink-0 w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xs font-bold">✓</span>
+              Now we choose when and IF we want to work
+            </li>
+            <li class="flex gap-3 text-sm text-slate-300">
+              <span class="flex-shrink-0 w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xs font-bold">✓</span>
+              Setting up our family for generational wealth
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     FRAMEWORK SECTION
+     ═══════════════════════════════════════════════════ -->
+<section class="py-12 sm:py-24 bg-[#0a0a0f]">
+  <div class="max-w-6xl mx-auto px-4">
+    <!-- Header -->
+    <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-16">
+      <p class="text-sm font-semibold text-amber-400 uppercase tracking-wider mb-3">The System</p>
+      <h2 class="font-display text-3xl sm:text-4xl font-semibold text-white">
+        The 5-Pillar Wealth Building Framework
+      </h2>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-12 items-start">
+      <!-- Left: Image + Intro -->
+      <div class="reveal">
+        <p class="text-lg text-slate-400 mb-6">
+          <strong class="text-white">I've broken wealth building into 5 specific pillars that stack on each other.</strong> Most people try to do everything at once and end up doing nothing.
+        </p>
+        <p class="text-slate-400 mb-8">
+          This framework gives you the exact order of operations - which moves to make first, second, and third.
+        </p>
+        <div class="rounded-2xl overflow-hidden shadow-xl">
+          <img src="./assets/images/06-preston-basement.webp" alt="Preston Seo" class="w-full" width="500" height="400" loading="lazy" decoding="async">
+        </div>
+      </div>
+
+      <!-- Right: Steps -->
+      <div class="space-y-4">
+        <div class="reveal p-6 bg-gradient-to-r from-slate-800 to-slate-800/40 rounded-2xl shadow-lg hover:shadow-xl hover:from-slate-800 hover:to-slate-700/40 transition-all">
+          <div class="flex items-start gap-4">
+            <span class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-amber-500/20 to-amber-600/10 rounded-xl flex items-center justify-center text-2xl shadow-inner">🏦</span>
+            <div>
+              <h4 class="font-semibold text-white mb-1">1. Cut Taxes Legally</h4>
+              <p class="text-slate-400 text-sm">At the base, you cut taxes legally so you keep 50-70% more of what you already earn.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal p-6 bg-gradient-to-r from-slate-800 to-slate-800/40 rounded-2xl shadow-lg hover:shadow-xl hover:from-slate-800 hover:to-slate-700/40 transition-all" style="transition-delay: 100ms">
+          <div class="flex items-start gap-4">
+            <span class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-amber-500/20 to-amber-600/10 rounded-xl flex items-center justify-center text-2xl shadow-inner">💳</span>
+            <div>
+              <h4 class="font-semibold text-white mb-1">2. Eliminate High-Interest Debt</h4>
+              <p class="text-slate-400 text-sm">After that, you eliminate high-interest debt so your money stops bleeding out every month.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal p-6 bg-gradient-to-r from-slate-800 to-slate-800/40 rounded-2xl shadow-lg hover:shadow-xl hover:from-slate-800 hover:to-slate-700/40 transition-all" style="transition-delay: 200ms">
+          <div class="flex items-start gap-4">
+            <span class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-amber-500/20 to-amber-600/10 rounded-xl flex items-center justify-center text-2xl shadow-inner">💵</span>
+            <div>
+              <h4 class="font-semibold text-white mb-1">3. Create $5K-$15K/Month Income</h4>
+              <p class="text-slate-400 text-sm">Then, create income streams that grow without putting in more hours.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal p-6 bg-gradient-to-r from-slate-800 to-slate-800/40 rounded-2xl shadow-lg hover:shadow-xl hover:from-slate-800 hover:to-slate-700/40 transition-all" style="transition-delay: 300ms">
+          <div class="flex items-start gap-4">
+            <span class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-amber-500/20 to-amber-600/10 rounded-xl flex items-center justify-center text-2xl shadow-inner">🏗️</span>
+            <div>
+              <h4 class="font-semibold text-white mb-1">4. Tax-Free Investment Vehicles</h4>
+              <p class="text-slate-400 text-sm">Use investment vehicles that grow tax-free and compound over time.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal p-6 bg-gradient-to-r from-slate-800 to-slate-800/40 rounded-2xl shadow-lg hover:shadow-xl hover:from-slate-800 hover:to-slate-700/40 transition-all" style="transition-delay: 400ms">
+          <div class="flex items-start gap-4">
+            <span class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-amber-500/20 to-amber-600/10 rounded-xl flex items-center justify-center text-2xl shadow-inner">🛡️</span>
+            <div>
+              <h4 class="font-semibold text-white mb-1">5. Protect & Pass It On</h4>
+              <p class="text-slate-400 text-sm">And finally, you protect it all through the right entity structures so you can pass it across generations!</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Desktop: $100K Result Box (after step 5) -->
+        <div class="reveal hidden lg:block mt-6 p-8 bg-slate-900/80 rounded-2xl border border-slate-700/50 shadow-xl" style="transition-delay: 500ms">
+          <p class="text-slate-400 text-sm text-center mb-2">This Way, It's Realistic For Anyone To Add</p>
+          <div class="text-4xl xl:text-5xl font-bold text-center mb-2" style="background: linear-gradient(135deg, #f59e0b, #fbbf24, #f59e0b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">+$100,000</div>
+          <p class="text-slate-300 text-center text-sm">to your net worth in 12 months</p>
+          <p class="text-xs text-slate-500 text-center mt-2">(Most students end up adding much more... but $100K is the baseline we aim for)</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile: Result (full-width at bottom) -->
+    <div class="reveal lg:hidden mt-12 text-center p-8 bg-gradient-to-r from-slate-800 via-slate-800/90 to-slate-900 rounded-3xl border border-amber-500/20 shadow-[0_0_60px_rgba(245,158,11,0.1)]">
+      <p class="text-slate-300 mb-3 text-lg">This Way, It's Realistic For Anyone To Add</p>
+      <div class="text-5xl sm:text-7xl font-bold text-shimmer mb-3">+$100,000</div>
+      <p class="text-slate-300 text-lg">to your net worth in 12 months</p>
+      <p class="text-sm text-slate-400 mt-3">(Most students end up adding much more... but $100K is the baseline we aim for)</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     3-DAY CHALLENGE AGENDA
+     ═══════════════════════════════════════════════════ -->
+<section class="py-12 sm:py-24 bg-slate-900/30">
+  <div class="max-w-6xl mx-auto px-4">
+    <!-- Header -->
+    <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-16">
+      <p class="text-sm font-semibold text-amber-400 uppercase tracking-wider mb-3">The Challenge</p>
+      <h2 class="font-display text-3xl sm:text-4xl font-semibold text-white">
+        3 Days to Add $100K to Your Net Worth
+      </h2>
+    </div>
+
+    <!-- Days Grid -->
+    <div class="grid lg:grid-cols-3 gap-6">
+      <!-- Day 1 -->
+      <div class="reveal card-glow bg-gradient-to-b from-slate-800 to-slate-900 rounded-3xl overflow-hidden">
+        <div class="p-6 bg-gradient-to-r from-amber-500/10 to-transparent border-b border-amber-500/20">
+          <span class="text-xs font-semibold text-amber-400 uppercase tracking-wider">Day 1</span>
+          <h3 class="text-xl font-semibold text-white mt-1">Find & Fix the Leaks</h3>
+        </div>
+        <div class="p-6 space-y-3">
+          <div class="p-3 bg-slate-800/50 rounded-xl hover:bg-slate-700/50 transition-colors cursor-default">
+            <span class="text-xs text-amber-400 font-medium">Session 1</span>
+            <p class="text-sm text-slate-300 mt-1">The Middle-Class Money Trap: Why Working Harder Isn't Making You Richer</p>
+          </div>
+          <div class="p-3 bg-slate-800/50 rounded-xl hover:bg-slate-700/50 transition-colors cursor-default">
+            <span class="text-xs text-amber-400 font-medium">Session 2</span>
+            <p class="text-sm text-slate-300 mt-1">Why Your 401(k) Is Bleeding Money & What To Do Instead</p>
+          </div>
+          <div class="p-3 bg-slate-800/50 rounded-xl hover:bg-slate-700/50 transition-colors cursor-default">
+            <span class="text-xs text-amber-400 font-medium">Session 3</span>
+            <p class="text-sm text-slate-300 mt-1">Debt Elimination & Credit Mastery</p>
+          </div>
+          <div class="p-3 bg-slate-800/50 rounded-xl hover:bg-slate-700/50 transition-colors cursor-default">
+            <span class="text-xs text-amber-400 font-medium">Session 4</span>
+            <p class="text-sm text-slate-300 mt-1">Entity Structure & Business Credit Expert Deep Dive</p>
+          </div>
+          <div class="p-3 bg-gradient-to-r from-amber-900/30 to-amber-800/20 rounded-xl border border-amber-500/40 hover:border-amber-400/60 transition-colors">
+            <span class="inline-block px-2 py-0.5 text-xs text-amber-900 font-bold bg-gradient-to-r from-amber-400 to-amber-500 rounded-full mb-1">VIP Only</span>
+            <p class="text-sm text-amber-200 mt-1">Roundtable Q&A with Preston</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 2 -->
+      <div class="reveal card-glow bg-gradient-to-b from-slate-800 to-slate-900 rounded-3xl overflow-hidden" style="transition-delay: 100ms">
+        <div class="p-6 bg-gradient-to-r from-amber-500/10 to-transparent border-b border-amber-500/20">
+          <span class="text-xs font-semibold text-amber-400 uppercase tracking-wider">Day 2</span>
+          <h3 class="text-xl font-semibold text-white mt-1">Multiply Your Wealth</h3>
+        </div>
+        <div class="p-6 space-y-3">
+          <div class="p-3 bg-slate-800/50 rounded-xl hover:bg-slate-700/50 transition-colors cursor-default">
+            <span class="text-xs text-amber-400 font-medium">Session 5</span>
+            <p class="text-sm text-slate-300 mt-1">The W-2 Taxes Playbook: Stop Losing Half Your Income</p>
+          </div>
+          <div class="p-3 bg-slate-800/50 rounded-xl hover:bg-slate-700/50 transition-colors cursor-default">
+            <span class="text-xs text-amber-400 font-medium">Session 6</span>
+            <p class="text-sm text-slate-300 mt-1">The Investor Playbook: Build Wealth Without Paying Taxes</p>
+          </div>
+          <div class="p-3 bg-slate-800/50 rounded-xl hover:bg-slate-700/50 transition-colors cursor-default">
+            <span class="text-xs text-amber-400 font-medium">Session 7</span>
+            <p class="text-sm text-slate-300 mt-1">100% Tax-Free Airbnb Business (No Property Required)</p>
+          </div>
+          <div class="p-3 bg-slate-800/50 rounded-xl hover:bg-slate-700/50 transition-colors cursor-default">
+            <span class="text-xs text-amber-400 font-medium">Session 8</span>
+            <p class="text-sm text-slate-300 mt-1">The Complete Wealth Acceleration System</p>
+          </div>
+          <div class="p-3 bg-gradient-to-r from-amber-900/30 to-amber-800/20 rounded-xl border border-amber-500/40 hover:border-amber-400/60 transition-colors">
+            <span class="inline-block px-2 py-0.5 text-xs text-amber-900 font-bold bg-gradient-to-r from-amber-400 to-amber-500 rounded-full mb-1">VIP Only</span>
+            <p class="text-sm text-amber-200 mt-1">Roundtable Q&A with Preston</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 3 -->
+      <div class="reveal card-glow bg-gradient-to-b from-slate-800 to-slate-900 rounded-3xl overflow-hidden" style="transition-delay: 200ms">
+        <div class="p-6 bg-gradient-to-r from-amber-500/10 to-transparent border-b border-amber-500/20">
+          <span class="text-xs font-semibold text-amber-400 uppercase tracking-wider">Day 3</span>
+          <h3 class="text-xl font-semibold text-white mt-1">Protect & Scale</h3>
+        </div>
+        <div class="p-6 space-y-3">
+          <div class="p-3 bg-slate-800/50 rounded-xl hover:bg-slate-700/50 transition-colors cursor-default">
+            <span class="text-xs text-amber-400 font-medium">Session 9</span>
+            <p class="text-sm text-slate-300 mt-1">Advanced Tax Optimization Expert Session</p>
+          </div>
+          <div class="p-3 bg-slate-800/50 rounded-xl hover:bg-slate-700/50 transition-colors cursor-default">
+            <span class="text-xs text-amber-400 font-medium">Session 10</span>
+            <p class="text-sm text-slate-300 mt-1">Your 12-Month Wealth Implementation Roadmap</p>
+          </div>
+          <div class="p-3 bg-slate-800/50 rounded-xl hover:bg-slate-700/50 transition-colors cursor-default">
+            <span class="text-xs text-amber-400 font-medium">Session 11</span>
+            <p class="text-sm text-slate-300 mt-1">How Students Hit $100K+ Net Worth (Real Numbers)</p>
+          </div>
+          <div class="p-3 bg-slate-800/50 rounded-xl hover:bg-slate-700/50 transition-colors cursor-default">
+            <span class="text-xs text-amber-400 font-medium">Session 12</span>
+            <p class="text-sm text-slate-300 mt-1">Your Next Steps and Beyond</p>
+          </div>
+          <div class="p-3 bg-gradient-to-r from-amber-900/30 to-amber-800/20 rounded-xl border border-amber-500/40 hover:border-amber-400/60 transition-colors">
+            <span class="inline-block px-2 py-0.5 text-xs text-amber-900 font-bold bg-gradient-to-r from-amber-400 to-amber-500 rounded-full mb-1">VIP Only</span>
+            <p class="text-sm text-amber-200 mt-1">Roundtable Q&A with Preston</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     WHEN WHERE WHY SECTION
+     ═══════════════════════════════════════════════════ -->
+<section class="py-12 bg-[#0a0a0f]">
+  <div class="max-w-5xl mx-auto px-4">
+    <div class="grid md:grid-cols-3 gap-6">
+      <!-- When -->
+      <div class="reveal bg-slate-900/50 border border-slate-700/50 rounded-2xl p-6 text-center">
+        <div class="text-4xl mb-4">📅</div>
+        <h3 class="text-lg font-semibold text-white mb-2">When</h3>
+        <p class="text-amber-400 font-medium mb-1">January 30 - February 1, 2026</p>
+        <p class="text-sm text-slate-400">Starting From 10 AM EST | 4-6 Hours Daily</p>
+      </div>
+
+      <!-- Where -->
+      <div class="reveal bg-slate-900/50 border border-slate-700/50 rounded-2xl p-6 text-center" style="transition-delay: 100ms">
+        <div class="text-4xl mb-4">💻</div>
+        <h3 class="text-lg font-semibold text-white mb-2">Where</h3>
+        <p class="text-amber-400 font-medium mb-1">Streaming Online on Zoom</p>
+        <p class="text-sm text-slate-400">Join from anywhere. We'll send you a private link.</p>
+      </div>
+
+      <!-- Why -->
+      <div class="reveal bg-slate-900/50 border border-slate-700/50 rounded-2xl p-6 text-center" style="transition-delay: 200ms">
+        <div class="text-4xl mb-4">🎯</div>
+        <h3 class="text-lg font-semibold text-white mb-2">Why</h3>
+        <p class="text-amber-400 font-medium mb-1">$100K+ Net Worth</p>
+        <p class="text-sm text-slate-400">Cut taxes, eliminate debt, build $5K-$15K monthly income.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     DETAILED SESSIONS BREAKDOWN
+     ═══════════════════════════════════════════════════ -->
+<section class="py-12 sm:py-24 bg-[#0a0a0f]">
+  <div class="max-w-4xl mx-auto px-4">
+    <!-- Header -->
+    <div class="text-center mb-12">
+      <h2 class="font-display text-3xl sm:text-4xl font-semibold text-white">
+        Here's Everything You Get When You Join The "$100K Net Worth" Challenge Today
+      </h2>
+    </div>
+
+    <!-- Day 1 -->
+    <div class="mb-16">
+      <div class="text-center mb-8">
+        <span class="inline-block px-4 py-2 bg-amber-500/20 border border-amber-500/30 rounded-full text-amber-400 font-semibold text-lg mb-4">Day 1</span>
+        <p class="text-slate-300 text-lg">Day 1 is about finding out where your money is really going, plugging the holes, and setting your path.</p>
+      </div>
+
+      <div class="space-y-6">
+        <!-- Session 1 -->
+        <div class="reveal bg-slate-900/50 border border-slate-700/50 rounded-2xl p-6">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="px-3 py-1 bg-amber-900/30 text-amber-400 text-sm font-semibold rounded-full">Session 1</span>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-4">The Middle-Class Money Trap: Why Working Harder Isn't Making You Richer</h3>
+          <p class="text-slate-300 mb-4">Most people think working harder and earning more equals building wealth, but they're stuck in a system designed to keep them middle-class forever.</p>
+          <p class="text-white font-medium mb-3">The Trap:</p>
+          <ul class="space-y-2 mb-4">
+            <li class="flex gap-3 text-slate-300">
+              <span class="text-amber-400">•</span>
+              Hidden fees bleed 1-2% annually, costing hundreds of thousands over decades
+            </li>
+            <li class="flex gap-3 text-slate-300">
+              <span class="text-amber-400">•</span>
+              Most retirees pay 30%+ taxes on withdrawals
+            </li>
+            <li class="flex gap-3 text-slate-300">
+              <span class="text-amber-400">•</span>
+              High-income earners today think they'll be in a lower tax bracket later, but they won't be
+            </li>
+          </ul>
+          <p class="text-slate-400 italic">You'll understand exactly why you feel broke despite good income and the mindset shifts that separate wealth builders from paycheck earners.</p>
+        </div>
+
+        <!-- Session 2 -->
+        <div class="reveal bg-slate-900/50 border border-slate-700/50 rounded-2xl p-6" style="transition-delay: 50ms">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="px-3 py-1 bg-amber-900/30 text-amber-400 text-sm font-semibold rounded-full">Session 2</span>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-4">Retirement Revolution: Why Your 401k Is Bleeding Money & What To Do Instead</h3>
+          <p class="text-slate-300 mb-4">People think maxing out a 401(k) is the best move, but they don't realize it's designed to make Wall Street rich while you work for 40 years.</p>
+          <p class="text-white font-medium mb-3">What's broken in their current approach:</p>
+          <ul class="space-y-2 mb-4">
+            <li class="flex gap-3 text-slate-300">
+              <span class="text-amber-400">•</span>
+              They save what's left instead of keeping what they earn
+            </li>
+            <li class="flex gap-3 text-slate-300">
+              <span class="text-amber-400">•</span>
+              Every raise gets eaten by taxes, inflation, and lifestyle creep
+            </li>
+            <li class="flex gap-3 text-slate-300">
+              <span class="text-amber-400">•</span>
+              High earners making $100K-$200K feel broke because they're following broke people's money rules
+            </li>
+          </ul>
+          <p class="text-slate-400 italic">We'll show you how to take control of when your money gets taxed and stop letting fund managers split your life savings with the IRS.</p>
+        </div>
+
+        <!-- Session 3 -->
+        <div class="reveal bg-slate-900/50 border border-slate-700/50 rounded-2xl p-6" style="transition-delay: 100ms">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="px-3 py-1 bg-amber-900/30 text-amber-400 text-sm font-semibold rounded-full">Session 3</span>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-4">Debt Elimination & Credit Mastery: From High-Interest Trap to Smart Funding</h3>
+          <p class="text-slate-300 mb-4">Most people think debt is something to avoid completely, but the wealthy use strategic leverage to buy assets that pay them.</p>
+          <ul class="space-y-2">
+            <li class="flex gap-3 text-slate-300">
+              <span class="text-amber-400">•</span>
+              How to eliminate wealth-killing debt without just "paying more"
+            </li>
+            <li class="flex gap-3 text-slate-300">
+              <span class="text-amber-400">•</span>
+              Access $50K-$100K in business funding without affecting personal credit
+            </li>
+            <li class="flex gap-3 text-slate-300">
+              <span class="text-amber-400">•</span>
+              The difference between consumer debt that kills wealth and strategic debt that builds it
+            </li>
+          </ul>
+        </div>
+
+        <!-- Session 4 -->
+        <div class="reveal bg-slate-900/50 border border-slate-700/50 rounded-2xl p-6" style="transition-delay: 150ms">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="px-3 py-1 bg-amber-900/30 text-amber-400 text-sm font-semibold rounded-full">Session 4</span>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-4">Expert Deep Dive - Entity Structure & Business Credit with Tommy Thornburgh (Prime Corporate Services)</h3>
+          <p class="text-slate-300 mb-4">Deepdive into strategies from industry experts who've helped tens of thousands of W-2 income earners & business owners optimize their financial structure and accelerate their wealth building timeline.</p>
+          <ul class="space-y-2">
+            <li class="flex gap-3 text-slate-300">
+              <span class="text-amber-400">•</span>
+              Structuring entities for protection and scalability
+            </li>
+            <li class="flex gap-3 text-slate-300">
+              <span class="text-amber-400">•</span>
+              Utilizing business credit for long-term growth
+            </li>
+            <li class="flex gap-3 text-slate-300">
+              <span class="text-amber-400">•</span>
+              Common mistakes that lead to double taxation
+            </li>
+          </ul>
+        </div>
+
+        <!-- VIP Session 1 -->
+        <div class="reveal bg-gradient-to-r from-amber-900/20 to-amber-800/10 border border-amber-500/30 rounded-2xl p-6" style="transition-delay: 200ms">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="px-3 py-1 bg-gradient-to-r from-amber-400 to-amber-500 text-amber-900 text-sm font-bold rounded-full">VIP Session 1</span>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-2">Exclusive VIP Session - Roundtable With Preston</h3>
+          <p class="text-amber-200">Get All Your Questions Answered Directly By Preston</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 2 -->
+    <div class="mb-16">
+      <div class="text-center mb-8">
+        <span class="inline-block px-4 py-2 bg-amber-500/20 border border-amber-500/30 rounded-full text-amber-400 font-semibold text-lg mb-4">Day 2</span>
+        <p class="text-slate-300 text-lg">Once the leaks are fixed, it's time to speed it up. Day 2 is about adding advanced strategies to boost your income and cut taxes to reach your goals faster.</p>
+      </div>
+
+      <div class="space-y-6">
+        <!-- Session 5 -->
+        <div class="reveal bg-slate-900/50 border border-slate-700/50 rounded-2xl p-6">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="px-3 py-1 bg-amber-900/30 text-amber-400 text-sm font-semibold rounded-full">Session 5</span>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-4">The W-2 Taxes Playbook: How High-Earners Keep Losing Half Their Income</h3>
+          <p class="text-slate-300 mb-4">How people making $1M+ pay less in taxes than someone making $80K. And how W-2 employees get punished for not knowing what business owners actually do.</p>
+          <p class="text-white font-medium mb-3">What's broken:</p>
+          <ul class="space-y-2 mb-4">
+            <li class="flex gap-3 text-slate-300">
+              <span class="text-amber-400">•</span>
+              Most people think they're stuck with their W-2 tax rate... they're not
+            </li>
+            <li class="flex gap-3 text-slate-300">
+              <span class="text-amber-400">•</span>
+              You're paying for expenses the IRS would let you deduct if you knew how to structure them
+            </li>
+            <li class="flex gap-3 text-slate-300">
+              <span class="text-amber-400">•</span>
+              W-2 employees have zero write-offs while business owners write off everything
+            </li>
+          </ul>
+          <p class="text-slate-400 italic">Taxes are the #1 expense in life. High earners lose $1M+ over their lifetime due to poor structuring. You'll know exactly which strategies apply to your situation and how to implement them immediately.</p>
+        </div>
+
+        <!-- Session 6 -->
+        <div class="reveal bg-slate-900/50 border border-slate-700/50 rounded-2xl p-6" style="transition-delay: 50ms">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="px-3 py-1 bg-amber-900/30 text-amber-400 text-sm font-semibold rounded-full">Session 6</span>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-4">The Investor Playbook: How to Build Wealth Without Paying Taxes</h3>
+          <p class="text-slate-300 mb-4">Previous session is about defense: Keeping more of what you earn. This session is about offense: Building wealth that never gets taxed.</p>
+          <p class="text-white font-medium mb-3">What's broken:</p>
+          <ul class="space-y-2 mb-4">
+            <li class="flex gap-3 text-slate-300">
+              <span class="text-amber-400">•</span>
+              Most people save money in accounts that get taxed twice (going in and coming out)
+            </li>
+            <li class="flex gap-3 text-slate-300">
+              <span class="text-amber-400">•</span>
+              They pay full price on investment gains when there are legal ways to offset them
+            </li>
+            <li class="flex gap-3 text-slate-300">
+              <span class="text-amber-400">•</span>
+              They're not using tax-free growth accounts for long-term wealth building
+            </li>
+          </ul>
+          <p class="text-slate-400 italic">You'll learn how to write off major purchases, automatically reduce your tax bill on business income, turn investment losses into savings, and build wealth that compounds tax-free for decades.</p>
+        </div>
+
+        <!-- Session 7 -->
+        <div class="reveal bg-slate-900/50 border border-slate-700/50 rounded-2xl p-6" style="transition-delay: 100ms">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="px-3 py-1 bg-amber-900/30 text-amber-400 text-sm font-semibold rounded-full">Session 7</span>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-4">How To Start A 100% Tax-Free Airbnb Business (Without Buying Property Or Quitting Your Job)</h3>
+          <p class="text-slate-300">I'll show you how to build income streams that net $5K-$15K monthly alongside your job and make it all tax-advantaged legally. Now that you've seen all the individual strategies, we'll show you how they work together as a complete system to add $100K+ to your net worth within 12 months.</p>
+        </div>
+
+        <!-- Session 8 -->
+        <div class="reveal bg-slate-900/50 border border-slate-700/50 rounded-2xl p-6" style="transition-delay: 150ms">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="px-3 py-1 bg-amber-900/30 text-amber-400 text-sm font-semibold rounded-full">Session 8</span>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-4">The Complete Wealth Acceleration System: How Everything Works Together To Add $100K</h3>
+          <p class="text-slate-300">Get your specific questions answered about implementing everything you've learned so far.</p>
+        </div>
+
+        <!-- VIP Session 2 -->
+        <div class="reveal bg-gradient-to-r from-amber-900/20 to-amber-800/10 border border-amber-500/30 rounded-2xl p-6" style="transition-delay: 200ms">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="px-3 py-1 bg-gradient-to-r from-amber-400 to-amber-500 text-amber-900 text-sm font-bold rounded-full">VIP Session 2</span>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-2">Exclusive VIP Session: Roundtable With Preston</h3>
+          <p class="text-amber-200">Get All Your Questions Answered Directly By Preston</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 3 -->
+    <div>
+      <div class="text-center mb-8">
+        <span class="inline-block px-4 py-2 bg-amber-500/20 border border-amber-500/30 rounded-full text-amber-400 font-semibold text-lg mb-4">Day 3</span>
+        <p class="text-slate-300 text-lg">The final step is making sure it lasts. Day 3 is about protecting what you've built, passing it on, and leaving a legacy that actually grows over time.</p>
+      </div>
+
+      <div class="space-y-6">
+        <!-- Session 9 -->
+        <div class="reveal bg-slate-900/50 border border-slate-700/50 rounded-2xl p-6">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="px-3 py-1 bg-amber-900/30 text-amber-400 text-sm font-semibold rounded-full">Session 9</span>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-4">Beyond the Basics: Advanced Tax Optimization with Garrett Maughan (Prime Corporate Services)</h3>
+          <p class="text-slate-300 mb-4">True wealth isn't just about making money. It's about keeping it and passing it on without getting taxed to death.</p>
+          <p class="text-white font-medium mb-3">What's broken in their current approach:</p>
+          <ul class="space-y-2 mb-4">
+            <li class="flex gap-3 text-slate-300">
+              <span class="text-amber-400">•</span>
+              They have no exit strategy, so their wealth disappears in poorly executed inheritance plans
+            </li>
+            <li class="flex gap-3 text-slate-300">
+              <span class="text-amber-400">•</span>
+              The wealthy use trust structures to pass down wealth tax-free - normal people lose 40%+ to estate taxes
+            </li>
+            <li class="flex gap-3 text-slate-300">
+              <span class="text-amber-400">•</span>
+              Most people only think about retirement, but what happens after that?
+            </li>
+          </ul>
+          <p class="text-slate-400 italic">We'll show you how to structure multi-generational wealth transfer the right way using the same legal structures the wealthy use.</p>
+        </div>
+
+        <!-- Session 10 -->
+        <div class="reveal bg-slate-900/50 border border-slate-700/50 rounded-2xl p-6" style="transition-delay: 50ms">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="px-3 py-1 bg-amber-900/30 text-amber-400 text-sm font-semibold rounded-full">Session 10</span>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-4">Your 12-Month Wealth Implementation Roadmap</h3>
+          <p class="text-slate-300">The exact order to tackle each piece so you see results fast without getting overwhelmed. What to do first, second, and third to start building serious wealth immediately.</p>
+        </div>
+
+        <!-- Session 11 -->
+        <div class="reveal bg-slate-900/50 border border-slate-700/50 rounded-2xl p-6" style="transition-delay: 100ms">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="px-3 py-1 bg-amber-900/30 text-amber-400 text-sm font-semibold rounded-full">Session 11</span>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-4">How Students Hit $100K+ Net Worth (Real Numbers, Real Strategies)</h3>
+          <p class="text-slate-300">Real case studies from working professionals who implemented these exact strategies. See the specific numbers, timelines, and results so you know exactly what's possible.</p>
+        </div>
+
+        <!-- Session 12 -->
+        <div class="reveal bg-slate-900/50 border border-slate-700/50 rounded-2xl p-6" style="transition-delay: 150ms">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="px-3 py-1 bg-amber-900/30 text-amber-400 text-sm font-semibold rounded-full">Session 12</span>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-4">Your Next Steps And Beyond</h3>
+          <p class="text-slate-300">Get your specific questions answered and walk away knowing exactly what to do to add $100K to your net worth in the next 12 months.</p>
+        </div>
+
+        <!-- VIP Session 3 -->
+        <div class="reveal bg-gradient-to-r from-amber-900/20 to-amber-800/10 border border-amber-500/30 rounded-2xl p-6" style="transition-delay: 200ms">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="px-3 py-1 bg-gradient-to-r from-amber-400 to-amber-500 text-amber-900 text-sm font-bold rounded-full">VIP Session 3</span>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-2">Exclusive VIP Session: Roundtable With Preston</h3>
+          <p class="text-amber-200">Get All Your Questions Answered Directly By Preston</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     SCREENSHOTS / TRUSTPILOT SECTION
+     ═══════════════════════════════════════════════════ -->
+<section class="py-12 sm:py-24 bg-[#0a0a0f]">
+  <div class="max-w-6xl mx-auto px-4">
+    <!-- Header -->
+    <div class="text-center max-w-3xl mx-auto mb-12">
+      <p class="text-sm font-semibold text-amber-400 uppercase tracking-wider mb-3">Why Attend This Challenge?</p>
+      <h2 class="font-display text-3xl sm:text-4xl font-semibold text-white">
+        See What People Are Saying After Attending Our 3-Day Live Tax-Free Income Challenge
+      </h2>
+    </div>
+
+    <!-- Screenshots Grid -->
+    <div class="reveal grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+      <div class="img-zoom rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 bg-slate-800 border border-slate-700/50 hover:border-amber-500/30">
+        <img src="./assets/images/11-social-proof-1.webp" alt="Testimonial" class="w-full h-auto" width="400" height="300" loading="lazy" decoding="async">
+      </div>
+      <div class="img-zoom rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 bg-slate-800 border border-slate-700/50 hover:border-amber-500/30">
+        <img src="./assets/images/12-social-proof-2.webp" alt="Testimonial" class="w-full h-auto" width="400" height="300" loading="lazy" decoding="async">
+      </div>
+      <div class="img-zoom rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 bg-slate-800 border border-slate-700/50 hover:border-amber-500/30">
+        <img src="./assets/images/13-social-proof-3.webp" alt="Testimonial" class="w-full h-auto" width="400" height="300" loading="lazy" decoding="async">
+      </div>
+      <div class="img-zoom rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 bg-slate-800 border border-slate-700/50 hover:border-amber-500/30">
+        <img src="./assets/images/14-social-proof-4.webp" alt="Testimonial" class="w-full h-auto" width="400" height="300" loading="lazy" decoding="async">
+      </div>
+      <div class="img-zoom rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 bg-slate-800 border border-slate-700/50 hover:border-amber-500/30">
+        <img src="./assets/images/15-social-proof-5.webp" alt="Testimonial" class="w-full h-auto" width="400" height="300" loading="lazy" decoding="async">
+      </div>
+      <div class="img-zoom rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 bg-slate-800 border border-slate-700/50 hover:border-amber-500/30">
+        <img src="./assets/images/16-social-proof-6.webp" alt="Testimonial" class="w-full h-auto" width="400" height="300" loading="lazy" decoding="async">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     BEFORE / AFTER SECTION
+     ═══════════════════════════════════════════════════ -->
+<section class="py-12 sm:py-24 bg-slate-900/30">
+  <div class="max-w-6xl mx-auto px-4">
+    <!-- Header -->
+    <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-16">
+      <p class="text-sm font-semibold text-amber-400 uppercase tracking-wider mb-3">The Transformation</p>
+      <h2 class="font-display text-3xl sm:text-4xl font-semibold text-white">
+        Here's What You Can Expect From The Challenge
+      </h2>
+    </div>
+
+    <!-- Before/After Grid -->
+    <div class="grid md:grid-cols-2 gap-8">
+      <!-- Before -->
+      <div class="reveal p-8 bg-rose-900/10 rounded-3xl border border-rose-800/30">
+        <div class="inline-flex items-center gap-2 px-4 py-2 bg-rose-900/30 rounded-full text-rose-300 text-sm font-semibold mb-6">
+          <span>✗</span>
+          Before the Challenge
+        </div>
+        <ul class="space-y-4">
+          <li class="flex gap-3 text-slate-300">
+            <span class="text-rose-500 mt-1">•</span>
+            You're losing $20K-$50K every year to taxes without knowing why
+          </li>
+          <li class="flex gap-3 text-slate-300">
+            <span class="text-rose-500 mt-1">•</span>
+            Stuck making minimum payments while your money sits idle
+          </li>
+          <li class="flex gap-3 text-slate-300">
+            <span class="text-rose-500 mt-1">•</span>
+            Every financial decision feels like a coin toss
+          </li>
+          <li class="flex gap-3 text-slate-300">
+            <span class="text-rose-500 mt-1">•</span>
+            Watching friends buy homes while you feel left behind
+          </li>
+          <li class="flex gap-3 text-slate-300">
+            <span class="text-rose-500 mt-1">•</span>
+            Constant second-guessing because every "expert" says something different
+          </li>
+        </ul>
+      </div>
+
+      <!-- After -->
+      <div class="reveal p-8 bg-emerald-900/10 rounded-3xl border border-emerald-800/30" style="transition-delay: 100ms">
+        <div class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-900/30 rounded-full text-emerald-300 text-sm font-semibold mb-6">
+          <span>✓</span>
+          After the Challenge
+        </div>
+        <ul class="space-y-4">
+          <li class="flex gap-3 text-slate-300">
+            <span class="text-emerald-500 mt-1">•</span>
+            Keeping more of every paycheck and seeing your savings grow
+          </li>
+          <li class="flex gap-3 text-slate-300">
+            <span class="text-emerald-500 mt-1">•</span>
+            High-interest debts gone and cash flow freed up
+          </li>
+          <li class="flex gap-3 text-slate-300">
+            <span class="text-emerald-500 mt-1">•</span>
+            Every decision feels clear because you know exactly WHAT to do and WHEN
+          </li>
+          <li class="flex gap-3 text-slate-300">
+            <span class="text-emerald-500 mt-1">•</span>
+            EXACT steps to create $5K-$15K monthly income streams
+          </li>
+          <li class="flex gap-3 text-slate-300">
+            <span class="text-emerald-500 mt-1">•</span>
+            Wealth protection strategies to pass money tax-free across generations
+          </li>
+          <li class="flex gap-3 text-slate-300">
+            <span class="text-emerald-500 mt-1">•</span>
+            A predictable plan to add $100K to your net worth within 12 months
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     EVENT DETAILS SECTION
+     ═══════════════════════════════════════════════════ -->
+<section class="py-16 bg-[#0a0a0f]">
+  <div class="max-w-5xl mx-auto px-4">
+    <div class="grid md:grid-cols-3 gap-6">
+      <!-- When -->
+      <div class="reveal text-center p-8 bg-gradient-to-br from-slate-800 to-slate-900 rounded-3xl shadow-xl">
+        <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-amber-500/20 to-amber-600/10 rounded-2xl flex items-center justify-center text-3xl">📅</div>
+        <div class="text-sm text-amber-400 font-semibold uppercase tracking-wider mb-2">When</div>
+        <div class="text-xl font-semibold text-white mb-2">January 30 - February 1, 2026</div>
+        <p class="text-sm text-slate-400">Starting From 10 AM EST | 4-6 Hours Daily</p>
+      </div>
+
+      <!-- Where -->
+      <div class="reveal text-center p-8 bg-gradient-to-br from-slate-800 to-slate-900 rounded-3xl shadow-xl" style="transition-delay: 100ms">
+        <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-amber-500/20 to-amber-600/10 rounded-2xl flex items-center justify-center text-3xl">💻</div>
+        <div class="text-sm text-amber-400 font-semibold uppercase tracking-wider mb-2">Where</div>
+        <div class="text-xl font-semibold text-white mb-2">Streaming Online on Zoom</div>
+        <p class="text-sm text-slate-400">Join from anywhere. We'll send you a private link.</p>
+      </div>
+
+      <!-- Why -->
+      <div class="reveal text-center p-8 bg-gradient-to-br from-slate-800 to-slate-900 rounded-3xl shadow-xl" style="transition-delay: 200ms">
+        <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-amber-500/20 to-amber-600/10 rounded-2xl flex items-center justify-center text-3xl">🎯</div>
+        <div class="text-sm text-amber-400 font-semibold uppercase tracking-wider mb-2">Why</div>
+        <div class="text-xl font-semibold text-white mb-2">$100K+ Net Worth</div>
+        <p class="text-sm text-slate-400">Cut taxes, eliminate debt, build $5K-$15K monthly income.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     PRICING SECTION
+     ═══════════════════════════════════════════════════ -->
+<section id="pricing" class="py-12 sm:py-24 bg-slate-900/30">
+  <div class="max-w-5xl mx-auto px-4">
+    <!-- Header -->
+    <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-16">
+      <p class="text-xs sm:text-sm font-semibold text-amber-400 uppercase tracking-wider mb-2 sm:mb-3">Choose Your Ticket</p>
+      <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-semibold text-white">
+        General Admission vs VIP
+      </h2>
+    </div>
+
+    <!-- Pricing Cards -->
+    <div class="grid md:grid-cols-2 gap-4 sm:gap-8 max-w-4xl mx-auto">
+      <!-- General Admission -->
+      <div class="reveal bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl sm:rounded-3xl p-5 sm:p-8 shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all">
+        <div class="mb-6">
+          <h3 class="text-xl font-semibold text-white mb-4">General Admission</h3>
+          <div class="flex items-baseline gap-2">
+            <span class="text-slate-400 line-through text-lg">$97</span>
+            <span class="text-4xl font-bold text-white">$47</span>
+          </div>
+        </div>
+
+        <p class="text-sm text-slate-400 mb-6">You'll walk away with a complete action plan:</p>
+
+        <ul class="space-y-3 mb-8">
+          <li class="flex gap-3 text-sm text-slate-300">
+            <svg class="w-5 h-5 text-emerald-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            The middle-class money trap breakdown + your escape plan
+          </li>
+          <li class="flex gap-3 text-sm text-slate-300">
+            <svg class="w-5 h-5 text-emerald-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            401k alternatives that actually build wealth faster
+          </li>
+          <li class="flex gap-3 text-sm text-slate-300">
+            <svg class="w-5 h-5 text-emerald-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            Tax strategies that save high earners $20K-$50K annually
+          </li>
+          <li class="flex gap-3 text-sm text-slate-300">
+            <svg class="w-5 h-5 text-emerald-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            Debt elimination + access to $50K-$100K in funding
+          </li>
+          <li class="flex gap-3 text-sm text-slate-300">
+            <svg class="w-5 h-5 text-emerald-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            Your first $5K-$15K/month income stream blueprint
+          </li>
+        </ul>
+
+        <a href="https://managemoney101.com/ticket" class="block w-full py-4 text-center font-bold rounded-xl transition-all" style="border: 2px solid rgba(245, 158, 11, 0.6); color: #fbbf24;">
+          Join the Challenge →
+        </a>
+      </div>
+
+      <!-- VIP -->
+      <div class="reveal relative bg-gradient-to-br from-slate-800 via-slate-800/95 to-slate-900 rounded-2xl sm:rounded-3xl p-5 sm:p-8 border-2 border-amber-500/50 shadow-[0_0_40px_rgba(245,158,11,0.2)] hover:shadow-[0_0_60px_rgba(245,158,11,0.3)] hover:-translate-y-1 transition-all" style="transition-delay: 100ms">
+        <div class="vip-badge absolute -top-3.5 left-1/2 -translate-x-1/2 px-5 py-2 text-slate-900 text-xs font-bold uppercase tracking-wider rounded-full">
+          Most Popular
+        </div>
+
+        <div class="mb-6">
+          <h3 class="text-xl font-semibold text-white mb-4">VIP Access</h3>
+          <div class="flex items-baseline gap-2">
+            <span class="text-slate-400 line-through text-lg">$197</span>
+            <span class="text-4xl font-bold text-white">$147</span>
+          </div>
+        </div>
+
+        <p class="text-sm text-slate-300 mb-6">Everything above PLUS direct access to Preston:</p>
+
+        <ul class="space-y-3 mb-8">
+          <li class="flex gap-3 text-sm text-slate-200">
+            <svg class="w-5 h-5 text-amber-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            Daily live roundtable call with Preston after each session
+          </li>
+          <li class="flex gap-3 text-sm text-slate-200">
+            <svg class="w-5 h-5 text-amber-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            Get your specific questions answered directly
+          </li>
+          <li class="flex gap-3 text-sm text-slate-200">
+            <svg class="w-5 h-5 text-amber-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            Lifetime access to 15+ hours of session replays
+          </li>
+          <li class="flex gap-3 text-sm text-slate-200">
+            <svg class="w-5 h-5 text-amber-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            All slides, notes, and educational materials delivered
+          </li>
+        </ul>
+
+        <a href="https://managemoney101.com/vip" class="btn-glow block w-full py-4 text-center font-bold rounded-xl transition-all shadow-lg" style="background: linear-gradient(to right, #f59e0b, #d97706); color: #0f172a; box-shadow: 0 4px 20px rgba(245, 158, 11, 0.3);">
+          Get VIP Access →
+        </a>
+      </div>
+    </div>
+
+    <!-- Comparison Table -->
+    <div class="mt-12 sm:mt-16 max-w-2xl mx-auto">
+      <table class="w-full text-sm">
+        <thead>
+          <tr class="border-b border-slate-700">
+            <th class="text-left py-4 text-slate-400 font-medium w-auto">Feature</th>
+            <th class="text-center py-4 text-slate-400 font-medium w-20 sm:w-24">General</th>
+            <th class="text-center py-4 text-amber-400 font-bold w-16 sm:w-24">VIP</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-700/50">
+          <tr class="table-row-hover">
+            <td class="py-4 text-slate-300">All 3 days of live training</td>
+            <td class="py-4 text-center text-emerald-400 font-medium">✓</td>
+            <td class="py-4 text-center text-emerald-400 font-medium">✓</td>
+          </tr>
+          <tr class="table-row-hover">
+            <td class="py-4 text-slate-300">Daily live roundtable with Preston</td>
+            <td class="py-4 text-center text-slate-500">—</td>
+            <td class="py-4 text-center text-emerald-400 font-medium">✓</td>
+          </tr>
+          <tr class="table-row-hover">
+            <td class="py-4 text-slate-300">Ask Preston questions directly</td>
+            <td class="py-4 text-center text-slate-500">—</td>
+            <td class="py-4 text-center text-emerald-400 font-medium">✓</td>
+          </tr>
+          <tr class="table-row-hover">
+            <td class="py-4 text-slate-300">15+ hours lifetime replay access</td>
+            <td class="py-4 text-center text-slate-500">—</td>
+            <td class="py-4 text-center text-emerald-400 font-medium">✓</td>
+          </tr>
+          <tr class="table-row-hover">
+            <td class="py-4 text-slate-300">All slides, notes & materials</td>
+            <td class="py-4 text-center text-slate-500">—</td>
+            <td class="py-4 text-center text-emerald-400 font-medium">✓</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     CASE STUDIES
+     ═══════════════════════════════════════════════════ -->
+<section class="py-12 sm:py-24 bg-slate-900/30">
+  <div class="max-w-6xl mx-auto px-4">
+    <!-- Header -->
+    <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-16">
+      <p class="text-sm font-semibold text-amber-400 uppercase tracking-wider mb-3">Proof It Works</p>
+      <h2 class="font-display text-3xl sm:text-4xl font-semibold text-white">
+        Real Results From Real People
+      </h2>
+    </div>
+
+    <!-- Case Study 1 -->
+    <div class="reveal grid md:grid-cols-2 gap-12 items-center mb-20">
+      <div class="rounded-2xl overflow-hidden shadow-xl">
+        <img src="./assets/images/20-dustin-cotten.webp" alt="Dustin Cotten" class="w-full" width="500" height="400" loading="lazy" decoding="async">
+      </div>
+      <div>
+        <h3 class="text-2xl font-semibold text-white mb-2">Dustin Cotten</h3>
+        <p class="text-amber-400 mb-4">"I didn't want to work my whole life just to be told I couldn't use my own money."</p>
+        <p class="text-slate-400 mb-6">
+          Dustin was in corporate sales, looking for a way out. The turning point came when his girlfriend's mom passed away at 62 with savings locked up. He decided to take his finances in his own hands.
+        </p>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="p-4 bg-gradient-to-br from-slate-800/80 to-slate-900/80 rounded-xl shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 border border-slate-700/30 hover:border-amber-500/30">
+            <span class="text-2xl">🏠</span>
+            <p class="text-sm text-slate-300 mt-2">First property in 30 days, $3K/month</p>
+          </div>
+          <div class="p-4 bg-gradient-to-br from-slate-800/80 to-slate-900/80 rounded-xl shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 border border-slate-700/30 hover:border-amber-500/30">
+            <span class="text-2xl">📈</span>
+            <p class="text-sm text-slate-300 mt-2">7 properties in under 2 years</p>
+          </div>
+          <div class="p-4 bg-gradient-to-br from-slate-800/80 to-slate-900/80 rounded-xl shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 border border-slate-700/30 hover:border-amber-500/30">
+            <span class="text-2xl">💰</span>
+            <p class="text-sm text-slate-300 mt-2">$56K net profit in one month</p>
+          </div>
+          <div class="p-4 bg-gradient-to-br from-slate-800/80 to-slate-900/80 rounded-xl shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 border border-slate-700/30 hover:border-amber-500/30">
+            <span class="text-2xl">✅</span>
+            <p class="text-sm text-slate-300 mt-2">Walked away from his 9 to 5</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Case Study 2 -->
+    <div class="reveal grid md:grid-cols-2 gap-12 items-center">
+      <div class="md:order-2 rounded-2xl overflow-hidden shadow-xl">
+        <img src="./assets/images/21-galin-icon.webp" alt="Galin" class="w-full" width="500" height="400" loading="lazy" decoding="async">
+      </div>
+      <div class="md:order-1">
+        <h3 class="text-2xl font-semibold text-white mb-2">Galin</h3>
+        <p class="text-amber-400 mb-4">Turning Taxes Into Cash Flow and Long-Term Growth</p>
+        <p class="text-slate-400 mb-6">
+          Before, Galin was working hard but watching too much disappear to taxes and overhead. Now he has a plan to save big on taxes and add consistent rental income.
+        </p>
+        <div class="space-y-3">
+          <div class="flex items-center gap-3 p-4 bg-gradient-to-br from-slate-800/80 to-slate-900/80 rounded-xl shadow-md hover:shadow-lg hover:scale-[1.02] transition-all duration-300 border border-slate-700/30 hover:border-amber-500/30">
+            <span class="text-2xl">🏦</span>
+            <p class="text-sm text-slate-300">$100K+ in tax savings and paper losses</p>
+          </div>
+          <div class="flex items-center gap-3 p-4 bg-gradient-to-br from-slate-800/80 to-slate-900/80 rounded-xl shadow-md hover:shadow-lg hover:scale-[1.02] transition-all duration-300 border border-slate-700/30 hover:border-amber-500/30">
+            <span class="text-2xl">📈</span>
+            <p class="text-sm text-slate-300">Six figures redirected into long-term investments</p>
+          </div>
+        </div>
+        <div class="mt-6 p-4 bg-emerald-900/20 rounded-xl border border-emerald-700/30">
+          <p class="text-xs text-emerald-400 font-medium mb-1">Estimated 12-Month ROI</p>
+          <p class="text-2xl font-bold text-emerald-300">~$150,000+</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Case Study 3: Abigail -->
+    <div class="reveal mt-20 max-w-3xl mx-auto p-8 bg-gradient-to-br from-slate-800 to-slate-900 rounded-3xl shadow-xl">
+      <h3 class="text-2xl font-semibold text-white mb-2">Abigail</h3>
+      <p class="text-amber-400 mb-4">Eliminating Taxes and Building Early Freedom</p>
+      <p class="text-slate-400 mb-6">
+        Before, their household was stuck watching too much of a W-2 paycheck disappear to the IRS. Retirement felt locked away until age 59½, and every move seemed tied up with penalties or restrictions. After putting the right pieces in place, they now have a plan to legally cut taxes to zero, create penalty-free income years earlier, and move money into assets that actually grow.
+      </p>
+      <div class="grid sm:grid-cols-2 gap-4 mb-6">
+        <div class="flex items-center gap-3 p-4 bg-gradient-to-br from-slate-800/80 to-slate-900/80 rounded-xl shadow-md hover:shadow-lg hover:scale-[1.02] transition-all duration-300 border border-slate-700/30 hover:border-amber-500/30">
+          <span class="text-2xl">🏦</span>
+          <p class="text-sm text-slate-300">~$52,500 cash refund from tax savings</p>
+        </div>
+        <div class="flex items-center gap-3 p-4 bg-gradient-to-br from-slate-800/80 to-slate-900/80 rounded-xl shadow-md hover:shadow-lg hover:scale-[1.02] transition-all duration-300 border border-slate-700/30 hover:border-amber-500/30">
+          <span class="text-2xl">🧾</span>
+          <p class="text-sm text-slate-300">$30K shifted into 0% tax brackets</p>
+        </div>
+        <div class="flex items-center gap-3 p-4 bg-gradient-to-br from-slate-800/80 to-slate-900/80 rounded-xl shadow-md hover:shadow-lg hover:scale-[1.02] transition-all duration-300 border border-slate-700/30 hover:border-amber-500/30">
+          <span class="text-2xl">🏠</span>
+          <p class="text-sm text-slate-300">Six-figure savings sheltered through new structures</p>
+        </div>
+        <div class="flex items-center gap-3 p-4 bg-gradient-to-br from-slate-800/80 to-slate-900/80 rounded-xl shadow-md hover:shadow-lg hover:scale-[1.02] transition-all duration-300 border border-slate-700/30 hover:border-amber-500/30">
+          <span class="text-2xl">📈</span>
+          <p class="text-sm text-slate-300">New cash flow and long-term growth layered on top</p>
+        </div>
+      </div>
+      <div class="p-4 bg-emerald-900/20 rounded-xl border border-emerald-700/30">
+        <p class="text-xs text-emerald-400 font-medium mb-1">Estimated 12-Month ROI</p>
+        <p class="text-2xl font-bold text-emerald-300">$50K-$100K</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     ABOUT PRESTON SECTION
+     ═══════════════════════════════════════════════════ -->
+<section class="py-12 sm:py-24 bg-[#0a0a0f]">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <!-- Images -->
+      <div class="reveal space-y-4">
+        <div class="img-zoom rounded-2xl overflow-hidden shadow-lg border border-slate-700/50 hover:border-amber-500/30 transition-colors duration-300">
+          <img src="./assets/images/24-preston-about-1.webp" alt="Preston featured alongside Ray Dalio, Robert Kiyosaki, Daymond John" class="w-full" width="500" height="350" loading="lazy" decoding="async">
+        </div>
+        <div class="img-zoom rounded-2xl overflow-hidden shadow-lg border border-slate-700/50 hover:border-amber-500/30 transition-colors duration-300">
+          <img src="./assets/images/23-abigail-case-study.webp" alt="Preston with Pace Morby and Dean Graziosi" class="w-full" width="500" height="350" loading="lazy" decoding="async">
+        </div>
+      </div>
+
+      <!-- Text -->
+      <div class="reveal" style="transition-delay: 100ms">
+        <p class="text-sm font-semibold text-amber-400 uppercase tracking-wider mb-3">About Preston</p>
+        <h3 class="font-display text-3xl font-semibold text-white mb-6">From Broke to $20M+ Portfolio</h3>
+
+        <div class="space-y-4 text-slate-400">
+          <p>I'm a 33-year-old who used to follow the same money rules as everyone else - save what's left, avoid debt, hope the 401k works out.</p>
+
+          <p>I was stuck in that cycle until I started learning everything I could about personal finance, investing, and real estate. My wife and I both applied what we learned. <strong class="text-white">By 28, I became financially free</strong> and we built a $20M+ real estate portfolio.</p>
+
+          <p>I share what I've learned with over <strong class="text-white">6 million people</strong> about how money actually works and the real strategies wealthy people use.</p>
+
+          <p>Over the years, this work has put me in rooms with people like <strong class="text-white">Pace Morby and Dean Graziosi</strong>. I've been featured alongside Ray Dalio, Robert Kiyosaki, and Daymond John.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     GUARANTEE
+     ═══════════════════════════════════════════════════ -->
+<section class="py-12 sm:py-24 bg-slate-900/30">
+  <div class="max-w-3xl mx-auto px-4 text-center">
+    <div class="reveal inline-block p-10 bg-gradient-to-br from-slate-800 to-slate-900 rounded-3xl shadow-[0_0_50px_rgba(16,185,129,0.2)]">
+      <div class="shield-pulse w-24 h-24 mx-auto mb-6 bg-emerald-900/40 rounded-full flex items-center justify-center shadow-[0_0_30px_rgba(16,185,129,0.3)]">
+        <svg class="w-12 h-12 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+        </svg>
+      </div>
+      <h3 class="text-2xl sm:text-3xl font-semibold text-white mb-2">100% Risk-Free Guarantee</h3>
+      <p class="text-emerald-400 font-medium text-sm uppercase tracking-wider mb-6">No Questions Asked</p>
+      <p class="text-slate-300 mb-4 text-lg">
+        We're confident that in just 3 days you'll walk away with a real plan to finally take control of your money.
+      </p>
+      <p class="text-slate-400">
+        <strong class="text-white">If you don't leave with total clarity on what to do next, just email us within 7 days and we'll refund you.</strong>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     FAQ
+     ═══════════════════════════════════════════════════ -->
+<section class="py-12 sm:py-24 bg-[#0a0a0f]">
+  <div class="max-w-3xl mx-auto px-4">
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <p class="text-sm font-semibold text-amber-400 uppercase tracking-wider mb-3">Got Questions?</p>
+      <h2 class="font-display text-3xl sm:text-4xl font-semibold text-white">
+        Frequently Asked Questions
+      </h2>
+    </div>
+
+    <!-- FAQ Items -->
+    <div class="space-y-4" id="faq-list">
+      <div class="faq-item reveal bg-gradient-to-r from-slate-800 to-slate-800/60 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl border border-slate-700/50 hover:border-amber-500/30 transition-all duration-300">
+        <button class="faq-question w-full p-6 flex items-center justify-between text-left">
+          <span class="font-medium text-white">Where will the event be held?</span>
+          <svg class="faq-icon w-5 h-5 text-slate-500 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="faq-answer hidden px-6 pb-6 text-slate-400">
+          The event is 100% online via Zoom. You can join from anywhere in the world. Once you grab your ticket, we'll send you a private link with all the details.
+        </div>
+      </div>
+
+      <div class="faq-item reveal bg-gradient-to-r from-slate-800 to-slate-800/60 rounded-2xl overflow-hidden shadow-lg" style="transition-delay: 50ms">
+        <button class="faq-question w-full p-6 flex items-center justify-between text-left">
+          <span class="font-medium text-white">How long is each day of the challenge?</span>
+          <svg class="faq-icon w-5 h-5 text-slate-500 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="faq-answer hidden px-6 pb-6 text-slate-400">
+          Each day runs approximately 4-6 hours, starting at 10 AM EST. VIP sessions add additional Q&A time after the main sessions.
+        </div>
+      </div>
+
+      <div class="faq-item reveal bg-gradient-to-r from-slate-800 to-slate-800/60 rounded-2xl overflow-hidden shadow-lg" style="transition-delay: 100ms">
+        <button class="faq-question w-full p-6 flex items-center justify-between text-left">
+          <span class="font-medium text-white">What if I can't make it all 3 days?</span>
+          <svg class="faq-icon w-5 h-5 text-slate-500 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="faq-answer hidden px-6 pb-6 text-slate-400">
+          VIP ticket holders get lifetime access to all replays and notes. General admission is live-only, so we recommend upgrading to VIP if your schedule is uncertain.
+        </div>
+      </div>
+
+      <div class="faq-item reveal bg-gradient-to-r from-slate-800 to-slate-800/60 rounded-2xl overflow-hidden shadow-lg" style="transition-delay: 150ms">
+        <button class="faq-question w-full p-6 flex items-center justify-between text-left">
+          <span class="font-medium text-white">Are these tax strategies actually legal?</span>
+          <svg class="faq-icon w-5 h-5 text-slate-500 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="faq-answer hidden px-6 pb-6 text-slate-400">
+          100% legal. Everything we teach uses the same tax code that wealthy individuals and corporations use every day. These aren't loopholes or gray areas - they're legitimate strategies written into tax law.
+        </div>
+      </div>
+
+      <div class="faq-item reveal bg-gradient-to-r from-slate-800 to-slate-800/60 rounded-2xl overflow-hidden shadow-lg" style="transition-delay: 200ms">
+        <button class="faq-question w-full p-6 flex items-center justify-between text-left">
+          <span class="font-medium text-white">Can I bring my spouse/partner?</span>
+          <svg class="faq-icon w-5 h-5 text-slate-500 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="faq-answer hidden px-6 pb-6 text-slate-400">
+          Yes! We highly encourage couples to attend together. One ticket covers you both attending from the same device/location.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     COST OF WAITING SECTION
+     ═══════════════════════════════════════════════════ -->
+<section class="py-12 sm:py-24 bg-slate-900/30">
+  <div class="max-w-6xl mx-auto px-4">
+    <!-- Header -->
+    <div class="text-center max-w-3xl mx-auto mb-12">
+      <p class="text-sm font-semibold text-amber-400 uppercase tracking-wider mb-3">The Reality</p>
+      <h2 class="font-display text-3xl sm:text-4xl font-semibold text-white">
+        The Real Cost of Waiting
+      </h2>
+    </div>
+
+    <!-- Cost Cards Grid -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+      <div class="reveal urgency-card p-6 bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl shadow-lg text-center border border-slate-700/30 hover:border-rose-500/30 transition-colors">
+        <div class="text-3xl mb-3">💸</div>
+        <div class="text-sm text-slate-400 font-medium mb-2">Taxes</div>
+        <div class="text-2xl font-bold text-rose-400 mb-2">$1K-$8K/month</div>
+        <p class="text-xs text-slate-400">Every month you delay = unnecessary taxes paid</p>
+      </div>
+
+      <div class="reveal urgency-card p-6 bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl shadow-lg text-center border border-slate-700/30 hover:border-rose-500/30 transition-colors" style="transition-delay: 50ms">
+        <div class="text-3xl mb-3">📉</div>
+        <div class="text-sm text-slate-400 font-medium mb-2">Interest</div>
+        <div class="text-2xl font-bold text-rose-400 mb-2">$500-$2K/month</div>
+        <p class="text-xs text-slate-400">Every month you delay = interest charges</p>
+      </div>
+
+      <div class="reveal urgency-card p-6 bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl shadow-lg text-center border border-slate-700/30 hover:border-rose-500/30 transition-colors" style="transition-delay: 100ms">
+        <div class="text-3xl mb-3">⏳</div>
+        <div class="text-sm text-slate-400 font-medium mb-2">Opportunity</div>
+        <div class="text-2xl font-bold text-rose-400 mb-2">$5K-$15K/month</div>
+        <p class="text-xs text-slate-400">Every month you delay = income missed</p>
+      </div>
+
+      <div class="reveal urgency-card p-6 bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl shadow-lg text-center border border-slate-700/30 hover:border-rose-500/30 transition-colors" style="transition-delay: 150ms">
+        <div class="text-3xl mb-3">📊</div>
+        <div class="text-sm text-slate-400 font-medium mb-2">Compound Growth</div>
+        <div class="text-2xl font-bold text-rose-400 mb-2">$100K+/year</div>
+        <p class="text-xs text-slate-400">Every year you delay = future wealth lost</p>
+      </div>
+    </div>
+
+    <!-- Total Cost Box -->
+    <div class="reveal max-w-2xl mx-auto p-8 bg-rose-900/10 rounded-3xl border border-rose-800/30 text-center">
+      <p class="text-sm text-slate-400 font-medium mb-2">Total Cost of Waiting One Year</p>
+      <div class="text-4xl sm:text-5xl font-bold text-rose-400 mb-4">$250,000+</div>
+      <p class="text-sm text-slate-400 mb-6">
+        <strong class="text-white">Here's the math:</strong> $4K/month in avoidable taxes ($48K/year) + $1K/month in unnecessary interest ($12K/year) + $10K/month in missed income opportunities ($120K/year) + $70K+ in lost compound growth = <strong class="text-white">$250K+ every year you wait</strong>
+      </p>
+      <p class="text-lg text-slate-300">
+        Or you can invest <strong class="text-amber-400">$47 today</strong> and start keeping that money instead.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     FINAL CTA
+     ═══════════════════════════════════════════════════ -->
+<section class="py-12 sm:py-24 bg-gradient-to-br from-[#0a0a0f] via-slate-900 to-[#0a0a0f]">
+  <div class="max-w-3xl mx-auto px-4 text-center">
+    <h2 class="font-display text-3xl sm:text-4xl font-semibold text-white mb-8">
+      So, What Are You Waiting For?
+    </h2>
+
+    <a href="#pricing" class="btn-glow inline-flex items-center gap-2 px-10 py-5 text-lg font-semibold rounded-full transition-all hover:-translate-y-1" style="background: linear-gradient(to right, #f59e0b, #fbbf24); color: #0f172a; box-shadow: 0 4px 20px rgba(245, 158, 11, 0.3);">
+      Get Started Now
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+    <p class="text-slate-400 mt-4">Jan 30th - Feb 1st | 10 AM - 4 PM EST</p>
+
+    <!-- Countdown -->
+    <div class="mt-12 inline-flex flex-col sm:flex-row items-center gap-3 sm:gap-6 px-4 sm:px-8 py-4 bg-white/5 rounded-2xl border border-amber-500/20 shadow-[0_0_30px_rgba(245,158,11,0.1)] max-w-full">
+      <span class="text-slate-400 text-sm">Early Bird Ends:</span>
+      <div class="flex gap-2 sm:gap-4 text-white">
+        <div class="text-center countdown-number">
+          <div id="days2" class="text-xl sm:text-2xl font-bold text-amber-400">6</div>
+          <div class="text-xs text-slate-500">Days</div>
+        </div>
+        <span class="text-slate-600">:</span>
+        <div class="text-center countdown-number">
+          <div id="hours2" class="text-xl sm:text-2xl font-bold text-amber-400">20</div>
+          <div class="text-xs text-slate-500">Hrs</div>
+        </div>
+        <span class="text-slate-600">:</span>
+        <div class="text-center countdown-number">
+          <div id="mins2" class="text-xl sm:text-2xl font-bold text-amber-400">11</div>
+          <div class="text-xs text-slate-500">Min</div>
+        </div>
+        <span class="text-slate-600">:</span>
+        <div class="text-center countdown-number">
+          <div id="secs2" class="text-xl sm:text-2xl font-bold text-amber-400">11</div>
+          <div class="text-xs text-slate-500">Sec</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════
+     FOOTER
+     ═══════════════════════════════════════════════════ -->
+<footer class="py-12 bg-[#050507] border-t border-slate-800">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="text-center space-y-4">
+      <p class="text-xs text-slate-500 max-w-3xl mx-auto leading-relaxed">
+        This site is not a part of the Facebook website or Facebook Inc. Additionally, This site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc.
+      </p>
+      <p class="text-xs text-slate-500 max-w-3xl mx-auto leading-relaxed">
+        INCOME DISCLAIMER: Although we make every effort to accurately represent the services and/or products presented on this website, Preston Seo makes no assurance, representation or promise regarding future earnings or income, or that you will make any specific amount of money, or any money at all.
+      </p>
+      <div class="flex items-center justify-center gap-6 pt-4">
+        <a href="https://www.firstairbnb.com/contactus" class="link-underline text-sm text-slate-400 hover:text-white transition-colors">Contact</a>
+        <a href="https://www.firstairbnb.com/privacypolicy" class="link-underline text-sm text-slate-400 hover:text-white transition-colors">Privacy</a>
+        <a href="https://managemoney101.com/challengeterms" class="link-underline text-sm text-slate-400 hover:text-white transition-colors">Terms</a>
+      </div>
+      <p class="text-xs text-slate-600 pt-4">
+        Legacy Investing Show LLC | 1993 Dewar Dr, Suite 256, Rock Springs, WY 82901
+      </p>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════════════════
+     JAVASCRIPT - Optimized for mobile performance
+     ═══════════════════════════════════════════════════ -->
+<script>
+  // Mobile detection using only user agent (avoids forced reflow from innerWidth)
+  const isMobile = /Android|iPhone|iPad|iPod|webOS|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+  // Vimeo Facade - Lazy load video only when clicked
+  document.getElementById('vimeo-facade')?.addEventListener('click', function() {
+    this.innerHTML = '<iframe src="https://player.vimeo.com/video/1151508707?autoplay=1&title=0&byline=0&wmode=transparent&autopause=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen class="w-full h-full absolute inset-0" loading="lazy"></iframe>';
+  });
+
+  // Countdown Timer - Runs after first paint
+  requestAnimationFrame(function() {
+    const target = new Date('2026-01-30T10:00:00-05:00').getTime();
+    const d1 = document.getElementById('days');
+    const h1 = document.getElementById('hours');
+    const m1 = document.getElementById('mins');
+    const s1 = document.getElementById('secs');
+    const d2 = document.getElementById('days2');
+    const h2 = document.getElementById('hours2');
+    const m2 = document.getElementById('mins2');
+    const s2 = document.getElementById('secs2');
+
+    let ld = -1, lh = -1, lm = -1, ls = -1;
+    function update() {
+      const diff = target - Date.now();
+      if (diff <= 0) return;
+
+      const d = Math.floor(diff / 86400000);
+      const h = Math.floor((diff % 86400000) / 3600000);
+      const m = Math.floor((diff % 3600000) / 60000);
+      const s = Math.floor((diff % 60000) / 1000);
+
+      if (d !== ld) { if (d1) d1.textContent = d; if (d2) d2.textContent = d; ld = d; }
+      if (h !== lh) { if (h1) h1.textContent = h; if (h2) h2.textContent = h; lh = h; }
+      if (m !== lm) { if (m1) m1.textContent = m; if (m2) m2.textContent = m; lm = m; }
+      if (s !== ls) { if (s1) s1.textContent = s; if (s2) s2.textContent = s; ls = s; }
+    }
+    update();
+    setInterval(update, 1000);
+  });
+
+  // Sticky Header - Only init if not on mobile (saves resources)
+  if (!isMobile) {
+    (function() {
+      const header = document.getElementById('sticky-header');
+      const hero = document.querySelector('section');
+      if (!header || !hero) return;
+
+      const observer = new IntersectionObserver(([entry]) => {
+        if (entry.isIntersecting) {
+          header.classList.add('-translate-y-full', 'opacity-0');
+        } else {
+          header.classList.remove('-translate-y-full', 'opacity-0');
+        }
+      }, { threshold: 0 });
+
+      observer.observe(hero);
+
+      // Update sticky countdown less frequently
+      setInterval(() => {
+        const d = document.getElementById('days')?.textContent || '0';
+        const h = document.getElementById('hours')?.textContent || '0';
+        const el = document.getElementById('sticky-countdown');
+        if (el) el.textContent = `${d}d ${h}h`;
+      }, 2000);
+    })();
+  }
+
+  // FAQ Accordion - Initialize after DOM is ready
+  function initFAQ() {
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        const item = this.closest('.faq-item');
+        const answer = item.querySelector('.faq-answer');
+        const icon = item.querySelector('.faq-icon');
+        const isOpen = !answer.classList.contains('hidden');
+
+        // Close all
+        document.querySelectorAll('.faq-answer').forEach(a => a.classList.add('hidden'));
+        document.querySelectorAll('.faq-icon').forEach(i => i.classList.remove('rotate-180'));
+
+        // Open clicked if it was closed
+        if (!isOpen) {
+          answer.classList.remove('hidden');
+          icon.classList.add('rotate-180');
+        }
+      });
+    });
+  }
+
+  // Run FAQ init immediately (DOM should be ready) and also on DOMContentLoaded as backup
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initFAQ);
+  } else {
+    initFAQ();
+  }
+
+  // Scroll reveal animations removed - all content visible immediately
+
+  // ============================================
+  // URL Parameter Passthrough for Cross-Domain Tracking
+  // Passes UTMs, Hyros, fbclid, gclid to ClickFunnels checkout
+  // ============================================
+  (function() {
+    const params = window.location.search;
+    if (!params) return;
+
+    // Target domain for ClickFunnels
+    const targetDomain = 'managemoney101.com';
+
+    // Find all links to ClickFunnels and append params
+    document.querySelectorAll('a[href*="' + targetDomain + '"]').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        const separator = href.includes('?') ? '&' : '?';
+        this.setAttribute('href', href + separator + params.substring(1));
+      });
+    });
+  })();
+
+</script>
+
 </body>
 </html>
