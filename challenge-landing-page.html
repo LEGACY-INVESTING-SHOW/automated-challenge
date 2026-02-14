@@ -104,27 +104,68 @@
   <!-- Preconnect to Vimeo for video -->
   <link rel="preconnect" href="https://player.vimeo.com" crossorigin>
 
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  
-  <!-- Design System CSS - loads synchronously -->
-  <link rel="stylesheet" href="design-system.css">
+  <!-- Preload self-hosted fonts -->
+  <link rel="preload" href="./assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./assets/fonts/newsreader-latin-400.woff2" as="font" type="font/woff2" crossorigin>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS - loads synchronously (only 10KB, faster than CLS fix) -->
+  <link rel="stylesheet" href="./dist/output.css">
+
+  <!-- Preload LCP image for faster initial render -->
+  <link rel="preload" as="image" href="./assets/images/hero-thumbnail.webp" fetchpriority="high">
+
+
 
   <style>
-    /* ============================================
-       CSS CUSTOM PROPERTIES
-       ============================================ */
-    :root {
-      --color-bg-primary: #0a0a0f;
-      --color-bg-secondary: #121214;
-      --color-amber-400: #f59e0b;
-      --color-amber-500: #f59e0b;
-      --color-rose-400: #fb7185;
-      --color-emerald-400: #34d399;
+    /* Self-hosted fonts - eliminates 780ms Google Fonts blocking request */
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400 700;
+      font-display: swap;
+      src: url('./assets/fonts/inter-latin.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Newsreader';
+      font-style: normal;
+      font-weight: 400 600;
+      font-display: swap;
+      src: url('./assets/fonts/newsreader-latin-400.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Newsreader';
+      font-style: italic;
+      font-weight: 400;
+      font-display: swap;
+      src: url('./assets/fonts/newsreader-latin-400i.woff2') format('woff2');
+    }
+
+    /* Custom utilities not in Tailwind */
+    .text-gradient-gold {
+      background: linear-gradient(135deg, #d4a84a 0%, #e8c86a 50%, #b89830 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* System font stack fallbacks for immediate text rendering */
+    .font-display { font-family: 'Newsreader', Georgia, 'Times New Roman', serif; }
+    .font-body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+
+    /* Ensure fonts don't cause layout shift */
+    html { font-size: 16px; }
+    body { font-synthesis: none; text-rendering: optimizeSpeed; }
+
+    /* Reveal elements - always visible, no scroll animations */
+    .reveal {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* Glass effect */
+    .glass {
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
     }
 
     /* ============================================
@@ -394,7 +435,7 @@
       <div class="space-y-4 sm:space-y-6">
         <!-- Video -->
         <div id="vimeo-facade" class="relative aspect-video rounded-2xl overflow-hidden bg-slate-900 shadow-2xl cursor-pointer group">
-          <img src="/assets/images/hero-thumbnail.webp" alt="Watch the Tax-Free Income Challenge video" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" width="640" height="360" fetchpriority="high" decoding="async">
+          <img src="./assets/images/hero-thumbnail.webp" alt="Watch the Tax-Free Income Challenge video" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" width="640" height="360" fetchpriority="high" decoding="async">
           <div class="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors"></div>
           <div class="absolute inset-0 flex items-center justify-center">
             <div class="w-20 h-20 bg-amber-500 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
@@ -450,8 +491,8 @@
     <div class="flex flex-col items-center gap-2 sm:gap-3 md:gap-4">
       <span class="text-xs sm:text-sm font-medium text-slate-400 uppercase tracking-wider">As Featured In</span>
       <div class="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8 md:gap-12 w-full">
-        <img src="/assets/images/04-as-featured-in-logos.webp" alt="Featured publications" class="h-12 sm:h-20 md:h-24 object-contain brightness-90 contrast-125" width="400" height="96" loading="lazy" decoding="async">
-        <img src="/assets/images/trustpilot.webp" alt="Trustpilot Rating" class="h-24 sm:h-32 md:h-40 object-contain brightness-90" width="350" height="81" loading="lazy" decoding="async">
+        <img src="./assets/images/04-as-featured-in-logos.webp" alt="Featured publications" class="h-12 sm:h-20 md:h-24 object-contain brightness-90 contrast-125" width="400" height="96" loading="lazy" decoding="async">
+        <img src="./assets/images/trustpilot.webp" alt="Trustpilot Rating" class="h-24 sm:h-32 md:h-40 object-contain brightness-90" width="350" height="81" loading="lazy" decoding="async">
       </div>
     </div>
   </div>
@@ -689,7 +730,7 @@
           "We're both full-time & have a daughter. We didn't wanna just stumble around in the dark. If you wanna get out of the 9-to-5, here's how to do it. It's such a blessing."
         </p>
         <div class="flex items-center gap-4">
-          <img src="/assets/images/01-testimonial-stephen-ellie.webp" alt="Stephen & Ellie" class="w-12 h-12 rounded-full object-cover ring-2 ring-amber-500/20" width="48" height="48" loading="lazy" decoding="async">
+          <img src="./assets/images/01-testimonial-stephen-ellie.webp" alt="Stephen & Ellie" class="w-12 h-12 rounded-full object-cover ring-2 ring-amber-500/20" width="48" height="48" loading="lazy" decoding="async">
           <div>
             <div class="font-semibold text-white">Stephen & Ellie</div>
             <div class="text-sm text-slate-400">Full-time Nurses, Kansas City</div>
@@ -710,7 +751,7 @@
           "When we talk about Preston doing an absolute masterclass on how to do this... I couldn't give it a bigger endorsement. It's about as legit as it gets."
         </p>
         <div class="flex items-center gap-4">
-          <img src="/assets/images/02-testimonial-rob.webp" alt="Rob" class="w-12 h-12 rounded-full object-cover ring-2 ring-amber-500/20" width="48" height="48" loading="lazy" decoding="async">
+          <img src="./assets/images/02-testimonial-rob.webp" alt="Rob" class="w-12 h-12 rounded-full object-cover ring-2 ring-amber-500/20" width="48" height="48" loading="lazy" decoding="async">
           <div>
             <div class="font-semibold text-white">Rob</div>
             <div class="text-sm text-slate-400">Marketing Director, Louisville</div>
@@ -731,7 +772,7 @@
           "I've never been someone who just 'gets it' the first time. It has been leaps and bounds, and worth it. Every step is well thought out."
         </p>
         <div class="flex items-center gap-4">
-          <img src="/assets/images/03-testimonial-kristopher.webp" alt="Kristopher" class="w-12 h-12 rounded-full object-cover ring-2 ring-amber-500/20" width="48" height="48" loading="lazy" decoding="async">
+          <img src="./assets/images/03-testimonial-kristopher.webp" alt="Kristopher" class="w-12 h-12 rounded-full object-cover ring-2 ring-amber-500/20" width="48" height="48" loading="lazy" decoding="async">
           <div>
             <div class="font-semibold text-white">Kristopher Bamford</div>
             <div class="text-sm text-slate-400">Husband & Dad, Louisiana</div>
@@ -889,13 +930,13 @@
       <!-- Images -->
       <div class="reveal grid grid-cols-2 gap-4">
         <div class="rounded-2xl overflow-hidden shadow-lg">
-          <img src="/assets/images/08-preston-bridget-early.webp" alt="Preston in parents' basement" class="w-full h-48 object-cover" width="300" height="192" loading="lazy" decoding="async">
+          <img src="./assets/images/08-preston-bridget-early.webp" alt="Preston in parents' basement" class="w-full h-48 object-cover" width="300" height="192" loading="lazy" decoding="async">
         </div>
         <div class="rounded-2xl overflow-hidden shadow-lg">
-          <img src="/assets/images/07-preston-wife-bridget.webp" alt="Preston with wife Bridget" class="w-full h-48 object-cover" width="300" height="192" loading="lazy" decoding="async">
+          <img src="./assets/images/07-preston-wife-bridget.webp" alt="Preston with wife Bridget" class="w-full h-48 object-cover" width="300" height="192" loading="lazy" decoding="async">
         </div>
         <div class="col-span-2 rounded-2xl overflow-hidden shadow-lg">
-          <img src="/assets/images/10-preston-family.webp" alt="Preston family" class="w-full h-64 object-cover" width="600" height="256" loading="lazy" decoding="async">
+          <img src="./assets/images/10-preston-family.webp" alt="Preston family" class="w-full h-64 object-cover" width="600" height="256" loading="lazy" decoding="async">
         </div>
       </div>
 
@@ -981,7 +1022,7 @@
           This framework gives you the exact order of operations - which moves to make first, second, and third.
         </p>
         <div class="rounded-2xl overflow-hidden shadow-xl">
-          <img src="/assets/images/06-preston-basement.webp" alt="Preston Seo" class="w-full" width="500" height="400" loading="lazy" decoding="async">
+          <img src="./assets/images/06-preston-basement.webp" alt="Preston Seo" class="w-full" width="500" height="400" loading="lazy" decoding="async">
         </div>
       </div>
 
@@ -1501,22 +1542,22 @@
     <!-- Screenshots Grid -->
     <div class="reveal grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
       <div class="img-zoom rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 bg-slate-800 border border-slate-700/50 hover:border-amber-500/30">
-        <img src="/assets/images/11-social-proof-1.webp" alt="Testimonial" class="w-full h-auto" width="400" height="300" loading="lazy" decoding="async">
+        <img src="./assets/images/11-social-proof-1.webp" alt="Testimonial" class="w-full h-auto" width="400" height="300" loading="lazy" decoding="async">
       </div>
       <div class="img-zoom rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 bg-slate-800 border border-slate-700/50 hover:border-amber-500/30">
-        <img src="/assets/images/12-social-proof-2.webp" alt="Testimonial" class="w-full h-auto" width="400" height="300" loading="lazy" decoding="async">
+        <img src="./assets/images/12-social-proof-2.webp" alt="Testimonial" class="w-full h-auto" width="400" height="300" loading="lazy" decoding="async">
       </div>
       <div class="img-zoom rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 bg-slate-800 border border-slate-700/50 hover:border-amber-500/30">
-        <img src="/assets/images/13-social-proof-3.webp" alt="Testimonial" class="w-full h-auto" width="400" height="300" loading="lazy" decoding="async">
+        <img src="./assets/images/13-social-proof-3.webp" alt="Testimonial" class="w-full h-auto" width="400" height="300" loading="lazy" decoding="async">
       </div>
       <div class="img-zoom rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 bg-slate-800 border border-slate-700/50 hover:border-amber-500/30">
-        <img src="/assets/images/14-social-proof-4.webp" alt="Testimonial" class="w-full h-auto" width="400" height="300" loading="lazy" decoding="async">
+        <img src="./assets/images/14-social-proof-4.webp" alt="Testimonial" class="w-full h-auto" width="400" height="300" loading="lazy" decoding="async">
       </div>
       <div class="img-zoom rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 bg-slate-800 border border-slate-700/50 hover:border-amber-500/30">
-        <img src="/assets/images/15-social-proof-5.webp" alt="Testimonial" class="w-full h-auto" width="400" height="300" loading="lazy" decoding="async">
+        <img src="./assets/images/15-social-proof-5.webp" alt="Testimonial" class="w-full h-auto" width="400" height="300" loading="lazy" decoding="async">
       </div>
       <div class="img-zoom rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 bg-slate-800 border border-slate-700/50 hover:border-amber-500/30">
-        <img src="/assets/images/16-social-proof-6.webp" alt="Testimonial" class="w-full h-auto" width="400" height="300" loading="lazy" decoding="async">
+        <img src="./assets/images/16-social-proof-6.webp" alt="Testimonial" class="w-full h-auto" width="400" height="300" loading="lazy" decoding="async">
       </div>
     </div>
   </div>
@@ -1800,7 +1841,7 @@
     <!-- Case Study 1 -->
     <div class="reveal grid md:grid-cols-2 gap-12 items-center mb-20">
       <div class="rounded-2xl overflow-hidden shadow-xl">
-        <img src="/assets/images/20-dustin-cotten.webp" alt="Dustin Cotten" class="w-full" width="500" height="400" loading="lazy" decoding="async">
+        <img src="./assets/images/20-dustin-cotten.webp" alt="Dustin Cotten" class="w-full" width="500" height="400" loading="lazy" decoding="async">
       </div>
       <div>
         <h3 class="text-2xl font-semibold text-white mb-2">Dustin Cotten</h3>
@@ -1832,7 +1873,7 @@
     <!-- Case Study 2 -->
     <div class="reveal grid md:grid-cols-2 gap-12 items-center">
       <div class="md:order-2 rounded-2xl overflow-hidden shadow-xl">
-        <img src="/assets/images/21-galin-icon.webp" alt="Galin" class="w-full" width="500" height="400" loading="lazy" decoding="async">
+        <img src="./assets/images/21-galin-icon.webp" alt="Galin" class="w-full" width="500" height="400" loading="lazy" decoding="async">
       </div>
       <div class="md:order-1">
         <h3 class="text-2xl font-semibold text-white mb-2">Galin</h3>
@@ -1899,10 +1940,10 @@
       <!-- Images -->
       <div class="reveal space-y-4">
         <div class="img-zoom rounded-2xl overflow-hidden shadow-lg border border-slate-700/50 hover:border-amber-500/30 transition-colors duration-300">
-          <img src="/assets/images/24-preston-about-1.webp" alt="Preston featured alongside Ray Dalio, Robert Kiyosaki, Daymond John" class="w-full" width="500" height="350" loading="lazy" decoding="async">
+          <img src="./assets/images/24-preston-about-1.webp" alt="Preston featured alongside Ray Dalio, Robert Kiyosaki, Daymond John" class="w-full" width="500" height="350" loading="lazy" decoding="async">
         </div>
         <div class="img-zoom rounded-2xl overflow-hidden shadow-lg border border-slate-700/50 hover:border-amber-500/30 transition-colors duration-300">
-          <img src="/assets/images/23-abigail-case-study.webp" alt="Preston with Pace Morby and Dean Graziosi" class="w-full" width="500" height="350" loading="lazy" decoding="async">
+          <img src="./assets/images/23-abigail-case-study.webp" alt="Preston with Pace Morby and Dean Graziosi" class="w-full" width="500" height="350" loading="lazy" decoding="async">
         </div>
       </div>
 
