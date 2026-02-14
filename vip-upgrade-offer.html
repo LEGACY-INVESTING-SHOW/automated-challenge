@@ -6,6 +6,23 @@
   <title>Get The VIP Ticket - Legacy Investing Show</title>
   <meta name="description" content="Upgrade to VIP for the Tax-Free Income Challenge. Get lifetime replays, exclusive Q&A sessions, and bonus expert training.">
 
+  <!-- Spiffy Checkout -->
+  <script>
+  "use strict";!function(i,t){var f=t.spiffy=t.spiffy||[];if(!f.init){
+  if(f.invoked)return void(t.console&&console.error&&console.warn("Spiffy Elements included twice."))
+  ;f.invoked=!0,f.methods=["identify","config","debug","off","on"],f.factory=function(i){
+  return function(){var t=Array.prototype.slice.call(arguments);return t.unshift(i),f.push(t),f}},
+  f.methods.forEach(function(i){spiffy[i]=f.factory(i)}),f.load=function(t,f){if(!spiffy.ACCOUNT){
+  spiffy.ACCOUNT=t,spiffy.DOMAIN=f;var e=i.createElement("script");e.type="text/javascript",
+  e.async=!0,e.crossorigin="anonymous",e.src="https://js.static.spiffy.co/spiffy.js?a="+t
+  ;var n=i.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)}}}}(document,window),
+  spiffy.SNIPPET_VERSION="1.1.0";
+  spiffy.config({
+      hideSidebar: false,
+  })
+  spiffy.load("legacyinvestingshow");
+  </script>
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -193,7 +210,7 @@
         <span class="hidden sm:inline">Offer Ends:</span>
         <span id="sticky-countdown" class="font-bold text-rose-400 tabular-nums font-mono">--</span>
       </div>
-      <a href="https://managemoney101.com/vip" class="btn-glow px-4 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm font-bold rounded-full transition-all shadow-lg" style="background: linear-gradient(to right, #c9a962, #a68b4b); color: #0a0a0b;">
+      <a href="https://legacyinvestingshow.spiffy.co/checkout/tax-free-income-challenge-early-bird-vip-2026" class="btn-glow px-4 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm font-bold rounded-full transition-all shadow-lg" style="background: linear-gradient(to right, #c9a962, #a68b4b); color: #0a0a0b;">
         Upgrade Now
       </a>
     </div>
@@ -302,10 +319,10 @@
       <p class="text-slate-400 mt-4 text-lg">Here's what you'll get as a VIP</p>
     </div>
 
-    <div class="grid md:grid-cols-3 gap-8">
+    <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
       <!-- Benefit 1 -->
-      <div class="card-glow bg-dark-secondary border border-slate-700/50 rounded-2xl p-8">
-        <div class="w-16 h-16 bg-gold/10 rounded-2xl flex items-center justify-center text-3xl mb-6 border border-gold/20">
+      <div class="card-glow bg-dark-secondary border border-slate-700/50 rounded-2xl p-8 text-center">
+        <div class="w-16 h-16 bg-gold/10 rounded-2xl flex items-center justify-center text-3xl mb-6 border border-gold/20 mx-auto">
           <i data-lucide="target" class="w-8 h-8 text-gold"></i>
         </div>
         <h3 class="text-xl font-semibold text-white mb-4">Extra Coaching Time Every Day</h3>
@@ -313,8 +330,8 @@
       </div>
 
       <!-- Benefit 2 -->
-      <div class="card-glow bg-dark-secondary border border-slate-700/50 rounded-2xl p-8">
-        <div class="w-16 h-16 bg-gold/10 rounded-2xl flex items-center justify-center text-3xl mb-6 border border-gold/20">
+      <div class="card-glow bg-dark-secondary border border-slate-700/50 rounded-2xl p-8 text-center">
+        <div class="w-16 h-16 bg-gold/10 rounded-2xl flex items-center justify-center text-3xl mb-6 border border-gold/20 mx-auto">
           <i data-lucide="repeat" class="w-8 h-8 text-gold"></i>
         </div>
         <h3 class="text-xl font-semibold text-white mb-4">Lifetime Replays + Notes</h3>
@@ -322,17 +339,35 @@
       </div>
 
       <!-- Benefit 3 -->
-      <div class="card-glow bg-dark-secondary border border-slate-700/50 rounded-2xl p-8">
-        <div class="w-16 h-16 bg-gold/10 rounded-2xl flex items-center justify-center text-3xl mb-6 border border-gold/20">
+      <div class="card-glow bg-dark-secondary border border-slate-700/50 rounded-2xl p-8 text-center">
+        <div class="w-16 h-16 bg-gold/10 rounded-2xl flex items-center justify-center text-3xl mb-6 border border-gold/20 mx-auto">
           <i data-lucide="briefcase" class="w-8 h-8 text-gold"></i>
         </div>
         <h3 class="text-xl font-semibold text-white mb-4">Exclusive Bonus Session</h3>
         <p class="text-slate-400 leading-relaxed">Join my personal Tax Strategist (the same expert I trust with my own tax planning). He'll walk you through advanced strategies that could <strong class="text-white">save you tens of thousands</strong>.</p>
       </div>
+
+      <!-- Benefit 4 - AI Agent -->
+      <div class="card-glow bg-dark-secondary border border-slate-700/50 rounded-2xl p-8 text-center">
+        <div class="w-16 h-16 bg-gold/10 rounded-2xl flex items-center justify-center text-3xl mb-6 border border-gold/20 mx-auto">
+          <i data-lucide="bot" class="w-8 h-8 text-gold"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-white mb-4">Legacy Wealth AI Agent</h3>
+        <p class="text-slate-400 leading-relaxed">Get <strong class="text-white">30-day exclusive access</strong> to our AI-powered wealth assistant. Ask questions, get personalized strategy recommendations, and accelerate your wealth-building journey.</p>
+      </div>
     </div>
 
     <!-- Additional Benefits -->
-    <div class="mt-12 grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
+      <div class="mt-12 grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
+      <div class="flex items-start gap-4 p-6 bg-dark-secondary/50 rounded-xl border border-slate-700/30">
+        <div class="w-10 h-10 bg-emerald-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
+          <i data-lucide="check" class="w-5 h-5 text-emerald-400"></i>
+        </div>
+        <div>
+          <h4 class="font-semibold text-white mb-1">30-Day Legacy Wealth AI Agent</h4>
+          <p class="text-slate-400 text-sm">AI-powered wealth assistant access</p>
+        </div>
+      </div>
       <div class="flex items-start gap-4 p-6 bg-dark-secondary/50 rounded-xl border border-slate-700/30">
         <div class="w-10 h-10 bg-emerald-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
           <i data-lucide="check" class="w-5 h-5 text-emerald-400"></i>
@@ -464,12 +499,12 @@
         </div>
 
         <div class="space-y-4">
-          <a href="https://managemoney101.com/vip" class="btn-glow w-full py-5 px-8 rounded-full font-bold text-lg text-dark flex items-center justify-center gap-3" style="background: linear-gradient(to right, #c9a962, #a68b4b); box-shadow: 0 4px 20px rgba(201, 169, 98, 0.3); text-decoration: none;">
+          <a href="https://legacyinvestingshow.spiffy.co/checkout/tax-free-income-challenge-early-bird-vip-2026" class="btn-glow w-full py-5 px-8 rounded-full font-bold text-lg text-dark flex items-center justify-center gap-3" style="background: linear-gradient(to right, #c9a962, #a68b4b); box-shadow: 0 4px 20px rgba(201, 169, 98, 0.3); text-decoration: none;">
             Upgrade to VIP Now
             <i data-lucide="arrow-right" class="w-5 h-5"></i>
           </a>
 
-          <a href="https://managemoney101.com/ticket" class="block w-full text-center text-sm text-slate-400 hover:text-slate-200 transition-colors" style="text-decoration: underline; text-underline-offset: 4px;">
+          <a href="https://legacyinvestingshow.spiffy.co/checkout/tax-free-income-challenge-early-bird-2026" class="block w-full text-center text-sm text-slate-400 hover:text-slate-200 transition-colors" style="text-decoration: underline; text-underline-offset: 4px;">
             No thanks, I'll stick with the regular ticket
           </a>
         </div>
@@ -543,7 +578,7 @@
     <h2 class="font-display text-2xl sm:text-3xl font-semibold text-white mb-6">
       Ready to Go VIP?
     </h2>
-    <a href="https://managemoney101.com/vip" class="btn-glow inline-flex items-center gap-2 px-8 py-4 rounded-full font-bold text-lg text-dark" style="background: linear-gradient(to right, #c9a962, #a68b4b); box-shadow: 0 4px 20px rgba(201, 169, 98, 0.3);">
+    <a href="https://legacyinvestingshow.spiffy.co/checkout/tax-free-income-challenge-early-bird-vip-2026" class="btn-glow inline-flex items-center gap-2 px-8 py-4 rounded-full font-bold text-lg text-dark" style="background: linear-gradient(to right, #c9a962, #a68b4b); box-shadow: 0 4px 20px rgba(201, 169, 98, 0.3);">
       Upgrade to VIP Now - $99
       <i data-lucide="arrow-right" class="w-5 h-5"></i>
     </a>

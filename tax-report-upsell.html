@@ -5,6 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stop Overpaying: Your Personalized Tax Strategy Report | Legacy Investing Show</title>
     <meta name="description" content="Discover exactly how much you're losing to taxes. Get a personalized 24-page tax strategy report based on 300+ reports generated. Just $47.">
+    
+    <!-- Spiffy Checkout -->
+    <script>
+    "use strict";!function(i,t){var f=t.spiffy=t.spiffy||[];if(!f.init){
+    if(f.invoked)return void(t.console&&console.error&&console.warn("Spiffy Elements included twice."))
+    ;f.invoked=!0,f.methods=["identify","config","debug","off","on"],f.factory=function(i){
+    return function(){var t=Array.prototype.slice.call(arguments);return t.unshift(i),f.push(t),f}},
+    f.methods.forEach(function(i){spiffy[i]=f.factory(i)}),f.load=function(t,f){if(!spiffy.ACCOUNT){
+    spiffy.ACCOUNT=t,spiffy.DOMAIN=f;var e=i.createElement("script");e.type="text/javascript",
+    e.async=!0,e.crossorigin="anonymous",e.src="https://js.static.spiffy.co/spiffy.js?a="+t
+    ;var n=i.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)}}}}(document,window),
+    spiffy.SNIPPET_VERSION="1.1.0";
+    spiffy.config({
+        hideSidebar: false,
+    })
+    spiffy.load("legacyinvestingshow");
+    </script>
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1211,13 +1229,13 @@
             </p>
             
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10 reveal">
-                <a href="https://legacyinvestingshow.spiffy.co/offer/xgD77hLuJ" class="inline-flex items-center px-10 py-5 bg-[#c9a962] hover:bg-[#e0c078] text-[#0a0a0b] font-bold text-lg transition-all duration-300 magnetic-btn">
+                <a href="https://legacyinvestingshow.spiffy.co/offer/bvoVcauz" id="tax-accept-btn" class="inline-flex items-center px-10 py-5 bg-[#c9a962] hover:bg-[#e0c078] text-[#0a0a0b] font-bold text-lg transition-all duration-300 magnetic-btn">
                     Yes, Add The Personalized Tax Analysis Report For $47
                     <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i>
                 </a>
             </div>
             <p class="text-[#a1a1aa] text-sm reveal">
-                <a href="https://legacyinvestingshow.spiffy.co/offer/WG5NNU8uW" class="underline underline-offset-4 hover:text-[#fafafa]">No thanks, I'll figure out what applies to me on my own</a>
+                <a href="https://legacyinvestingshow.spiffy.co/offer/MB7OBSYuy" id="tax-decline-btn" class="underline underline-offset-4 hover:text-[#fafafa]">No thanks, I'll figure out what applies to me on my own</a>
             </p>
             
             <div class="flex flex-wrap justify-center items-center gap-6 text-sm text-[#71717a] reveal">
@@ -1257,6 +1275,22 @@
     </footer>
 
     <script>
+        // Flow detection for Tax Report Upsell
+        // Regular flow: Accept=bvoVcauz, Decline=MB7OBSYuy
+        // VIP flow: Accept=ge4XdTMuy, Decline=3E3gNFDum
+        (function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const flow = urlParams.get('flow') || 'regular'; // default to regular
+            
+            const acceptBtn = document.getElementById('tax-accept-btn');
+            const declineBtn = document.getElementById('tax-decline-btn');
+            
+            if (flow === 'vip') {
+                if (acceptBtn) acceptBtn.href = 'https://legacyinvestingshow.spiffy.co/offer/ge4XdTMuy';
+                if (declineBtn) declineBtn.href = 'https://legacyinvestingshow.spiffy.co/offer/3E3gNFDum';
+            }
+        })();
+
         // Initialize Lucide icons
         if (window.lucide && typeof window.lucide.createIcons === 'function') {
             window.lucide.createIcons();

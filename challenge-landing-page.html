@@ -84,61 +84,62 @@
   })();
   </script>
 
+  <!-- Spiffy Checkout -->
+  <script>
+  "use strict";!function(i,t){var f=t.spiffy=t.spiffy||[];if(!f.init){
+  if(f.invoked)return void(t.console&&console.error&&console.warn("Spiffy Elements included twice."))
+  ;f.invoked=!0,f.methods=["identify","config","debug","off","on"],f.factory=function(i){
+  return function(){var t=Array.prototype.slice.call(arguments);return t.unshift(i),f.push(t),f}},
+  f.methods.forEach(function(i){spiffy[i]=f.factory(i)}),f.load=function(t,f){if(!spiffy.ACCOUNT){
+  spiffy.ACCOUNT=t,spiffy.DOMAIN=f;var e=i.createElement("script");e.type="text/javascript",
+  e.async=!0,e.crossorigin="anonymous",e.src="https://js.static.spiffy.co/spiffy.js?a="+t
+  ;var n=i.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)}}}}(document,window),
+  spiffy.SNIPPET_VERSION="1.1.0";
+  spiffy.config({
+      hideSidebar: false,
+  })
+  spiffy.load("legacyinvestingshow");
+  </script>
+
   <!-- Preconnect to Vimeo for video -->
   <link rel="preconnect" href="https://player.vimeo.com" crossorigin>
 
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
   <!-- Design System CSS - loads synchronously -->
   <link rel="stylesheet" href="design-system.css">
-
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 
   <style>
-
-    /* Custom utilities not in Tailwind */
-    .text-gradient-gold {
-      background: linear-gradient(135deg, #d4a84a 0%, #e8c86a 50%, #b89830 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    /* System font stack fallbacks for immediate text rendering */
-    .font-display { font-family: 'Newsreader', Georgia, 'Times New Roman', serif; }
-    .font-body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
-
-    /* Ensure fonts don't cause layout shift */
-    html { font-size: 16px; }
-    body { font-synthesis: none; text-rendering: optimizeSpeed; }
-
-    /* Reveal elements - always visible, no scroll animations */
-    .reveal {
-      opacity: 1;
-      transform: none;
-    }
-
-    /* Glass effect */
-    .glass {
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+    /* ============================================
+       CSS CUSTOM PROPERTIES
+       ============================================ */
+    :root {
+      --color-bg-primary: #0a0a0f;
+      --color-bg-secondary: #121214;
+      --color-amber-400: #f59e0b;
+      --color-amber-500: #f59e0b;
+      --color-rose-400: #fb7185;
+      --color-emerald-400: #34d399;
     }
 
     /* ============================================
-       MOBILE OPTIMIZATIONS (Simplified)
+       BASE STYLES
        ============================================ */
-
-    @media (max-width: 640px) {
-      .blur-3xl { display: none; }
-      .countdown-number { min-width: 44px; padding: 6px 8px; }
-      .btn-glow { width: 100%; justify-content: center; }
-      /* Prevent any element from causing horizontal overflow */
-      img, video, iframe { max-width: 100%; height: auto; }
-      table { display: block; overflow-x: auto; }
-      /* Better mobile text sizing */
-      h1 { font-size: 1.5rem !important; line-height: 1.25 !important; }
-      h2 { font-size: 1.5rem !important; }
+    html { 
+      font-size: 16px; 
+      scroll-behavior: smooth;
+    }
+    
+    body { 
+      font-synthesis: none; 
+      text-rendering: optimizeSpeed; 
+      overflow-x: hidden;
+      width: 100%;
     }
 
     /* Global overflow prevention */
@@ -147,8 +148,173 @@
       width: 100%;
     }
 
+    /* ============================================
+       TYPOGRAPHY
+       ============================================ */
+    .font-display { 
+      font-family: 'Newsreader', Georgia, 'Times New Roman', serif; 
+    }
+    
+    .font-body { 
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+    }
+
+    .text-gradient-gold {
+      background: linear-gradient(135deg, #d4a84a 0%, #e8c86a 50%, #b89830 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .text-shimmer {
+      background: linear-gradient(135deg, #f59e0b, #fbbf24, #f59e0b);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      background-size: 200% 200%;
+      animation: shimmer 3s ease-in-out infinite;
+    }
+
+    @keyframes shimmer {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* ============================================
+       BUTTONS
+       ============================================ */
+    .btn-glow {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-glow:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(245, 158, 11, 0.4);
+    }
+
+    .btn-glow::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.5s;
+    }
+
+    .btn-glow:hover::before {
+      left: 100%;
+    }
+
+    /* ============================================
+       CARDS & COMPONENTS
+       ============================================ */
+    .card-glow {
+      transition: all 0.3s ease;
+    }
+
+    .card-glow:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .backdrop-enhanced {
+      background: rgba(10, 10, 15, 0.95);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    .glass {
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    /* ============================================
+       DECORATIVE ELEMENTS
+       ============================================ */
+    .quote-decoration::before {
+      content: '"';
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-family: 'Newsreader', serif;
+      font-size: 4rem;
+      color: rgba(245, 158, 11, 0.2);
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    /* ============================================
+       ANIMATIONS
+       ============================================ */
+    .reveal {
+      opacity: 1;
+      transform: none;
+    }
+
+    .animate-float {
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .animate-float-delay-1 { animation-delay: 1s; }
+    .animate-float-delay-2 { animation-delay: 2s; }
+    .animate-float-delay-3 { animation-delay: 3s; }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(var(--rotate, 0deg)); }
+      50% { transform: translateY(-10px) rotate(var(--rotate, 0deg)); }
+    }
+
+    .animate-pulse {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+
+    /* ============================================
+       UTILITY BOXES
+       ============================================ */
+    .pain-box {
+      background: linear-gradient(135deg, rgba(244, 63, 94, 0.1), rgba(244, 63, 94, 0.05));
+      border: 1px solid rgba(244, 63, 94, 0.2);
+    }
+
+    .results-box {
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(16, 185, 129, 0.05));
+      border: 1px solid rgba(16, 185, 129, 0.2);
+    }
+
+    /* ============================================
+       MOBILE OPTIMIZATIONS
+       ============================================ */
+    @media (max-width: 640px) {
+      .blur-3xl { display: none; }
+      .countdown-number { min-width: 44px; padding: 6px 8px; }
+      .btn-glow { width: 100%; justify-content: center; }
+      img, video, iframe { max-width: 100%; height: auto; }
+      table { display: block; overflow-x: auto; }
+      h1 { font-size: 1.5rem !important; line-height: 1.25 !important; }
+      h2 { font-size: 1.5rem !important; }
+    }
+
+    /* Reduced motion preference */
     @media (prefers-reduced-motion: reduce) {
-      .animate-pulse { animation: none; }
+      .animate-pulse,
+      .animate-float,
+      .text-shimmer { 
+        animation: none; 
+      }
     }
   </style>
 </head>
@@ -1521,7 +1687,7 @@
           </li>
         </ul>
 
-        <a href="https://managemoney101.com/ticket" class="block w-full py-4 text-center font-bold rounded-xl transition-all" style="border: 2px solid rgba(245, 158, 11, 0.6); color: #fbbf24;">
+        <a href="https://legacyinvestingshow.spiffy.co/checkout/tax-free-income-challenge-early-bird-2026" class="block w-full py-4 text-center font-bold rounded-xl transition-all" style="border: 2px solid rgba(245, 158, 11, 0.6); color: #fbbf24;">
           Join the Challenge →
         </a>
       </div>
@@ -1559,9 +1725,13 @@
             <svg class="w-5 h-5 text-amber-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
             All slides, notes, and educational materials delivered
           </li>
+          <li class="flex gap-3 text-sm text-slate-200">
+            <svg class="w-5 h-5 text-amber-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            30-day Legacy Wealth AI Agent access
+          </li>
         </ul>
 
-        <a href="https://managemoney101.com/vip" class="btn-glow block w-full py-4 text-center font-bold rounded-xl transition-all shadow-lg" style="background: linear-gradient(to right, #f59e0b, #d97706); color: #0f172a; box-shadow: 0 4px 20px rgba(245, 158, 11, 0.3);">
+        <a href="https://legacyinvestingshow.spiffy.co/checkout/tax-free-income-challenge-early-bird-vip-2026" class="btn-glow block w-full py-4 text-center font-bold rounded-xl transition-all shadow-lg" style="background: linear-gradient(to right, #f59e0b, #d97706); color: #0f172a; box-shadow: 0 4px 20px rgba(245, 158, 11, 0.3);">
           Get VIP Access →
         </a>
       </div>
@@ -1595,6 +1765,11 @@
           </tr>
           <tr class="table-row-hover">
             <td class="py-4 text-slate-300">15+ hours lifetime replay access</td>
+            <td class="py-4 text-center text-slate-500">—</td>
+            <td class="py-4 text-center text-emerald-400 font-medium">✓</td>
+          </tr>
+          <tr class="table-row-hover">
+            <td class="py-4 text-slate-300">30-day Legacy Wealth AI Agent access</td>
             <td class="py-4 text-center text-slate-500">—</td>
             <td class="py-4 text-center text-emerald-400 font-medium">✓</td>
           </tr>
