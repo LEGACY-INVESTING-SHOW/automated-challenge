@@ -925,13 +925,22 @@
               VIP Access
             </div>
             <h3>Secure VIP Checkout</h3>
-            <p>Checkout form would be embedded here (Spiffy/Stripe integration)</p>
-            <div style="margin-top: 2rem;">
-              <button class="btn btn-primary btn-large">
+            <p>Complete your VIP registration below</p>
+            <div id="spiffy-checkout-vip" style="margin-top: 2rem;">
+              <a href="https://legacyinvestingshow.spiffy.co/checkout/tax-free-income-challenge-early-bird-vip-2026" class="btn btn-primary btn-large">
                 Get VIP Access - $297
                 <i data-lucide="arrow-right" class="w-5 h-5"></i>
-              </button>
+              </a>
             </div>
+            <script>
+              // Check if Spiffy is loaded and replace button with embed
+              if (window.spiffy) {
+                const container = document.getElementById('spiffy-checkout-vip');
+                if (container) {
+                  container.innerHTML = '<spiffy-checkout url="https://legacyinvestingshow.spiffy.co/checkout/tax-free-income-challenge-early-bird-vip-2026" style="display: block; width: 100%;"></spiffy-checkout>';
+                }
+              }
+            </script>
           </div>
         </div>
 
