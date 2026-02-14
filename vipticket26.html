@@ -339,7 +339,8 @@
       background: var(--bg-secondary);
       border-radius: var(--radius-lg);
       border: 1px solid rgba(201, 169, 98, 0.1);
-      padding: 2rem;
+      padding: 0;
+      overflow: hidden;
     }
 
     .checkout-placeholder {
@@ -919,28 +920,15 @@
       <div class="checkout-grid">
         <!-- Left: Checkout Form -->
         <div class="checkout-form">
-          <div class="checkout-placeholder">
-            <div class="vip-badge-large">
-              <i data-lucide="crown" class="w-5 h-5"></i>
-              VIP Access
-            </div>
-            <h3>Secure VIP Checkout</h3>
-            <p>Complete your VIP registration below</p>
-            <div id="spiffy-checkout-vip" style="margin-top: 2rem;">
-              <a href="https://legacyinvestingshow.spiffy.co/checkout/tax-free-income-challenge-early-bird-vip-2026" class="btn btn-primary btn-large">
-                Get VIP Access - $297
-                <i data-lucide="arrow-right" class="w-5 h-5"></i>
-              </a>
-            </div>
-            <script>
-              // Check if Spiffy is loaded and replace button with embed
-              if (window.spiffy) {
-                const container = document.getElementById('spiffy-checkout-vip');
-                if (container) {
-                  container.innerHTML = '<spiffy-checkout url="https://legacyinvestingshow.spiffy.co/checkout/tax-free-income-challenge-early-bird-vip-2026" style="display: block; width: 100%;"></spiffy-checkout>';
-                }
-              }
-            </script>
+          <div style="background: var(--bg-primary); border-radius: var(--radius-lg); border: 0; padding: 0;">
+            <iframe
+              id="spiffy-inline-checkout"
+              title="Secure VIP Checkout"
+              style="width: 100%; height: 1050px; border: 0; min-height: 760px; border-radius: var(--radius-lg); background: #ffffff;"
+              loading="eager"
+              allow="payment"
+              referrerpolicy="strict-origin-when-cross-origin">
+            </iframe>
           </div>
         </div>
 
@@ -1266,6 +1254,45 @@
     (function() {
       // Initialize Lucide icons
       lucide.createIcons();
+
+      // Checkout embed (manual inline mount for reliability)
+      (function initCheckoutEmbed() {
+        const iframe = document.getElementById('spiffy-inline-checkout');
+        if (!iframe) return;
+
+        const checkoutBase = 'https://legacyinvestingshow.spiffy.co/checkout/tax-free-income-challenge-early-bird-vip-2026';
+        const url = new URL(checkoutBase);
+        const pageParams = new URLSearchParams(window.location.search);
+        pageParams.forEach((value, key) => {
+          if (key !== 'elements') url.searchParams.set(key, value);
+        });
+
+        try {
+          const payload = {
+            modality: 'inline',
+            uid: 'manual-embed',
+            from: window.location.href,
+            sessionId: `manual-${Date.now()}`
+          };
+          url.searchParams.set('elements', btoa(JSON.stringify(payload)));
+        } catch (err) {
+          // Fall back to plain checkout URL if encoding fails.
+        }
+
+        iframe.src = url.toString();
+
+        window.addEventListener('message', (event) => {
+          try {
+            const message = typeof event.data === 'string' ? JSON.parse(event.data) : event.data;
+            const height = Number(message?.data?.height);
+            if (message?.event === 'form:size' && Number.isFinite(height) && height > 0) {
+              iframe.style.height = `${Math.max(700, height)}px`;
+            }
+          } catch (err) {
+            // Ignore non-JSON postMessage events.
+          }
+        });
+      })();
 
       // Countdown Timer
       let targetDate = Number(window.eventTargetDate) || new Date('February 19, 2026 05:00:00 UTC').getTime();
