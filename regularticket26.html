@@ -651,53 +651,20 @@
 
 <!-- Checkout Section -->
 <section id="checkout" class="py-12 sm:py-20 bg-dark">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6">
-    <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+  <div class="max-w-[103rem] mx-auto px-4 sm:px-6">
+    <div class="grid lg:grid-cols-2 gap-8 items-start lg:gap-10">
       <!-- Left: Checkout Form -->
       <div class="order-2 lg:order-1">
-        <div class="bg-dark rounded-2xl p-6 sm:p-8 border border-slate-700/50 shadow-xl">
-          <div class="text-center mb-6">
-            <h2 class="font-display text-2xl sm:text-3xl font-semibold text-white mb-2">Complete Your Registration</h2>
-            <p class="text-slate-400">Secure your spot before early bird pricing ends</p>
-          </div>
-
-          <!-- Pricing Display -->
-          <div class="bg-dark-secondary rounded-xl p-6 mb-6 border border-slate-700/30">
-            <div class="flex items-center justify-between mb-4">
-              <span class="text-slate-300">Regular Ticket</span>
-              <div class="text-right">
-                <span class="text-slate-500 line-through text-sm">$97</span>
-                <span class="text-2xl font-bold text-white ml-2">$47</span>
-              </div>
-            </div>
-            <div class="flex items-center justify-between text-sm">
-              <span class="text-emerald-400">Early Bird Savings</span>
-              <span class="text-emerald-400 font-semibold">-$50</span>
-            </div>
-          </div>
-
-          <!-- Checkout Placeholder -->
-          <div class="bg-dark-tertiary/50 border border-slate-700 rounded-xl p-8">
-            <div class="w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-4">
-              <i data-lucide="shield-check" class="w-8 h-8 text-gold"></i>
-            </div>
-            <h3 class="text-white font-semibold mb-2 text-center">Secure Checkout</h3>
-            <p class="text-slate-400 text-sm mb-6 text-center">Complete your registration below</p>
-            <!-- Spiffy Checkout Embed -->
-            <spiffy-checkout url="https://legacyinvestingshow.spiffy.co/checkout/tax-free-income-challenge-early-bird-2026"></spiffy-checkout>
-          </div>
-
-          <!-- Trust Badges -->
-          <div class="flex items-center justify-center gap-4 mt-6 text-xs text-slate-500">
-            <span class="flex items-center gap-1">
-              <i data-lucide="lock" class="w-4 h-4"></i>
-              SSL Secure
-            </span>
-            <span class="flex items-center gap-1">
-              <i data-lucide="check-circle" class="w-4 h-4"></i>
-              7-Day Guarantee
-            </span>
-          </div>
+        <div class="bg-dark rounded-2xl p-2 sm:p-3 border border-slate-700/50 shadow-xl">
+          <iframe
+            id="spiffy-inline-checkout"
+            title="Secure Checkout"
+            class="w-full rounded-xl bg-white"
+            style="height: 1050px; border: 0; min-height: 760px;"
+            loading="eager"
+            allow="payment"
+            referrerpolicy="strict-origin-when-cross-origin">
+          </iframe>
         </div>
       </div>
 
@@ -1126,6 +1093,45 @@
   (function() {
     // Initialize Lucide icons
     lucide.createIcons();
+
+    // Checkout embed (manual inline mount for reliability)
+    (function initCheckoutEmbed() {
+      const iframe = document.getElementById('spiffy-inline-checkout');
+      if (!iframe) return;
+
+      const checkoutBase = 'https://legacyinvestingshow.spiffy.co/checkout/tax-free-income-challenge-early-bird-2026';
+      const url = new URL(checkoutBase);
+      const pageParams = new URLSearchParams(window.location.search);
+      pageParams.forEach((value, key) => {
+        if (key !== 'elements') url.searchParams.set(key, value);
+      });
+
+      try {
+        const payload = {
+          modality: 'inline',
+          uid: 'manual-embed',
+          from: window.location.href,
+          sessionId: `manual-${Date.now()}`
+        };
+        url.searchParams.set('elements', btoa(JSON.stringify(payload)));
+      } catch (err) {
+        // Fall back to plain checkout URL if encoding fails.
+      }
+
+      iframe.src = url.toString();
+
+      window.addEventListener('message', (event) => {
+        try {
+          const message = typeof event.data === 'string' ? JSON.parse(event.data) : event.data;
+          const height = Number(message?.data?.height);
+          if (message?.event === 'form:size' && Number.isFinite(height) && height > 0) {
+            iframe.style.height = `${Math.max(700, height)}px`;
+          }
+        } catch (err) {
+          // Ignore non-JSON postMessage events.
+        }
+      });
+    })();
 
     // Countdown Timer
     let targetDate = Number(window.eventTargetDate) || new Date('February 19, 2026 05:00:00 UTC').getTime();
