@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth overflow-x-hidden">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VIP Exclusive: The Challenge Prep Kit | Preston Seo</title>
+  <meta name="description" content="As a VIP member, get ready before Day 1 with the Challenge Prep Kit. Includes 27 Tax Strategy Cheatsheet, Anti-Inflation Pack, and Financial Diagnostic Calculator.">
+
+  <!-- Spiffy Checkout -->
+  <script>
+  "use strict";!function(i,t){var f=t.spiffy=t.spiffy||[];if(!f.init){
+  if(f.invoked)return void(t.console&&console.error&&console.warn("Spiffy Elements included twice."))
+  ;f.invoked=!0,f.methods=["identify","config","debug","off","on"],f.factory=function(i){
+  return function(){var t=Array.prototype.slice.call(arguments);return t.unshift(i),f.push(t),f}},
+  f.methods.forEach(function(i){spiffy[i]=f.factory(i)}),f.load=function(t,f){if(!spiffy.ACCOUNT){
+  spiffy.ACCOUNT=t,spiffy.DOMAIN=f;var e=i.createElement("script");e.type="text/javascript",
+  e.async=!0,e.crossorigin="anonymous",e.src="https://js.static.spiffy.co/spiffy.js?a="+t
+  ;var n=i.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)}}}}(document,window),
+  spiffy.SNIPPET_VERSION="1.1.0";
+  spiffy.config({
+      hideSidebar: false,
+  })
+  spiffy.load("legacyinvestingshow");
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Design System -->
+  <link rel="stylesheet" href="design-system.css">
+
+  <style>
+    /* ========== CSS VARIABLES ========== */
+    :root {
+      --bg-primary: #0a0a0b;
+      --bg-secondary: #121214;
+      --bg-tertiary: #1a1a1d;
+      --accent-gold: #c9a962;
+      --accent-gold-light: #e0c078;
+      --accent-gold-dark: #a68b4b;
+      --accent-copper: #b87333;
+      --text-primary: #fafafa;
+      --text-secondary: #a1a1aa;
+      --text-muted: #71717a;
+      --success: #16a34a;
+      --danger: #dc2626;
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --radius-xl: 24px;
+      --radius-full: 9999px;
+      --container: min(1152px, calc(100% - 2rem));
+    }
+
+    /* ========== BASE STYLES ========== */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    html, body {
+      overflow-x: hidden;
+      width: 100%;
+      max-width: 100vw;
+    }
+
+    body {
+      font-family: 'Sora', system-ui, sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    img, video, iframe, svg {
+      max-width: 100%;
+      height: auto;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Crimson Pro', Georgia, serif;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    .font-serif {
+      font-family: 'Crimson Pro', Georgia, serif;
+    }
+
+    .font-mono {
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* Noise overlay */
+    .noise-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1000;
+      opacity: 0.03;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--bg-secondary);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--accent-gold-dark);
+      border-radius: 4px;
+    }
+
+    /* Text gradient gold */
+    .text-gradient-gold {
+      background: linear-gradient(135deg, #e0c078 0%, #c9a962 50%, #a68b4b 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* ========== UTILITY CLASSES ========== */
+    .container {
+      width: var(--container);
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    /* ========== HERO SECTION ========== */
+    .hero {
+      background: linear-gradient(180deg, rgba(26, 26, 29, 0.9) 0%, var(--bg-primary) 100%);
+      padding: 3rem 0 2rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50%;
+      height: 50%;
+      background: radial-gradient(circle at 80% 20%, rgba(201, 169, 98, 0.15) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .hero-title {
+      font-family: 'Crimson Pro', Georgia, serif;
+      font-size: clamp(1.75rem, 5vw, 3rem);
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 2rem;
+      position: relative;
+      z-index: 1;
+      line-height: 1.2;
+    }
+
+    /* ========== PROGRESS BAR ========== */
+    .progress-container {
+      max-width: 600px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .progress-bar-wrapper {
+      background: var(--bg-secondary);
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(201, 169, 98, 0.2);
+      overflow: hidden;
+      height: 40px;
+      position: relative;
+    }
+
+    .progress-bar {
+      height: 100%;
+      background: linear-gradient(90deg, var(--accent-gold) 0%, var(--accent-gold-dark) 100%);
+      width: 74%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: width 0.3s ease;
+      box-shadow: 0 0 20px rgba(201, 169, 98, 0.3);
+    }
+
+    .progress-label {
+      color: var(--bg-primary);
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* ========== VIDEO SECTION ========== */
+    .video-section {
+      background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+      padding: 0 0 3rem;
+      text-align: center;
+    }
+
+    .video-wrapper {
+      max-width: 950px;
+      margin: 0 auto;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      background: var(--bg-secondary);
+      border: 1px solid rgba(201, 169, 98, 0.1);
+    }
+
+    .video-container {
+      position: relative;
+      aspect-ratio: 16/9;
+      background: rgba(0, 0, 0, 0.4);
+    }
+
+    .video-placeholder {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-primary);
+      font-size: 1.25rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      gap: 1rem;
+    }
+
+    .video-placeholder:hover {
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .video-play-icon {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-gold-dark) 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 30px rgba(201, 169, 98, 0.4);
+    }
+
+    .video-play-icon:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 40px rgba(201, 169, 98, 0.6);
+    }
+
+    /* ========== VALUE BOXES ========== */
+    .value-section {
+      background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+      padding: 2rem 0;
+    }
+
+    .value-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .value-box {
+      background: linear-gradient(145deg, rgba(201, 169, 98, 0.05) 0%, rgba(18, 18, 20, 0.8) 100%);
+      border: 1px solid rgba(201, 169, 98, 0.1);
+      border-radius: var(--radius-md);
+      padding: 1.25rem 1rem;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .value-box:hover {
+      border-color: rgba(201, 169, 98, 0.3);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(201, 169, 98, 0.1);
+    }
+
+    .value-text {
+      color: var(--text-primary);
+      font-weight: 600;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+
+    /* ========== INTRO SECTION ========== */
+    .intro-section {
+      background: var(--bg-primary);
+      padding: 4rem 0;
+      text-align: center;
+    }
+
+    .intro-text {
+      font-weight: 600;
+      font-size: 1.25rem;
+      color: var(--text-secondary);
+      max-width: 700px;
+      margin: 0 auto 1.5rem;
+      line-height: 1.6;
+    }
+
+    .intro-highlight {
+      background: linear-gradient(90deg, rgba(201, 169, 98, 0.1) 0%, transparent 100%);
+      border-left: 4px solid var(--accent-gold);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      padding: 1.5rem;
+      max-width: 800px;
+      margin: 2rem auto;
+      border: 1px solid rgba(201, 169, 98, 0.1);
+      border-left-width: 4px;
+    }
+
+    .intro-highlight p {
+      font-weight: 400;
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+
+    .solution-title {
+      font-family: 'Crimson Pro', Georgia, serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 600;
+      color: var(--accent-gold);
+      margin: 2.5rem 0 1rem;
+      line-height: 1.2;
+    }
+
+    .solution-subtitle {
+      font-weight: 400;
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .solution-subtitle strong {
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .prep-kit-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: linear-gradient(90deg, rgba(201, 169, 98, 0.2), rgba(184, 115, 51, 0.1));
+      border: 1px solid rgba(201, 169, 98, 0.3);
+      border-radius: var(--radius-full);
+      padding: 0.75rem 1.5rem;
+      margin: 2rem 0;
+      color: var(--accent-gold);
+      font-weight: 600;
+      font-size: 0.95rem;
+      font-family: 'JetBrains Mono', monospace;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* ========== PRODUCTS SECTION ========== */
+    .products-section {
+      background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+      padding: 4rem 0;
+      border-top: 1px solid rgba(201, 169, 98, 0.1);
+      border-bottom: 1px solid rgba(201, 169, 98, 0.1);
+    }
+
+    .section-title {
+      text-align: center;
+      font-family: 'Crimson Pro', Georgia, serif;
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 3rem;
+      line-height: 1.2;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .product-card {
+      background: linear-gradient(145deg, rgba(201, 169, 98, 0.05) 0%, rgba(18, 18, 20, 0.8) 100%);
+      border: 1px solid rgba(201, 169, 98, 0.1);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(201, 169, 98, 0.3);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .product-image-wrapper {
+      margin-bottom: 1.5rem;
+      background: var(--bg-tertiary);
+      border-radius: var(--radius-md);
+      padding: 1rem;
+      border: 1px solid rgba(201, 169, 98, 0.1);
+    }
+
+    .product-image {
+      width: 100%;
+      max-width: 180px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border-radius: var(--radius-sm);
+    }
+
+    .product-title {
+      font-family: 'Crimson Pro', Georgia, serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--accent-gold);
+      margin-bottom: 1rem;
+      text-align: center;
+      line-height: 1.3;
+    }
+
+    .product-desc {
+      font-weight: 400;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.7;
+      text-align: left;
+    }
+
+    .product-list {
+      list-style: none;
+      padding: 0;
+      margin-top: 1rem;
+      text-align: left;
+    }
+
+    .product-list li {
+      padding: 0.6rem 0;
+      padding-left: 1.75rem;
+      position: relative;
+      font-weight: 400;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .product-list li i {
+      position: absolute;
+      left: 0;
+      top: 0.75rem;
+      color: var(--accent-gold);
+    }
+
+    /* ========== URGENCY SECTION ========== */
+    .urgency-section {
+      background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+      padding: 4rem 0;
+      text-align: center;
+    }
+
+    .urgency-title {
+      font-family: 'Crimson Pro', Georgia, serif;
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 1.5rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.3;
+    }
+
+    .urgency-text {
+      font-weight: 400;
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      max-width: 700px;
+      margin: 0 auto 2rem;
+      line-height: 1.8;
+    }
+
+    .urgency-text strong {
+      color: var(--accent-gold);
+      font-weight: 600;
+    }
+
+    .urgency-list {
+      list-style: none;
+      padding: 0;
+      max-width: 500px;
+      margin: 2rem auto;
+      text-align: left;
+    }
+
+    .urgency-list li {
+      color: var(--text-secondary);
+      padding: 0.75rem 0;
+      padding-left: 1.75rem;
+      position: relative;
+      font-size: 1.05rem;
+    }
+
+    .urgency-list li i {
+      position: absolute;
+      left: 0;
+      top: 0.85rem;
+      color: var(--success);
+    }
+
+    .urgency-note {
+      background: linear-gradient(90deg, rgba(201, 169, 98, 0.1), rgba(184, 115, 51, 0.05));
+      border: 1px solid rgba(201, 169, 98, 0.2);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      max-width: 600px;
+      margin: 2rem auto;
+    }
+
+    .urgency-note p {
+      color: var(--accent-gold);
+      font-style: italic;
+      margin: 0;
+      font-size: 1rem;
+    }
+
+    /* ========== CTA SECTION ========== */
+    .cta-section {
+      background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 50%, var(--bg-secondary) 100%);
+      padding: 4rem 0;
+      text-align: center;
+    }
+
+    .cta-subline {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      margin-top: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-gold-dark) 100%);
+      color: var(--bg-primary);
+      padding: 1.25rem 2.5rem;
+      font-size: 1.25rem;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: var(--radius-full);
+      box-shadow: 0 4px 20px rgba(201, 169, 98, 0.3);
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.5s;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 30px rgba(201, 169, 98, 0.4);
+    }
+
+    .cta-button:hover::before {
+      left: 100%;
+    }
+
+    .decline-links {
+      margin-top: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .decline-link {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      transition: all 0.2s;
+      opacity: 0.95;
+    }
+
+    .decline-link:hover {
+      color: var(--text-primary);
+      opacity: 1;
+    }
+
+    /* ========== FOOTER ========== */
+    footer {
+      background: var(--bg-secondary);
+      color: var(--text-muted);
+      padding: 2.5rem 0;
+      border-top: 1px solid rgba(201, 169, 98, 0.1);
+    }
+
+    .footer-content {
+      text-align: center;
+    }
+
+    .footer-text {
+      font-size: 0.75rem;
+      line-height: 1.7;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.8rem;
+      transition: all 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent-gold);
+      text-decoration: underline;
+    }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 768px) {
+      html {
+        font-size: 15px;
+      }
+
+      .value-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .products-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-title {
+        font-size: 1.75rem;
+      }
+
+      .section-title {
+        font-size: 1.6rem;
+      }
+
+      .cta-button {
+        padding: 1.125rem 2rem;
+        font-size: 1.1rem;
+        width: 100%;
+        max-width: 400px;
+      }
+
+      .video-play-icon {
+        width: 60px;
+        height: 60px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero {
+        padding: 2rem 0 1.5rem;
+      }
+
+      .intro-section {
+        padding: 3rem 0;
+      }
+
+      .products-section,
+      .urgency-section,
+      .cta-section {
+        padding: 3rem 0;
+      }
+
+      .product-card {
+        padding: 1.25rem;
+      }
+    }
+  </style>
+  <!-- Event Date Automation -->
+  <script src="event-automation.js"></script>
+</head>
+
+<body>
+  <!-- Noise overlay -->
+  <div class="noise-overlay"></div>
+
+  <!-- Hero Section with Progress Bar -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="hero-title">
+        <i data-lucide="alert-triangle" class="w-8 h-8 inline-block mr-2 text-gold"></i>
+        One Last Thing Before You Head Out…
+      </h1>
+      
+      <div class="progress-container">
+        <div class="progress-bar-wrapper">
+          <div class="progress-bar">
+            <span class="progress-label">Order Processing</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Section -->
+  <section class="video-section">
+    <div class="container">
+      <div class="video-wrapper">
+        <div class="video-container">
+          <div class="video-placeholder">
+            <div class="video-play-icon">
+              <i data-lucide="play" class="w-10 h-10 text-dark ml-1"></i>
+            </div>
+            <span>Watch The Video</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Value Section -->
+  <section class="value-section">
+    <div class="container">
+      <div class="value-grid">
+        <div class="value-box">
+          <div class="value-text">
+            <i data-lucide="check" class="w-5 h-5 text-emerald-500"></i>
+            Cut taxes
+          </div>
+        </div>
+        <div class="value-box">
+          <div class="value-text">
+            <i data-lucide="check" class="w-5 h-5 text-emerald-500"></i>
+            Pay off debt
+          </div>
+        </div>
+        <div class="value-box">
+          <div class="value-text">
+            <i data-lucide="check" class="w-5 h-5 text-emerald-500"></i>
+            Build real income streams
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intro Section -->
+  <section class="intro-section">
+    <div class="container">
+      <p class="intro-text">
+        You've got your ticket for the Challenge which means you're about to learn how to
+      </p>
+
+      <div class="intro-highlight">
+        <p>Most people might show up to Day 1 with no idea where their money is actually going. They spend the first 2 days just trying to catch up while everyone else is already implementing.</p>
+      </div>
+
+      <div class="prep-kit-badge">
+        <i data-lucide="flame" class="w-4 h-4"></i>
+        That's Why I Built...
+      </div>
+
+      <h2 class="solution-title">VIP Exclusive: The Challenge Prep Kit</h2>
+      
+      <p class="solution-subtitle">
+        This gets you ready before Day 1 so you can walk in knowing where <strong>YOU</strong> stand.
+      </p>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section class="products-section">
+    <div class="container">
+      <h2 class="section-title">Here's What You Get Inside The Kit</h2>
+
+      <div class="products-grid">
+        <!-- Product 1 -->
+        <div class="product-card">
+          <div class="product-image-wrapper">
+            <img src="https://images.clickfunnels.com/cdn-cgi/image/width=1000px,fit=scale-down,f=auto,q=80/https://statics.myclickfunnels.com/workspace/JDNxNX/image/20037538/file/b37a5c2f62f2c32afc98d01b8731cf67.png" alt="27 Tax Strategy Cheatsheet" class="product-image">
+          </div>
+          <h3 class="product-title">27 Tax Strategy Cheatsheet</h3>
+          <p class="product-desc">27 Tax Strategies You've Never Heard From Your CPA (Works for W-2 earners and business owners)</p>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+          <div class="product-image-wrapper">
+            <img src="https://images.clickfunnels.com/cdn-cgi/image/width=1000px,fit=scale-down,f=auto,q=80/https://statics.myclickfunnels.com/workspace/JDNxNX/image/20037542/file/e96cffdaa177da6068ff1c31eb745ac2.png" alt="Anti-Inflation Pack" class="product-image">
+          </div>
+          <h3 class="product-title">Anti-Inflation Pack</h3>
+          <p class="product-desc">A guide showing you how to protect your savings from inflation eating away at it year after year.</p>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card">
+          <div class="product-image-wrapper">
+            <img src="https://images.clickfunnels.com/cdn-cgi/image/width=1000px,fit=scale-down,f=auto,q=80/https://statics.myclickfunnels.com/workspace/JDNxNX/image/20021100/file/da213154dc0e713d09f759eceeec96e6.png" alt="Financial Diagnostic Calculator" class="product-image">
+          </div>
+          <h3 class="product-title">Financial Diagnostic Calculator</h3>
+          <p class="product-desc">Run your numbers in 5 minutes and see... what's really happening with your money.</p>
+          
+          <ul class="product-list">
+            <li><i data-lucide="arrow-right" class="w-4 h-4"></i>Where you're losing money through taxes, debt, and fees</li>
+            <li><i data-lucide="arrow-right" class="w-4 h-4"></i>How much you could be saving with the right strategies</li>
+            <li><i data-lucide="arrow-right" class="w-4 h-4"></i>Your true gap to financial freedom (and what it takes to close it faster)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Urgency Section -->
+  <section class="urgency-section">
+    <div class="container">
+      <h2 class="urgency-title">When we go live February 20th, I'm not slowing down for people who didn't prepare.</h2>
+      
+      <p class="urgency-text">
+        You don't want to just hear information.
+      </p>
+
+      <ul class="urgency-list">
+        <li><i data-lucide="check" class="w-5 h-5"></i>You want to know your numbers.</li>
+        <li><i data-lucide="check" class="w-5 h-5"></i>You want to see where you're strong.</li>
+        <li><i data-lucide="check" class="w-5 h-5"></i>You want to spot the leaks holding you back.</li>
+      </ul>
+
+      <div class="urgency-note">
+        <p>(If you don't know your baseline, you won't know what applies to you.)</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <a href="https://legacyinvestingshow.spiffy.co/offer/3E3gofDub" id="prep-accept-btn" class="cta-button">
+        <i data-lucide="lock" class="w-5 h-5"></i>
+        Add VIP Exclusive: The Challenge Prep Kit For $67
+      </a>
+
+      <p class="cta-subline">Know your baseline before Day 1 so you can execute faster.</p>
+
+      <div class="decline-links">
+        <a href="https://legacyinvestingshow.spiffy.co/offer/JxRYdHpuD" id="prep-decline-btn" class="decline-link">
+          No thanks, I'll skip the prep kit and enter the challenge without my baseline numbers.
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <p class="footer-text">
+          This site is not a part of the Facebook website or Facebook Inc. Additionally, this site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc.
+        </p>
+        <p class="footer-text">
+          Income Disclaimer: Although we make every effort to accurately represent the services and/or products presented on this website, Preston Seo makes no assurance, representation or promise regarding future earnings or income, or that you will make any specific amount of money, or any money at all, or that you will not lose money.
+        </p>
+        <p class="footer-text">
+          <strong style="color: var(--text-secondary);">Legacy Investing Show LLC</strong> · 1993 Dewar Dr, Suite 256, Rock Springs, WY 82901
+        </p>
+        <div class="footer-links">
+          <a href="https://www.firstairbnb.com/contactus" target="_blank" rel="noopener noreferrer">Contact Us</a>
+          <a href="https://www.firstairbnb.com/privacypolicy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+          <a href="https://managemoney101.com/challengeterms" target="_blank" rel="noopener noreferrer">Terms and Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    (function() {
+      // Initialize Lucide icons
+      lucide.createIcons();
+    })();
+  </script>
+</body>
+</html>
