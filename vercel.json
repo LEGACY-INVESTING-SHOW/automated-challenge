@@ -1,4 +1,11 @@
 {
   "version": 2,
-  "public": true
+  "public": true,
+  "redirects": [
+    {
+      "source": "/automatedchallenge",
+      "destination": "/automatedchallenge.html",
+      "permanent": false
+    }
+  ]
 }
