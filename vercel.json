@@ -5,6 +5,103 @@
     {
       "source": "/automatedchallenge",
       "destination": "/automatedchallenge.html"
+    },
+    {
+      "source": "/index",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/vipticket26",
+      "destination": "/vipticket26.html"
+    },
+    {
+      "source": "/regularticket26",
+      "destination": "/regularticket26.html"
+    },
+    {
+      "source": "/taxreportvip",
+      "destination": "/taxreportvip.html"
+    },
+    {
+      "source": "/prepkitvip",
+      "destination": "/prepkitvip.html"
+    },
+    {
+      "source": "/upgradevip",
+      "destination": "/upgradevip.html"
+    },
+    {
+      "source": "/prepkit",
+      "destination": "/prepkit.html"
+    },
+    {
+      "source": "/taxreport",
+      "destination": "/taxreport.html"
+    },
+    {
+      "source": "/challengeconfirmation",
+      "destination": "/challengeconfirmation.html"
+    },
+    {
+      "source": "/pdf-viewer",
+      "destination": "/pdf-viewer.html"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/automatedchallenge.html",
+      "destination": "/automatedchallenge",
+      "permanent": false
+    },
+    {
+      "source": "/index.html",
+      "destination": "/index",
+      "permanent": false
+    },
+    {
+      "source": "/vipticket26.html",
+      "destination": "/vipticket26",
+      "permanent": false
+    },
+    {
+      "source": "/regularticket26.html",
+      "destination": "/regularticket26",
+      "permanent": false
+    },
+    {
+      "source": "/taxreportvip.html",
+      "destination": "/taxreportvip",
+      "permanent": false
+    },
+    {
+      "source": "/prepkitvip.html",
+      "destination": "/prepkitvip",
+      "permanent": false
+    },
+    {
+      "source": "/upgradevip.html",
+      "destination": "/upgradevip",
+      "permanent": false
+    },
+    {
+      "source": "/prepkit.html",
+      "destination": "/prepkit",
+      "permanent": false
+    },
+    {
+      "source": "/taxreport.html",
+      "destination": "/taxreport",
+      "permanent": false
+    },
+    {
+      "source": "/challengeconfirmation.html",
+      "destination": "/challengeconfirmation",
+      "permanent": false
+    },
+    {
+      "source": "/pdf-viewer.html",
+      "destination": "/pdf-viewer",
+      "permanent": false
     }
   ]
 }
