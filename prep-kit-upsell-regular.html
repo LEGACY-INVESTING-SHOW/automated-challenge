@@ -880,7 +880,7 @@
   <!-- CTA Section -->
   <section class="cta-section">
     <div class="container">
-      <a href="https://legacyinvestingshow.spiffy.co/offer/MB7QQhyud" id="prep-accept-btn" class="cta-button">
+      <a href="https://legacyinvestingshow.spiffy.co/offer/MB70QhYud" id="prep-accept-btn" class="cta-button">
         <i data-lucide="lock" class="w-5 h-5"></i>
         Add The Challenge Prep Kit For $67
       </a>
@@ -888,7 +888,7 @@
       <p class="cta-subline">Know your baseline before Day 1 so you can execute faster.</p>
 
       <div class="decline-links">
-        <a href="https://legacyinvestingshow.spiffy.co/offer/oGkapftour" id="prep-decline-btn" class="decline-link">
+        <a href="https://legacyinvestingshow.spiffy.co/offer/oGkapfpur" id="prep-decline-btn" class="decline-link">
           No thanks, I'll skip the prep kit and enter the challenge without my baseline numbers.
         </a>
       </div>
@@ -920,20 +920,6 @@
   <!-- JavaScript -->
   <script>
     (function() {
-      // Flow detection for Prep Kit Upsell
-      // Regular flow: Accept=MB7QQhyud, Decline=oGkapftour
-      // VIP flow: Accept=3E3gofDub, Decline=JxRYdHpuD
-      const urlParams = new URLSearchParams(window.location.search);
-      const flow = urlParams.get('flow') || 'regular'; // default to regular
-      
-      const acceptBtn = document.getElementById('prep-accept-btn');
-      const declineBtn = document.getElementById('prep-decline-btn');
-      
-      if (flow === 'vip') {
-        if (acceptBtn) acceptBtn.href = 'https://legacyinvestingshow.spiffy.co/offer/3E3gofDub';
-        if (declineBtn) declineBtn.href = 'https://legacyinvestingshow.spiffy.co/offer/JxRYdHpuD';
-      }
-
       // Initialize Lucide icons
       lucide.createIcons();
     })();
