@@ -1,11 +1,10 @@
 {
   "version": 2,
   "public": true,
-  "redirects": [
+  "rewrites": [
     {
       "source": "/automatedchallenge",
-      "destination": "/automatedchallenge.html",
-      "permanent": false
+      "destination": "/automatedchallenge.html"
     }
   ]
 }
