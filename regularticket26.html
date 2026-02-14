@@ -684,9 +684,25 @@
             <h3 class="text-white font-semibold mb-2 text-center">Secure Checkout</h3>
             <p class="text-slate-400 text-sm mb-6 text-center">Complete your registration below</p>
             <!-- Spiffy Checkout Embed -->
-            <div id="spiffy-checkout-container" style="width: 100%;">
-              <spiffy-checkout url="https://legacyinvestingshow.spiffy.co/checkout/tax-free-income-challenge-early-bird-2026" style="display: block; width: 100%;"></spiffy-checkout>
+            <div id="spiffy-checkout-container" style="width: 100%; min-height: 400px;">
+              <a href="https://legacyinvestingshow.spiffy.co/checkout/tax-free-income-challenge-early-bird-2026" class="btn-glow w-full py-4 text-lg font-bold rounded-full transition-all shadow-lg text-center block" style="background: linear-gradient(to right, #c9a962, #a68b4b); color: #0a0a0b;">
+                Get Your Ticket - $47
+                <i data-lucide="arrow-right" class="w-5 h-5 inline-block ml-2"></i>
+              </a>
             </div>
+            <script>
+              function loadSpiffyCheckout() {
+                const container = document.getElementById('spiffy-checkout-container');
+                if (container && window.spiffy) {
+                  container.innerHTML = '<spiffy-checkout url="https://legacyinvestingshow.spiffy.co/checkout/tax-free-income-challenge-early-bird-2026" style="display: block; width: 100%; min-height: 400px;"></spiffy-checkout>';
+                }
+              }
+              if (window.spiffy) {
+                loadSpiffyCheckout();
+              } else {
+                window.addEventListener('load', loadSpiffyCheckout);
+              }
+            </script>
           </div>
 
           <!-- Trust Badges -->
