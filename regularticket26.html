@@ -525,11 +525,6 @@
       .animate-pulse { animation: none; }
     }
   </style>
-  <!-- Event Date Automation -->
-  <script src="event-automation.js"></script>
-  
-  <!-- Aevent Dynamic Fields & Countdown -->
-  <script defer type="application/javascript" src="https://35063397.aevent.online/getscript?page=registration&wtl=vhmriHXslxTC43K"></script>
 </head>
 
 <body class="font-body bg-dark text-slate-300 antialiased overflow-x-hidden">
@@ -551,7 +546,7 @@
     <div class="flex items-center gap-3 sm:gap-4 ml-auto">
       <div class="flex items-center gap-2 text-sm text-slate-400">
         <span class="w-2.5 h-2.5 bg-rose-500 rounded-full animate-pulse shadow-rose"></span>
-        <span class="hidden sm:inline">Early Bird Ends:</span>
+        <span class="hidden sm:inline">Offer Ends:</span>
         <span id="sticky-countdown" class="font-bold text-rose-400 tabular-nums">--</span>
       </div>
       <a href="#checkout" class="btn-glow px-4 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm font-bold rounded-full transition-all shadow-lg" style="background: linear-gradient(to right, #c9a962, #a68b4b); color: #0a0a0b;">
@@ -604,7 +599,7 @@
       </div>
       <div class="bg-dark rounded-2xl p-6 border border-slate-700/50">
         <div class="text-gold text-sm font-semibold uppercase tracking-wider mb-2 font-mono">Where</div>
-        <div class="text-white font-semibold">Live on Zoom</div>
+        <div class="text-white font-semibold">Attend on Zoom</div>
         <div class="text-slate-400 text-sm mt-1">Join from anywhere</div>
       </div>
       <div class="bg-dark rounded-2xl p-6 border border-slate-700/50">
@@ -621,12 +616,12 @@
   <div class="max-w-4xl mx-auto px-4 text-center">
     <div class="inline-flex items-center gap-2 px-4 py-2 bg-rose-500/10 border border-rose-500/30 rounded-full mb-6">
       <span class="w-2 h-2 bg-rose-500 rounded-full animate-pulse"></span>
-      <span class="text-rose-400 font-semibold text-sm font-mono">Only 16 Spots Left at Early Bird Pricing</span>
+      <span class="text-rose-400 font-semibold text-sm font-mono">Only 16 Spots Left</span>
     </div>
 
     <!-- Countdown -->
     <div class="bg-dark rounded-2xl p-6 sm:p-8 shadow-xl border border-slate-700/50 inline-block">
-      <p class="text-center text-sm font-semibold text-gold mb-4 tracking-wide uppercase font-mono">Early Bird Pricing Ends In</p>
+      <p class="text-center text-sm font-semibold text-gold mb-4 tracking-wide uppercase font-mono">Offer Ends In</p>
       <div class="flex justify-center gap-2 sm:gap-4">
         <div class="text-center">
           <div id="days" class="text-3xl sm:text-5xl font-bold text-white tabular-nums font-display">00</div>
@@ -654,53 +649,20 @@
 
 <!-- Checkout Section -->
 <section id="checkout" class="py-12 sm:py-20 bg-dark">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6">
-    <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+  <div class="max-w-[103rem] mx-auto px-4 sm:px-6">
+    <div class="grid lg:grid-cols-2 gap-8 items-start lg:gap-10">
       <!-- Left: Checkout Form -->
       <div class="order-2 lg:order-1">
-        <div class="bg-dark rounded-2xl p-6 sm:p-8 border border-slate-700/50 shadow-xl">
-          <div class="text-center mb-6">
-            <h2 class="font-display text-2xl sm:text-3xl font-semibold text-white mb-2">Complete Your Registration</h2>
-            <p class="text-slate-400">Secure your spot before early bird pricing ends</p>
-          </div>
-
-          <!-- Pricing Display -->
-          <div class="bg-dark-secondary rounded-xl p-6 mb-6 border border-slate-700/30">
-            <div class="flex items-center justify-between mb-4">
-              <span class="text-slate-300">Regular Ticket</span>
-              <div class="text-right">
-                <span class="text-slate-500 line-through text-sm">$97</span>
-                <span class="text-2xl font-bold text-white ml-2">$47</span>
-              </div>
-            </div>
-            <div class="flex items-center justify-between text-sm">
-              <span class="text-emerald-400">Early Bird Savings</span>
-              <span class="text-emerald-400 font-semibold">-$50</span>
-            </div>
-          </div>
-
-          <!-- Checkout Placeholder -->
-          <div class="bg-dark-tertiary/50 border border-slate-700 rounded-xl p-8">
-            <div class="w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-4">
-              <i data-lucide="shield-check" class="w-8 h-8 text-gold"></i>
-            </div>
-            <h3 class="text-white font-semibold mb-2 text-center">Secure Checkout</h3>
-            <p class="text-slate-400 text-sm mb-6 text-center">Complete your registration below</p>
-            <!-- Spiffy Checkout Embed -->
-            <spiffy-checkout url="https://legacyinvestingshow.spiffy.co/checkout/tax-free-income-challenge-early-bird-2026"></spiffy-checkout>
-          </div>
-
-          <!-- Trust Badges -->
-          <div class="flex items-center justify-center gap-4 mt-6 text-xs text-slate-500">
-            <span class="flex items-center gap-1">
-              <i data-lucide="lock" class="w-4 h-4"></i>
-              SSL Secure
-            </span>
-            <span class="flex items-center gap-1">
-              <i data-lucide="check-circle" class="w-4 h-4"></i>
-              7-Day Guarantee
-            </span>
-          </div>
+        <div class="bg-dark rounded-2xl p-2 sm:p-3 border border-slate-700/50 shadow-xl">
+          <iframe
+            id="spiffy-inline-checkout"
+            title="Secure Checkout"
+            class="w-full rounded-xl bg-white"
+            style="height: 1050px; border: 0; min-height: 760px;"
+            loading="eager"
+            allow="payment"
+            referrerpolicy="strict-origin-when-cross-origin">
+          </iframe>
         </div>
       </div>
 
@@ -735,8 +697,8 @@
           <div class="flex items-start gap-3 p-3 bg-dark-secondary/50 rounded-xl border border-slate-700/30">
             <i data-lucide="check" class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5"></i>
             <div>
-              <span class="text-white font-medium">12 Live Trainings + Q&A</span>
-              <p class="text-slate-400 text-sm">Learn directly from Preston and his team across 3 days</p>
+              <span class="text-white font-medium">12 Challenge Training Sessions</span>
+              <p class="text-slate-400 text-sm">Learn directly from Preston and his team across all 3 days</p>
             </div>
           </div>
           <div class="flex items-start gap-3 p-3 bg-dark-secondary/50 rounded-xl border border-slate-700/30">
@@ -951,7 +913,7 @@
 <section class="py-12 sm:py-20 bg-gradient-to-b from-dark to-dark-secondary/50">
   <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
     <h2 class="font-display text-2xl sm:text-4xl font-semibold text-white mb-4">
-      Early Bird Pricing Expires In...
+      Offer Expires In...
     </h2>
 
     <!-- Countdown -->
@@ -1009,19 +971,19 @@
         </button>
         <div class="faq-answer">
           <div class="px-6 pb-4 text-slate-400">
-            This is a live online event held on Zoom you can join from anywhere. All you need is internet and the commitment to actually change your finances. We made it interactive even though it's online. You'll work through real examples, get feedback, and start implementing strategies right away.
+            This is an online event held on Zoom that you can join from anywhere. All you need is internet and the commitment to implement. You'll work through real examples and apply strategies as each session unfolds.
           </div>
         </div>
       </div>
 
       <div class="faq-item bg-dark rounded-xl border border-slate-700/50 overflow-hidden">
         <button class="faq-question w-full px-6 py-4 text-left flex items-center justify-between text-white font-medium hover:text-gold transition-colors">
-          <span>How interactive is this event?</span>
+          <span>What is the session format?</span>
           <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-gold transition-transform duration-200"></i>
         </button>
         <div class="faq-answer">
           <div class="px-6 pb-4 text-slate-400">
-            This isn't some video you watch passively. Each day includes: Live Q&A with Preston and our experts, hands-on exercises where you run your own numbers, and real-time implementation of strategies. We designed this to keep you engaged and active.
+            This is not passive content. Each day includes guided training, hands-on exercises where you run your own numbers, and clear implementation steps you can apply immediately.
           </div>
         </div>
       </div>
@@ -1033,19 +995,19 @@
         </button>
         <div class="faq-answer">
           <div class="px-6 pb-4 text-slate-400">
-            Each day runs about 3 to 5 hours with breaks built in. Day 1 and Day 3 are shorter. Day 2 is the longest since we cover the most ground. We include stretch breaks and lunch breaks so you don't get burned out.
+            Each day runs approximately 4-6 hours, starting at 10 AM EST. We include breaks throughout the training so you can stay focused and keep implementing.
           </div>
         </div>
       </div>
 
       <div class="faq-item bg-dark rounded-xl border border-slate-700/50 overflow-hidden">
         <button class="faq-question w-full px-6 py-4 text-left flex items-center justify-between text-white font-medium hover:text-gold transition-colors">
-          <span>What if I can't make it all 3 days? Are there replays?</span>
+          <span>What if I can't make every session?</span>
           <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-gold transition-transform duration-200"></i>
         </button>
         <div class="faq-answer">
           <div class="px-6 pb-4 text-slate-400">
-            Life happens. The live experience is best because you can ask questions and get real-time feedback. But we don't want you missing out on strategies that could change your finances because of scheduling. VIP ticket holders get lifetime replay access.
+            Life happens. If your schedule is uncertain, VIP gives you extended session access plus materials so you can review key training points after the event.
           </div>
         </div>
       </div>
@@ -1130,14 +1092,49 @@
     // Initialize Lucide icons
     lucide.createIcons();
 
-    // Countdown Timer
-    let targetDate = Number(window.eventTargetDate) || new Date('February 19, 2026 05:00:00 UTC').getTime();
+    // Checkout embed (manual inline mount for reliability)
+    (function initCheckoutEmbed() {
+      const iframe = document.getElementById('spiffy-inline-checkout');
+      if (!iframe) return;
 
-    function updateCountdown() {
-      if (Number(window.eventTargetDate)) {
-        targetDate = Number(window.eventTargetDate);
+      const checkoutBase = 'https://legacyinvestingshow.spiffy.co/checkout/tax-free-income-challenge-early-bird-2026';
+      const url = new URL(checkoutBase);
+      const pageParams = new URLSearchParams(window.location.search);
+      pageParams.forEach((value, key) => {
+        if (key !== 'elements') url.searchParams.set(key, value);
+      });
+
+      try {
+        const payload = {
+          modality: 'inline',
+          uid: 'manual-embed',
+          from: window.location.href,
+          sessionId: `manual-${Date.now()}`
+        };
+        url.searchParams.set('elements', btoa(JSON.stringify(payload)));
+      } catch (err) {
+        // Fall back to plain checkout URL if encoding fails.
       }
 
+      iframe.src = url.toString();
+
+      window.addEventListener('message', (event) => {
+        try {
+          const message = typeof event.data === 'string' ? JSON.parse(event.data) : event.data;
+          const height = Number(message?.data?.height);
+          if (message?.event === 'form:size' && Number.isFinite(height) && height > 0) {
+            iframe.style.height = `${Math.max(700, height)}px`;
+          }
+        } catch (err) {
+          // Ignore non-JSON postMessage events.
+        }
+      });
+    })();
+
+    // Countdown Timer
+    const targetDate = new Date('February 20, 2026 10:00:00 EST').getTime();
+
+    function updateCountdown() {
       const now = new Date().getTime();
       const distance = targetDate - now;
 
