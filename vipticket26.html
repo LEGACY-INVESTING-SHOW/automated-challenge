@@ -1283,6 +1283,25 @@
 
         iframe.src = url.toString();
 
+        // Monitor iframe URL changes to detect upsell/upgrade navigation
+        let lastSrc = iframe.src;
+        const checkNavigation = setInterval(() => {
+          try {
+            const currentSrc = iframe.contentWindow?.location?.href;
+            if (currentSrc && currentSrc !== lastSrc) {
+              lastSrc = currentSrc;
+              // If navigating to upsell page after VIP purchase, redirect parent to confirmation
+              if (currentSrc.includes('/upsell') || currentSrc.includes('/offer')) {
+                clearInterval(checkNavigation);
+                window.location.href = 'https://www.joinlwb.com/challengeconfirmation';
+              }
+            }
+          } catch (e) {
+            // Cross-origin restrictions prevent reading iframe location
+            // Fall back to postMessage handling
+          }
+        }, 500);
+
         window.addEventListener('message', (event) => {
           try {
             const message = typeof event.data === 'string' ? JSON.parse(event.data) : event.data;
@@ -1293,6 +1312,13 @@
             // Handle purchase completion
             if (message?.event === 'purchase:complete' || message?.event === 'checkout:success') {
               window.location.href = 'https://www.joinlwb.com/challengeconfirmation';
+            }
+            // Handle navigation
+            if (message?.event === 'navigate' || message?.event === 'redirect') {
+              const navUrl = message?.data?.url || message?.url;
+              if (navUrl && (navUrl.includes('/upsell') || navUrl.includes('/offer'))) {
+                window.location.href = 'https://www.joinlwb.com/challengeconfirmation';
+              }
             }
           } catch (err) {
             // Ignore non-JSON postMessage events.
