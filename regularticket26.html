@@ -1107,8 +1107,8 @@
         if (key !== 'elements') url.searchParams.set(key, value);
       });
 
-      // Add success redirect URL
-      url.searchParams.set('success_url', 'https://www.joinlwb.com/challengeconfirmation');
+      // Add success redirect URL - go to upgrade page first
+      url.searchParams.set('success_url', 'https://www.joinlwb.com/upgradevip');
 
       try {
         const payload = {
