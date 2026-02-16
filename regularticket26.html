@@ -1107,6 +1107,9 @@
         if (key !== 'elements') url.searchParams.set(key, value);
       });
 
+      // Add success redirect URL
+      url.searchParams.set('success_url', 'https://www.joinlwb.com/challengeconfirmation');
+
       try {
         const payload = {
           modality: 'inline',
@@ -1127,6 +1130,10 @@
           const height = Number(message?.data?.height);
           if (message?.event === 'form:size' && Number.isFinite(height) && height > 0) {
             iframe.style.height = `${Math.max(700, height)}px`;
+          }
+          // Handle purchase completion
+          if (message?.event === 'purchase:complete' || message?.event === 'checkout:success') {
+            window.location.href = 'https://www.joinlwb.com/challengeconfirmation';
           }
         } catch (err) {
           // Ignore non-JSON postMessage events.
