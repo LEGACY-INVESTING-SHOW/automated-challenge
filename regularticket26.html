@@ -1107,8 +1107,8 @@
         if (key !== 'elements') url.searchParams.set(key, value);
       });
 
-      // Add success redirect URL - go to upgrade page first
-      url.searchParams.set('success_url', 'https://www.joinlwb.com/upgradevip');
+      // Let Spiffy Flow handle post-purchase routing and upsell sequencing.
+      url.searchParams.delete('success_url');
 
       try {
         const payload = {
@@ -1124,41 +1124,21 @@
 
       iframe.src = url.toString();
 
-      // Monitor iframe URL changes to detect upsell/upgrade navigation
-      let lastSrc = iframe.src;
-      const checkNavigation = setInterval(() => {
-        try {
-          const currentSrc = iframe.contentWindow?.location?.href;
-          if (currentSrc && currentSrc !== lastSrc) {
-            lastSrc = currentSrc;
-            // If navigating to upgrade/upsell page, redirect parent
-            if (currentSrc.includes('/upgrade') || currentSrc.includes('/upsell') || currentSrc.includes('/offer')) {
-              clearInterval(checkNavigation);
-              window.location.href = 'https://www.joinlwb.com/upgradevip';
-            }
-          }
-        } catch (e) {
-          // Cross-origin restrictions prevent reading iframe location
-          // Fall back to postMessage handling
-        }
-      }, 500);
-
       window.addEventListener('message', (event) => {
+        if (typeof event.origin === 'string' && !event.origin.includes('spiffy.co')) return;
+
         try {
           const message = typeof event.data === 'string' ? JSON.parse(event.data) : event.data;
           const height = Number(message?.data?.height);
           if (message?.event === 'form:size' && Number.isFinite(height) && height > 0) {
             iframe.style.height = `${Math.max(700, height)}px`;
           }
-          // Handle purchase completion
-          if (message?.event === 'purchase:complete' || message?.event === 'checkout:success') {
-            window.location.href = 'https://www.joinlwb.com/upgradevip';
-          }
-          // Handle navigation to upsell
+
+          // Respect Spiffy-directed navigation for custom upsell/thank-you flow.
           if (message?.event === 'navigate' || message?.event === 'redirect') {
             const navUrl = message?.data?.url || message?.url;
-            if (navUrl && (navUrl.includes('/upgrade') || navUrl.includes('/upsell') || navUrl.includes('/offer'))) {
-              window.location.href = 'https://www.joinlwb.com/upgradevip';
+            if (typeof navUrl === 'string' && navUrl.trim()) {
+              window.location.href = navUrl;
             }
           }
         } catch (err) {
@@ -1247,22 +1227,6 @@
       lastScroll = currentScroll;
     }, { passive: true });
   })();
-</script>
-
-<script>
-"use strict";!function(i,t){var f=t.spiffy=t.spiffy||[];if(!f.init){
-if(f.invoked)return void(t.console&&console.error&&console.warn("Spiffy Elements included twice."))
-;f.invoked=!0,f.methods=["identify","config","debug","off","on"],f.factory=function(i){
-return function(){var t=Array.prototype.slice.call(arguments);return t.unshift(i),f.push(t),f}},
-f.methods.forEach(function(i){spiffy[i]=f.factory(i)}),f.load=function(t,f){if(!spiffy.ACCOUNT){
-spiffy.ACCOUNT=t,spiffy.DOMAIN=f;var e=i.createElement("script");e.type="text/javascript",
-e.async=!0,e.crossorigin="anonymous",e.src="https://js.static.spiffy.co/spiffy.js?a="+t
-;var n=i.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)}}}}(document,window),
-spiffy.SNIPPET_VERSION="1.1.0";
-spiffy.config({
-    hideSidebar: false,
-})
-spiffy.load("legacyinvestingshow");
 </script>
 
 </body>

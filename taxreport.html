@@ -491,6 +491,16 @@
   <script defer type="application/javascript" src="https://35063397.aevent.online/getscript?page=registration&wtl=vhmriHXslxTC43K"></script>
 </head>
 <body class="antialiased overflow-x-hidden">
+    <script>
+        (function breakoutFromEmbeddedCheckoutFrame() {
+            if (window.top === window.self) return;
+            try {
+                window.top.location.href = window.location.href;
+            } catch (err) {
+                window.location.href = window.location.href;
+            }
+        })();
+    </script>
     <!-- Noise overlay -->
     <div class="noise-overlay"></div>
 
@@ -1236,7 +1246,7 @@
                 </a>
             </div>
             <p class="text-[#a1a1aa] text-sm reveal">
-                <a href="https://www.joinlwb.com/prepkit" id="tax-decline-btn" class="underline underline-offset-4 hover:text-[#fafafa]">No thanks, I'll figure out what applies to me on my own</a>
+                <a href="https://legacyinvestingshow.spiffy.co/offer/MB70BSYuY" id="tax-decline-btn" class="underline underline-offset-4 hover:text-[#fafafa]">No thanks, I'll figure out what applies to me on my own</a>
             </p>
             
             <div class="flex flex-wrap justify-center items-center gap-6 text-sm text-[#71717a] reveal">
@@ -1279,6 +1289,48 @@
         // Initialize Lucide icons
         if (window.lucide && typeof window.lucide.createIcons === 'function') {
             window.lucide.createIcons();
+        }
+
+        // Preserve flow/session query params across upsell CTA clicks.
+        const incomingParams = new URLSearchParams(window.location.search);
+        if ([...incomingParams.keys()].length) {
+            const allowedHosts = new Set([
+                'legacyinvestingshow.spiffy.co',
+                'www.joinlwb.com'
+            ]);
+            const selector = [
+                'a[href*="legacyinvestingshow.spiffy.co/offer/"]',
+                'a[href*="www.joinlwb.com/upgradevip"]',
+                'a[href*="www.joinlwb.com/prepkit"]',
+                'a[href*="www.joinlwb.com/prepkitvip"]',
+                'a[href*="www.joinlwb.com/taxreport"]',
+                'a[href*="www.joinlwb.com/taxreportvip"]',
+                'a[href*="www.joinlwb.com/challengeconfirmation"]'
+            ].join(', ');
+
+            document.querySelectorAll(selector).forEach((link) => {
+                const href = link.getAttribute('href');
+                if (!href) return;
+
+                try {
+                    const url = new URL(href, window.location.origin);
+                    if (!allowedHosts.has(url.host)) return;
+
+                    incomingParams.forEach((value, key) => {
+                        if (!url.searchParams.has(key)) {
+                            url.searchParams.set(key, value);
+                        }
+                    });
+
+                    if (/^https?:\/\//i.test(href)) {
+                        link.setAttribute('href', url.toString());
+                    } else {
+                        link.setAttribute('href', `${url.pathname}${url.search}${url.hash}`);
+                    }
+                } catch (err) {
+                    // Ignore invalid href values.
+                }
+            });
         }
 
         // Reveal animations on scroll

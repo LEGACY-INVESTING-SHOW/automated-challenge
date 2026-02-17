@@ -190,6 +190,16 @@
 </head>
 
 <body class="font-body bg-dark text-slate-200 antialiased overflow-x-hidden">
+<script>
+  (function breakoutFromEmbeddedCheckoutFrame() {
+    if (window.top === window.self) return;
+    try {
+      window.top.location.href = window.location.href;
+    } catch (err) {
+      window.location.href = window.location.href;
+    }
+  })();
+</script>
 
 <!-- Noise overlay -->
 <div class="noise-overlay"></div>
@@ -543,6 +553,52 @@
         stickyHeader.classList.add('-translate-y-full', 'opacity-0');
       }
     }, { passive: true });
+
+    // Preserve flow/session query params across upsell CTA clicks.
+    function preserveFunnelQueryParams() {
+      const incomingParams = new URLSearchParams(window.location.search);
+      if (![...incomingParams.keys()].length) return;
+
+      const allowedHosts = new Set([
+        'legacyinvestingshow.spiffy.co',
+        'www.joinlwb.com'
+      ]);
+      const selector = [
+        'a[href*="legacyinvestingshow.spiffy.co/offer/"]',
+        'a[href*="www.joinlwb.com/upgradevip"]',
+        'a[href*="www.joinlwb.com/prepkit"]',
+        'a[href*="www.joinlwb.com/prepkitvip"]',
+        'a[href*="www.joinlwb.com/taxreport"]',
+        'a[href*="www.joinlwb.com/taxreportvip"]',
+        'a[href*="www.joinlwb.com/challengeconfirmation"]'
+      ].join(', ');
+
+      document.querySelectorAll(selector).forEach((link) => {
+        const href = link.getAttribute('href');
+        if (!href) return;
+
+        try {
+          const url = new URL(href, window.location.origin);
+          if (!allowedHosts.has(url.host)) return;
+
+          incomingParams.forEach((value, key) => {
+            if (!url.searchParams.has(key)) {
+              url.searchParams.set(key, value);
+            }
+          });
+
+          if (/^https?:\/\//i.test(href)) {
+            link.setAttribute('href', url.toString());
+          } else {
+            link.setAttribute('href', `${url.pathname}${url.search}${url.hash}`);
+          }
+        } catch (err) {
+          // Ignore invalid href values.
+        }
+      });
+    }
+
+    preserveFunnelQueryParams();
   })();
 </script>
 
