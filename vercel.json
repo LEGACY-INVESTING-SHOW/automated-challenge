@@ -3,8 +3,8 @@
   "public": true,
   "rewrites": [
     {
-      "source": "/automatedchallenge",
-      "destination": "/automatedchallenge.html"
+      "source": "/intensive",
+      "destination": "/intensive.html"
     },
     {
       "source": "/index",
@@ -49,8 +49,18 @@
   ],
   "redirects": [
     {
+      "source": "/automatedchallenge",
+      "destination": "/intensive",
+      "permanent": true
+    },
+    {
       "source": "/automatedchallenge.html",
-      "destination": "/automatedchallenge",
+      "destination": "/intensive",
+      "permanent": true
+    },
+    {
+      "source": "/intensive.html",
+      "destination": "/intensive",
       "permanent": false
     },
     {
