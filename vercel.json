@@ -11,10 +11,6 @@
       "destination": "/index.html"
     },
     {
-      "source": "/joinlwb",
-      "destination": "/joinlwb.html"
-    },
-    {
       "source": "/vipticket26",
       "destination": "/vipticket26.html"
     },
@@ -73,9 +69,14 @@
       "permanent": false
     },
     {
+      "source": "/joinlwb",
+      "destination": "/",
+      "permanent": true
+    },
+    {
       "source": "/joinlwb.html",
-      "destination": "/joinlwb",
-      "permanent": false
+      "destination": "/",
+      "permanent": true
     },
     {
       "source": "/vipticket26.html",
