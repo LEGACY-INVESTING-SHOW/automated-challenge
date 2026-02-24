@@ -4,23 +4,19 @@
   "rewrites": [
     {
       "source": "/call",
-      "destination": "/joinlwb.com/call/index.html"
+      "destination": "/call/index.html"
     },
     {
       "source": "/call/",
-      "destination": "/joinlwb.com/call/index.html"
+      "destination": "/call/index.html"
     },
     {
       "source": "/introcall",
-      "destination": "/joinlwb.com/introcall/index.html"
+      "destination": "/introcall/index.html"
     },
     {
       "source": "/introcall/",
-      "destination": "/joinlwb.com/introcall/index.html"
-    },
-    {
-      "source": "/",
-      "destination": "/joinlwb.com/index.html"
+      "destination": "/introcall/index.html"
     },
     {
       "source": "/intensive",
