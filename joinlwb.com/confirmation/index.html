@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your 1-On-1 Session Is Booked! - Legacy Investing Show</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:wght@400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['DM Serif Display', 'serif'],
+                        'sans': ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        'brand': {
+                            900: '#0f172a',
+                            800: '#1e293b',
+                            700: '#334155',
+                            600: '#059669',
+                            500: '#10b981',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+        }
+        .font-serif { font-family: 'DM Serif Display', serif; }
+        .accordion-content { 
+            max-height: 0; 
+            overflow: hidden; 
+            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1); 
+        }
+        .accordion-content.active { 
+            max-height: 3000px; 
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .step-header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        }
+        .checkmark-pulse {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4); }
+            50% { box-shadow: 0 0 0 20px rgba(16, 185, 129, 0); }
+        }
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="antialiased text-slate-800">
+    <!-- Hero Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+            <!-- Success Badge -->
+            <div class="flex justify-center mb-10">
+                <div class="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200 rounded-full px-5 py-2.5">
+                    <div class="w-5 h-5 bg-emerald-500 rounded-full flex items-center justify-center checkmark-pulse">
+                        <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                    </div>
+                    <span class="text-emerald-700 font-semibold text-sm tracking-wide uppercase">Booking Confirmed</span>
+                </div>
+            </div>
+            
+            <!-- Main Headline -->
+            <div class="text-center mb-6">
+                <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl text-slate-900 mb-6 leading-tight">
+                    Your 1-On-1 Session<br>Is Booked!
+                </h1>
+                <p class="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
+                    <span class="font-semibold text-slate-900">Important:</span> Complete these 3 steps now. 
+                    <span class="text-red-600 font-medium">If you don't, we'll be forced to cancel your call.</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Steps Section -->
+    <section class="px-4 sm:px-6 lg:px-8 pb-16">
+        <div class="max-w-3xl mx-auto space-y-8">
+            
+            <!-- Step 1 -->
+            <div class="glass-card rounded-2xl overflow-hidden shadow-lg hover-lift">
+                <div class="step-header text-white py-4 px-6">
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center font-bold text-lg">1</div>
+                        <h2 class="text-xl font-semibold">Watch The Video Below</h2>
+                    </div>
+                </div>
+                <div class="p-6 sm:p-8">
+                    <div class="rounded-xl overflow-hidden shadow-lg bg-slate-900">
+                        <div class="relative" style="padding-bottom: 56.25%; height: 0; overflow: hidden;">
+                            <iframe 
+                                src="https://player.vimeo.com/video/1121616486" 
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+                                frameborder="0" 
+                                allow="autoplay; fullscreen" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 space-y-4">
+                        <p class="text-slate-700 leading-relaxed">
+                            As mentioned in the video above, on this call, we'll walk through your numbers and map out what's possible for you.
+                        </p>
+                        <div class="bg-slate-50 rounded-xl p-6 border border-slate-200">
+                            <p class="font-semibold text-slate-900 mb-3">To get accurate and personalized results, have these details ready:</p>
+                            <ul class="space-y-2 text-slate-700">
+                                <li class="flex items-start gap-3">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span>
+                                    <span>W-2 income</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span>
+                                    <span>Business income</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span>
+                                    <span>Monthly investable surplus</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span>
+                                    <span>Available lump sum for investing</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span>
+                                    <span>Current debt situation</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span>
+                                    <span>Any other major financial details that affect your picture</span>
+                                </li>
+                            </ul>
+                            <p class="mt-4 text-slate-600 text-sm">
+                                Having these numbers on hand makes sure we give you clear results instead of rough estimates.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="glass-card rounded-2xl overflow-hidden shadow-lg hover-lift">
+                <div class="step-header text-white py-4 px-6">
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center font-bold text-lg">2</div>
+                        <h2 class="text-xl font-semibold">Confirm Your Call</h2>
+                    </div>
+                </div>
+                <div class="p-6 sm:p-8 space-y-4">
+                    <p class="text-slate-700 leading-relaxed">
+                        Confirm your call by replying <span class="font-semibold text-slate-900">"Yes"</span> to our email or text AND selecting <span class="font-semibold text-slate-900">"Yes"</span> in the email calendar section.
+                    </p>
+                    <div class="bg-amber-50 border border-amber-200 rounded-xl p-5">
+                        <div class="flex gap-3">
+                            <svg class="w-6 h-6 text-amber-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                            </svg>
+                            <div>
+                                <p class="font-semibold text-amber-900 mb-1">Action Required</p>
+                                <p class="text-amber-800">Search your email inbox for "Invitation". Click "Add to calendar" and "Yes" for the calendar confirmation.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="glass-card rounded-2xl overflow-hidden shadow-lg hover-lift">
+                <div class="step-header text-white py-4 px-6">
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center font-bold text-lg">3</div>
+                        <h2 class="text-xl font-semibold">Bring Your Spouse (if you have one)</h2>
+                    </div>
+                </div>
+                <div class="p-6 sm:p-8 space-y-4">
+                    <p class="text-slate-700 leading-relaxed">
+                        If you're married or have a partner, it's important that you both are on the same page. This call is about decisions that affect your family's finances and future. So make sure your spouse joins the call with you.
+                    </p>
+                    <div class="bg-slate-50 rounded-xl p-5 border border-slate-200">
+                        <p class="text-slate-600 italic">
+                            Can't make that work? At least have them watch the webinar replay or the training BEFORE the call so you're both aligned.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Videos Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-emerald-600 font-semibold text-sm tracking-wider uppercase mb-2 block">Got Questions?</span>
+                <h2 class="font-serif text-4xl sm:text-5xl text-slate-900">Frequently Asked Questions</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Video 1 -->
+                <div class="group">
+                    <div class="relative rounded-2xl overflow-hidden shadow-lg bg-slate-900" style="padding-bottom: 177.78%;">
+                        <iframe src="https://player.vimeo.com/video/1085313518" class="absolute inset-0 w-full h-full" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                    </div>
+                    <h3 class="mt-4 font-semibold text-slate-900 text-center text-sm leading-snug">"I Don't Have Time To Do This Right Now"</h3>
+                </div>
+                
+                <!-- Video 2 -->
+                <div class="group">
+                    <div class="relative rounded-2xl overflow-hidden shadow-lg bg-slate-900" style="padding-bottom: 177.78%;">
+                        <iframe src="https://player.vimeo.com/video/1085313434" class="absolute inset-0 w-full h-full" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                    </div>
+                    <h3 class="mt-4 font-semibold text-slate-900 text-center text-sm leading-snug">"Can I Still Join If I Don't Own A Business Yet?"</h3>
+                </div>
+                
+                <!-- Video 3 -->
+                <div class="group">
+                    <div class="relative rounded-2xl overflow-hidden shadow-lg bg-slate-900" style="padding-bottom: 177.78%;">
+                        <iframe src="https://player.vimeo.com/video/1085313564" class="absolute inset-0 w-full h-full" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                    </div>
+                    <h3 class="mt-4 font-semibold text-slate-900 text-center text-sm leading-snug">"What If My Partner/Spouse Isn't On Board Yet?"</h3>
+                </div>
+                
+                <!-- Video 4 -->
+                <div class="group">
+                    <div class="relative rounded-2xl overflow-hidden shadow-lg bg-slate-900" style="padding-bottom: 177.78%;">
+                        <iframe src="https://player.vimeo.com/video/1085313455" class="absolute inset-0 w-full h-full" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                    </div>
+                    <h3 class="mt-4 font-semibold text-slate-900 text-center text-sm leading-snug">"How Do I Know If This Is Financially Worth It For Me?"</h3>
+                </div>
+                
+                <!-- Video 5 -->
+                <div class="group">
+                    <div class="relative rounded-2xl overflow-hidden shadow-lg bg-slate-900" style="padding-bottom: 177.78%;">
+                        <iframe src="https://player.vimeo.com/video/1085313546" class="absolute inset-0 w-full h-full" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                    </div>
+                    <h3 class="mt-4 font-semibold text-slate-900 text-center text-sm leading-snug">"What If I'm Not Good At Any of This Finance Stuff?"</h3>
+                </div>
+                
+                <!-- Video 6 -->
+                <div class="group">
+                    <div class="relative rounded-2xl overflow-hidden shadow-lg bg-slate-900" style="padding-bottom: 177.78%;">
+                        <iframe src="https://player.vimeo.com/video/1085313476" class="absolute inset-0 w-full h-full" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                    </div>
+                    <h3 class="mt-4 font-semibold text-slate-900 text-center text-sm leading-snug">"How Do I Know If This Is For Me?"</h3>
+                </div>
+                
+                <!-- Video 7 -->
+                <div class="group">
+                    <div class="relative rounded-2xl overflow-hidden shadow-lg bg-slate-900" style="padding-bottom: 177.78%;">
+                        <iframe src="https://player.vimeo.com/video/1085313498" class="absolute inset-0 w-full h-full" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                    </div>
+                    <h3 class="mt-4 font-semibold text-slate-900 text-center text-sm leading-snug">"How Is This Better Than YouTube?"</h3>
+                </div>
+                
+                <!-- Video 8 -->
+                <div class="group">
+                    <div class="relative rounded-2xl overflow-hidden shadow-lg bg-slate-900" style="padding-bottom: 177.78%;">
+                        <iframe src="https://player.vimeo.com/video/1085313414" class="absolute inset-0 w-full h-full" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                    </div>
+                    <h3 class="mt-4 font-semibold text-slate-900 text-center text-sm leading-snug">"Can I Do This Later?"</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Text FAQ Accordion Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50">
+        <div class="max-w-3xl mx-auto">
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <div class="bg-white rounded-2xl shadow-sm overflow-hidden border border-slate-200">
+                    <button class="accordion-btn w-full px-6 py-5 text-left flex justify-between items-center hover:bg-slate-50 transition-all" onclick="toggleAccordion(this)">
+                        <span class="font-semibold text-slate-900 pr-4">How is this better than just watching YouTube videos or reading finance books?</span>
+                        <div class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center flex-shrink-0">
+                            <svg class="w-4 h-4 text-slate-600 transform transition-transform chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="px-6 pb-6 text-slate-700 space-y-4">
+                            <p>If YouTube and books were enough, you would have already done it. But the problem is…</p>
+                            <div>
+                                <p class="font-semibold text-slate-900 mb-2">1. YouTube and books don't give you a system.</p>
+                                <p>They throw tactics at you. One video says, "Open a Roth IRA." Another says, "Buy rentals." A book tells you to budget better. But none of them tell you what to do first, how it fits together, or what actually applies to your situation. That's what this program does. It's not a pile of scattered advice.</p>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-slate-900 mb-2">2. Are you really going to do all that research yourself?</p>
+                                <p>You don't have the time to research tax codes, read financial disclosures, study credit systems, and figure out investing models—then test them and figure out what works. That's a full-time job.</p>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-slate-900 mb-2">3. YouTubers make money from the views they get</p>
+                                <p>Most of them aren't financially free. They just package up content to get clicks. They don't care about your situation. They won't answer your questions. And they definitely won't stick around when it doesn't work out.</p>
+                            </div>
+                            <p class="bg-emerald-50 p-4 rounded-lg text-emerald-800">Inside this program, you get access to the same strategies I've used to become financially free at 28. Plus, you can ask questions. You can get feedback. You're not alone figuring this out.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="bg-white rounded-2xl shadow-sm overflow-hidden border border-slate-200">
+                    <button class="accordion-btn w-full px-6 py-5 text-left flex justify-between items-center hover:bg-slate-50 transition-all" onclick="toggleAccordion(this)">
+                        <span class="font-semibold text-slate-900 pr-4">Can I Still Join If I Don't Own A Business Yet?</span>
+                        <div class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center flex-shrink-0">
+                            <svg class="w-4 h-4 text-slate-600 transform transition-transform chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="px-6 pb-6 text-slate-700 space-y-4">
+                            <p>You don't need a business to start building wealth like the wealthy do. In fact, many of the biggest wins come <em>before</em> someone ever launches a business.</p>
+                            <p class="font-semibold text-slate-900">Here's what that looks like in real numbers:</p>
+                            <ul class="space-y-2 bg-slate-50 p-4 rounded-lg">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-emerald-600 font-bold">✓</span>
+                                    <span>Just by maxing out your 401(k) or Solo 401(k), you could save <strong>$4,004</strong> a year in taxes</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-emerald-600 font-bold">✓</span>
+                                    <span>IRA contributions can save another <strong>$1,540</strong></span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-emerald-600 font-bold">✓</span>
+                                    <span>Using an HSA properly adds <strong>$913</strong> in triple-tax savings</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-emerald-600 font-bold">✓</span>
+                                    <span>Short-term rental loopholes? That's <strong>$1,800</strong> more</span>
+                                </li>
+                            </ul>
+                            <p>That's over <strong>$8,000 in annual tax savings</strong> using strategies available to non-business owners. Whether you're W-2, freelancing, or just starting to think about entrepreneurship—this program meets you where you are.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="bg-white rounded-2xl shadow-sm overflow-hidden border border-slate-200">
+                    <button class="accordion-btn w-full px-6 py-5 text-left flex justify-between items-center hover:bg-slate-50 transition-all" onclick="toggleAccordion(this)">
+                        <span class="font-semibold text-slate-900 pr-4">What If My Partner/Spouse Isn't On Board Yet?</span>
+                        <div class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center flex-shrink-0">
+                            <svg class="w-4 h-4 text-slate-600 transform transition-transform chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="px-6 pb-6 text-slate-700 space-y-4">
+                            <p>Look, I'm not here to break up marriages. But I'll tell you this straight up: you don't have to do this alone.</p>
+                            <p>If you want your spouse on the same page, you can watch the training together. Just send me an email, and I'll send it over. Discuss with them how this fits your situation. Make a list of questions. And when you show up on the call, we'll walk through it all together.</p>
+                            <div class="bg-emerald-50 border border-emerald-200 rounded-lg p-4">
+                                <p class="font-semibold text-emerald-900 mb-2">Good news: We include a second membership</p>
+                                <p class="text-emerald-800">For your spouse or a family member. So you're not just explaining stuff to them. You can actually go through it together. Watch the lessons together. Join the live calls. Ask questions in the community.</p>
+                            </div>
+                            <p class="text-sm text-slate-500 italic">The second membership is completely optional. If your spouse is too busy to go through the program right now and you're the one who's gonna go through it, no problem at all.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="bg-white rounded-2xl shadow-sm overflow-hidden border border-slate-200">
+                    <button class="accordion-btn w-full px-6 py-5 text-left flex justify-between items-center hover:bg-slate-50 transition-all" onclick="toggleAccordion(this)">
+                        <span class="font-semibold text-slate-900 pr-4">I Don't Have Time To Do This Right Now</span>
+                        <div class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center flex-shrink-0">
+                            <svg class="w-4 h-4 text-slate-600 transform transition-transform chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="px-6 pb-6 text-slate-700 space-y-4">
+                            <p>This program was built <em>for</em> busy people—people with jobs, kids, responsibilities. The lessons are straight to the point. You don't have to sit through 100 hours of fluff to get value.</p>
+                            <p>And it's not like you have to go through the entire thing from start to finish either. If you're struggling with debt? Go straight to the debt fixes. Confused about taxes? Go straight to the tax playbooks. Credit is a mess? Pull up the Credit modules. You solve the problem that matters to you right now.</p>
+                            <div class="bg-slate-900 text-white rounded-xl p-5">
+                                <p class="font-semibold mb-2">You need just 1–2 hours a month to implement it.</p>
+                                <p class="text-slate-300 text-sm">Not a week. A month. And even that's spread out—quick check-ins, small changes, a few moves. That's it.</p>
+                            </div>
+                            <div class="space-y-3">
+                                <p class="font-semibold text-slate-900">I also put together a set of tools designed to give you quick wins:</p>
+                                <div class="grid gap-3">
+                                    <div class="border border-slate-200 rounded-lg p-4">
+                                        <p class="font-semibold text-slate-900">A] Do This First: Red Flags Checklist</p>
+                                        <p class="text-sm text-slate-600 mt-1">Spot stuff that quietly bleeds $200–$400/month</p>
+                                    </div>
+                                    <div class="border border-slate-200 rounded-lg p-4">
+                                        <p class="font-semibold text-slate-900">B] Anti-Inflation Investing Pack</p>
+                                        <p class="text-sm text-slate-600 mt-1">Where to allocate cash so it grows while staying liquid</p>
+                                    </div>
+                                    <div class="border border-slate-200 rounded-lg p-4">
+                                        <p class="font-semibold text-slate-900">C] Credit CPR</p>
+                                        <p class="text-sm text-slate-600 mt-1">One fix could bump your score 50–100 points and unlock $10K–$50K in funding</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="bg-white rounded-2xl shadow-sm overflow-hidden border border-slate-200">
+                    <button class="accordion-btn w-full px-6 py-5 text-left flex justify-between items-center hover:bg-slate-50 transition-all" onclick="toggleAccordion(this)">
+                        <span class="font-semibold text-slate-900 pr-4">How Do I Know If This Is Financially Worth It For Me?</span>
+                        <div class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center flex-shrink-0">
+                            <svg class="w-4 h-4 text-slate-600 transform transition-transform chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="px-6 pb-6 text-slate-700 space-y-4">
+                            <p>Look, money shouldn't be what holds you back from changing your financial future. That's why we have creative deal structuring. We did this for you so that money doesn't become the excuse.</p>
+                            <p class="font-serif text-xl text-slate-900">"Will this help me get closer to the financial life I want?"</p>
+                            <div class="bg-emerald-50 rounded-xl p-5 border border-emerald-200">
+                                <p class="font-semibold text-emerald-900 mb-3">What you can unlock:</p>
+                                <ul class="space-y-2 text-emerald-800">
+                                    <li>✓ Save $15K+ in taxes with strategies the IRS doesn't advertise</li>
+                                    <li>✓ Cut $20K+ in bad debt & interest</li>
+                                    <li>✓ Add $50K+ in investments without quitting your job</li>
+                                    <li>✓ Access $50K–$100K in 0% interest funding</li>
+                                    <li>✓ Lock in lifetime protection with trusts, LLCs, and estate planning</li>
+                                </ul>
+                            </div>
+                            <div class="bg-slate-100 rounded-lg p-4 italic">
+                                "Initial investments paying off already, thank you." — Nate, after one Zoom call
+                            </div>
+                            <p>The worst decision IS NOT saying no. It's doing nothing. And when you join, you're not the one taking the risk, we are. If you show up, go through the material, do the work, and don't see measurable financial upside, we will give you your money back.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 6 -->
+                <div class="bg-white rounded-2xl shadow-sm overflow-hidden border border-slate-200">
+                    <button class="accordion-btn w-full px-6 py-5 text-left flex justify-between items-center hover:bg-slate-50 transition-all" onclick="toggleAccordion(this)">
+                        <span class="font-semibold text-slate-900 pr-4">Can I Do This Later?</span>
+                        <div class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center flex-shrink-0">
+                            <svg class="w-4 h-4 text-slate-600 transform transition-transform chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="px-6 pb-6 text-slate-700 space-y-4">
+                            <p>If you're thinking you want to do this later because the timing is wrong, listen up… The reason you say that is because you don't understand the cost of doing this later.</p>
+                            <div class="bg-red-50 border border-red-200 rounded-lg p-4">
+                                <p class="text-red-800 font-semibold">If you're saying, "I'll come back in a few months" — what changes between now and then?</p>
+                                <p class="text-red-700 mt-2">Life won't slow down. The opportunity cost of waiting gets bigger — more taxes lost, more investment compounding missed, more time wasted in confusion.</p>
+                            </div>
+                            <p>There's <strong>$100K+ sitting inside your current income.</strong> You don't need to double your income to add six figures to your net worth. You just need to stop leaking money through interest, overpaying taxes, and letting your savings sit idle.</p>
+                            <p class="bg-slate-900 text-white p-4 rounded-lg">This is the financial system I wish someone handed me when I was earning well but still felt behind. If you're in that same spot—earning decently but not seeing the results—this is your shot to fix it for good.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 7 -->
+                <div class="bg-white rounded-2xl shadow-sm overflow-hidden border border-slate-200">
+                    <button class="accordion-btn w-full px-6 py-5 text-left flex justify-between items-center hover:bg-slate-50 transition-all" onclick="toggleAccordion(this)">
+                        <span class="font-semibold text-slate-900 pr-4">How Do I Know If This Is For Me?</span>
+                        <div class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center flex-shrink-0">
+                            <svg class="w-4 h-4 text-slate-600 transform transition-transform chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="px-6 pb-6 text-slate-700 space-y-4">
+                            <p>Most people never break out of the middle class trap because they don't even know what's possible. Overpaying $10K+ in taxes sounds normal to them. They think 0% interest business credit is only for people who already have businesses.</p>
+                            <p>Following this same approach is how I was able to build from $0 to over $15 million. This is the financial system that helped me break out of the middle class trap.</p>
+                            <p class="font-semibold text-slate-900">This program is for you if…</p>
+                            <ul class="space-y-3">
+                                <li class="flex items-start gap-3 bg-slate-50 p-3 rounded-lg">
+                                    <span class="text-emerald-600 text-xl">→</span>
+                                    <span>You make more than your parents ever did but somehow, it feels like you're falling behind</span>
+                                </li>
+                                <li class="flex items-start gap-3 bg-slate-50 p-3 rounded-lg">
+                                    <span class="text-emerald-600 text-xl">→</span>
+                                    <span>You followed every rule (work hard, save what you can) but you're still nowhere near financial freedom</span>
+                                </li>
+                                <li class="flex items-start gap-3 bg-slate-50 p-3 rounded-lg">
+                                    <span class="text-emerald-600 text-xl">→</span>
+                                    <span>You want a plan that grows wealth quietly in the background</span>
+                                </li>
+                                <li class="flex items-start gap-3 bg-slate-50 p-3 rounded-lg">
+                                    <span class="text-emerald-600 text-xl">→</span>
+                                    <span>You want to build wealth that gets bigger with every generation</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 8 -->
+                <div class="bg-white rounded-2xl shadow-sm overflow-hidden border border-slate-200">
+                    <button class="accordion-btn w-full px-6 py-5 text-left flex justify-between items-center hover:bg-slate-50 transition-all" onclick="toggleAccordion(this)">
+                        <span class="font-semibold text-slate-900 pr-4">What If I'm Not Good At Any of This Finance Stuff?</span>
+                        <div class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center flex-shrink-0">
+                            <svg class="w-4 h-4 text-slate-600 transform transition-transform chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="px-6 pb-6 text-slate-700 space-y-4">
+                            <p>If financial stuff makes your brain shut down… you're not broken. You're not the problem. <strong>The system is.</strong></p>
+                            <p>We've worked with people earning hundreds of thousands… and they still felt completely lost. They didn't know what they were paying in taxes. They'd stare at a form and freeze.</p>
+                            <div class="bg-slate-900 text-white p-5 rounded-xl">
+                                <p class="font-serif text-xl mb-3">Legacy Wealth Blueprint was built specifically for people who are smart, but tired of feeling stuck when it comes to money.</p>
+                                <p class="text-slate-300">We break it down. Step by step. No jargon. It's not about how much you know. It's about finally having someone help you connect the dots and guide you through it.</p>
+                            </div>
+                            <p>You don't become financially confident before you start. You become confident because you start—and you finally see how it all fits together.</p>
+                            <div class="border-l-4 border-emerald-500 pl-4 py-2 bg-emerald-50">
+                                <p class="font-semibold text-emerald-900">What if I already have a financial advisor or CPA?</p>
+                                <p class="text-emerald-800 mt-1">Most CPAs just file your taxes. They don't plan them. Most advisors just manage investments. They don't show you where you're leaking money in the first place.</p>
+                            </div>
+                            <p>What you need is a framework that connects everything: your tax plays, your debt fixes, your access to funding, and your long-term wealth strategy. That's what Legacy Wealth Blueprint gives you.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white py-12 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-center items-center gap-6 text-sm">
+                <a href="https://www.firstairbnb.com/contactus" target="_blank" class="text-slate-400 hover:text-white transition-colors">Contact Us</a>
+                <span class="hidden md:block text-slate-600">|</span>
+                <a href="https://www.firstairbnb.com/privacypolicy" target="_blank" class="text-slate-400 hover:text-white transition-colors">Privacy Policy</a>
+            </div>
+            <p class="text-center text-slate-600 text-xs mt-8">© 2025 Legacy Investing Show. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleAccordion(button) {
+            const content = button.nextElementSibling;
+            const chevron = button.querySelector('.chevron');
+            
+            // Close all other accordions
+            document.querySelectorAll('.accordion-content').forEach(item => {
+                if (item !== content && item.classList.contains('active')) {
+                    item.classList.remove('active');
+                    item.previousElementSibling.querySelector('.chevron').classList.remove('rotate-180');
+                }
+            });
+            
+            // Toggle current accordion
+            content.classList.toggle('active');
+            chevron.classList.toggle('rotate-180');
+        }
+    </script>
+</body>
+</html>

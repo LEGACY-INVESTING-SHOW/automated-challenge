@@ -3,6 +3,26 @@
   "public": true,
   "rewrites": [
     {
+      "source": "/call",
+      "destination": "/joinlwb.com/call/index.html"
+    },
+    {
+      "source": "/call/",
+      "destination": "/joinlwb.com/call/index.html"
+    },
+    {
+      "source": "/introcall",
+      "destination": "/joinlwb.com/introcall/index.html"
+    },
+    {
+      "source": "/introcall/",
+      "destination": "/joinlwb.com/introcall/index.html"
+    },
+    {
+      "source": "/",
+      "destination": "/joinlwb.com/index.html"
+    },
+    {
       "source": "/intensive",
       "destination": "/intensive.html"
     },
