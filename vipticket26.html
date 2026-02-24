@@ -845,6 +845,8 @@
     }
   </style>
 
+  <script defer src="event-automation.js"></script>
+
   <!-- Aevent Dynamic Fields & Countdown -->
   <script defer type="application/javascript" src="https://35063397.aevent.online/getscript?page=registration&wtl=vhmriHXslxTC43K"></script>
 </head>
@@ -883,7 +885,7 @@
         <div class="detail-card">
           <div class="detail-label">When</div>
           <div class="detail-content">
-            <strong>Feb 20th - Feb 22nd, 2026</strong><br>
+            <strong>Feb 27th - Mar 1st, 2026</strong><br>
             Starting From 10 AM EST | 4-6 Hours Daily
           </div>
         </div>
@@ -1321,29 +1323,44 @@
       })();
 
       // Countdown Timer
-      const targetDate = new Date('February 20, 2026 10:00:00 EST').getTime();
+      const fallbackTargetDate = new Date('2026-02-27T10:00:00-05:00').getTime();
+      let targetDate = Number(window.eventTargetDate) || fallbackTargetDate;
+
+      window.addEventListener('event-target-updated', (event) => {
+        const nextTarget = Number(event?.detail?.timestamp);
+        if (Number.isFinite(nextTarget)) {
+          targetDate = nextTarget;
+          updateCountdown();
+        }
+      });
 
       function updateCountdown() {
         const now = new Date().getTime();
         const distance = targetDate - now;
 
-        if (distance > 0) {
-          const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-          const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-          const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-          const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        const days = distance > 0 ? Math.floor(distance / (1000 * 60 * 60 * 24)) : 0;
+        const hours = distance > 0 ? Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)) : 0;
+        const minutes = distance > 0 ? Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)) : 0;
+        const seconds = distance > 0 ? Math.floor((distance % (1000 * 60)) / 1000) : 0;
 
-          // Update both countdowns
-          document.getElementById('days').textContent = String(days).padStart(2, '0');
-          document.getElementById('hours').textContent = String(hours).padStart(2, '0');
-          document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
-          document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
-          
-          document.getElementById('days2').textContent = String(days).padStart(2, '0');
-          document.getElementById('hours2').textContent = String(hours).padStart(2, '0');
-          document.getElementById('minutes2').textContent = String(minutes).padStart(2, '0');
-          document.getElementById('seconds2').textContent = String(seconds).padStart(2, '0');
-        }
+        // Update both countdowns
+        const daysEl = document.getElementById('days');
+        const hoursEl = document.getElementById('hours');
+        const minutesEl = document.getElementById('minutes');
+        const secondsEl = document.getElementById('seconds');
+        const days2El = document.getElementById('days2');
+        const hours2El = document.getElementById('hours2');
+        const minutes2El = document.getElementById('minutes2');
+        const seconds2El = document.getElementById('seconds2');
+
+        if (daysEl) daysEl.textContent = String(days).padStart(2, '0');
+        if (hoursEl) hoursEl.textContent = String(hours).padStart(2, '0');
+        if (minutesEl) minutesEl.textContent = String(minutes).padStart(2, '0');
+        if (secondsEl) secondsEl.textContent = String(seconds).padStart(2, '0');
+        if (days2El) days2El.textContent = String(days).padStart(2, '0');
+        if (hours2El) hours2El.textContent = String(hours).padStart(2, '0');
+        if (minutes2El) minutes2El.textContent = String(minutes).padStart(2, '0');
+        if (seconds2El) seconds2El.textContent = String(seconds).padStart(2, '0');
       }
 
       updateCountdown();

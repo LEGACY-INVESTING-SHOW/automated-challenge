@@ -361,6 +361,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
   </style>
 
+  <script defer src="event-automation.js"></script>
+
   <!-- Aevent Dynamic Fields & Countdown -->
   <script defer type="application/javascript" src="https://35063397.aevent.online/getscript?page=registration&wtl=vhmriHXslxTC43K"></script>
 </head>
@@ -382,7 +384,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <header id="sticky-header" class="fixed top-0 left-0 right-0 z-40 -translate-y-full opacity-0 transition-[transform,opacity] duration-300 backdrop-enhanced">
   <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
     <span class="hidden md:block text-sm font-medium text-slate-300">
-      Tax-Free Income Challenge <span class="text-amber-400 font-semibold">Feb 20-22</span>
+      Tax-Free Income Challenge <span class="text-amber-400 font-semibold">Feb 27-Mar 1</span>
     </span>
     <div class="flex items-center gap-3 sm:gap-4 ml-auto">
       <div class="flex items-center gap-2 text-sm text-slate-400">
@@ -412,7 +414,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <!-- Badge -->
         <div class="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-amber-500/20 to-amber-600/10 rounded-full shadow-[0_0_20px_rgba(245,158,11,0.15)]">
           <span class="w-2 h-2 bg-amber-500 rounded-full animate-pulse"></span>
-          <span class="text-sm font-semibold text-amber-400">3-Day Intensive - Feb 20 - 22, 2026</span>
+          <span class="text-sm font-semibold text-amber-400">3-Day Intensive - Feb 27 - Mar 1, 2026</span>
         </div>
 
         <!-- Pre-headline -->
@@ -449,7 +451,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             Claim Your Ticket Now
             <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
-          <p class="text-xs sm:text-sm text-slate-400">Feb 20th - 22nd | 10 AM - 4 PM EST</p>
+          <p class="text-xs sm:text-sm text-slate-400">Feb 27th - Mar 1st | 10 AM - 4 PM EST</p>
         </div>
 
         <!-- Countdown -->
@@ -1215,7 +1217,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div class="reveal bg-slate-900/50 border border-slate-700/50 rounded-2xl p-6 text-center">
         <div class="text-4xl mb-4">📅</div>
         <h3 class="text-lg font-semibold text-white mb-2">When</h3>
-        <p class="text-amber-400 font-medium mb-1">February 20 - 22, 2026</p>
+        <p class="text-amber-400 font-medium mb-1">February 27 - March 1, 2026</p>
         <p class="text-sm text-slate-400">Starting From 10 AM EST | 4-6 Hours Daily</p>
       </div>
 
@@ -1654,7 +1656,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div class="reveal text-center p-8 bg-gradient-to-br from-slate-800 to-slate-900 rounded-3xl shadow-xl">
         <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-amber-500/20 to-amber-600/10 rounded-2xl flex items-center justify-center text-3xl">📅</div>
         <div class="text-sm text-amber-400 font-semibold uppercase tracking-wider mb-2">When</div>
-        <div class="text-xl font-semibold text-white mb-2">February 20 - 22, 2026</div>
+        <div class="text-xl font-semibold text-white mb-2">February 27 - March 1, 2026</div>
         <p class="text-sm text-slate-400">Starting From 10 AM EST | 4-6 Hours Daily</p>
       </div>
 
@@ -2146,7 +2148,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       Get Started Now
       <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
     </a>
-    <p class="text-slate-400 mt-4">Feb 20th - 22nd | 10 AM - 4 PM EST</p>
+    <p class="text-slate-400 mt-4">Feb 27th - Mar 1st | 10 AM - 4 PM EST</p>
 
     <!-- Countdown -->
     <div class="mt-12 inline-flex flex-col sm:flex-row items-center gap-3 sm:gap-6 px-4 sm:px-8 py-4 bg-white/5 rounded-2xl border border-amber-500/20 shadow-[0_0_30px_rgba(245,158,11,0.1)] max-w-full">
@@ -2210,7 +2212,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   // Countdown Timer - Runs after first paint
   requestAnimationFrame(function() {
-    const target = new Date('2026-02-20T10:00:00-05:00').getTime();
+    const fallbackTarget = new Date('2026-02-27T10:00:00-05:00').getTime();
+    let target = Number(window.eventTargetDate) || fallbackTarget;
     const d1 = document.getElementById('days');
     const h1 = document.getElementById('hours');
     const m1 = document.getElementById('mins');
@@ -2221,14 +2224,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     const s2 = document.getElementById('secs2');
 
     let ld = -1, lh = -1, lm = -1, ls = -1;
+
+    window.addEventListener('event-target-updated', (event) => {
+      const nextTarget = Number(event?.detail?.timestamp);
+      if (Number.isFinite(nextTarget)) {
+        target = nextTarget;
+        ld = -1;
+        lh = -1;
+        lm = -1;
+        ls = -1;
+        update();
+      }
+    });
+
     function update() {
       const diff = target - Date.now();
-      if (diff <= 0) return;
-
-      const d = Math.floor(diff / 86400000);
-      const h = Math.floor((diff % 86400000) / 3600000);
-      const m = Math.floor((diff % 3600000) / 60000);
-      const s = Math.floor((diff % 60000) / 1000);
+      const d = diff > 0 ? Math.floor(diff / 86400000) : 0;
+      const h = diff > 0 ? Math.floor((diff % 86400000) / 3600000) : 0;
+      const m = diff > 0 ? Math.floor((diff % 3600000) / 60000) : 0;
+      const s = diff > 0 ? Math.floor((diff % 60000) / 1000) : 0;
 
       if (d !== ld) { if (d1) d1.textContent = d; if (d2) d2.textContent = d; ld = d; }
       if (h !== lh) { if (h1) h1.textContent = h; if (h2) h2.textContent = h; lh = h; }

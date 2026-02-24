@@ -1,6 +1,6 @@
 /**
  * Event Date Automation Script
- * Automatically calculates and updates dates for recurring Friday-Sunday events
+ * Automatically updates dates for the current Friday-Sunday event cycle.
  * 
  * Usage: Include this script in the <head> of your HTML pages
  * <script src="event-automation.js"></script>
@@ -11,41 +11,29 @@
 
   // Configuration
   const CONFIG = {
-    eventDay: 5, // Friday (0 = Sunday, 5 = Friday)
-    eventHour: 10, // 10:00 AM
-    eventMinute: 0,
+    eventStartIso: '2026-02-27T10:00:00-05:00',
+    eventEndIso: '2026-03-01T16:00:00-05:00',
     timezone: 'EST'
   };
 
   /**
-   * Get the next occurrence of Friday at 10 AM EST
-   * @returns {Date} The next Friday 10 AM date
+   * Get the configured event start date.
+   * @returns {Date} Event start date
    */
-  function getNextEventDate() {
-    const now = new Date();
-    const currentDay = now.getDay(); // 0 = Sunday, 5 = Friday
-    
-    // Calculate days until next Friday
-    let daysUntilFriday = CONFIG.eventDay - currentDay;
-    if (daysUntilFriday < 0) {
-      daysUntilFriday += 7;
-    }
-    
-    // Create date for next Friday at 10 AM
-    const nextFriday = new Date(now);
-    nextFriday.setDate(now.getDate() + daysUntilFriday);
-    nextFriday.setHours(CONFIG.eventHour, CONFIG.eventMinute, 0, 0);
-
-    // If it's already Friday after event start, move to next Friday.
-    if (daysUntilFriday === 0 && now.getTime() >= nextFriday.getTime()) {
-      nextFriday.setDate(nextFriday.getDate() + 7);
-    }
-    
-    return nextFriday;
+  function getEventStartDate() {
+    return new Date(CONFIG.eventStartIso);
   }
 
   /**
-   * Format date as "Month Day" (e.g., "February 20")
+   * Get the configured event end date.
+   * @returns {Date} Event end date
+   */
+  function getEventEndDate() {
+    return new Date(CONFIG.eventEndIso);
+  }
+
+  /**
+   * Format date as "Month Day" (e.g., "February 27")
    * @param {Date} date - Date to format
    * @returns {string} Formatted date string
    */
@@ -55,7 +43,7 @@
   }
 
   /**
-   * Format date as "Month Dayth" (e.g., "February 20th")
+   * Format date as "Month Dayth" (e.g., "February 27th")
    * @param {Date} date - Date to format
    * @returns {string} Formatted date string with ordinal
    */
@@ -90,24 +78,25 @@
    * Update all date elements on the page
    */
   function updateAllDates() {
-    const nextFriday = getNextEventDate();
-    const nextSaturday = new Date(nextFriday);
-    nextSaturday.setDate(nextFriday.getDate() + 1);
-    const nextSunday = new Date(nextFriday);
-    nextSunday.setDate(nextFriday.getDate() + 2);
+    const eventStart = getEventStartDate();
+    const eventEnd = getEventEndDate();
+    const eventDay2 = new Date(eventStart);
+    eventDay2.setDate(eventStart.getDate() + 1);
 
     // Format date strings
-    const dateRangeShort = `${formatDateShort(nextFriday)} - ${formatDateShort(nextSunday)}`;
-    const dateRangeFull = `${formatDateWithOrdinal(nextFriday)} - ${formatDateWithOrdinal(nextSunday)}`;
-    const day1Full = `${getDayName(nextFriday)}, ${formatDateWithOrdinal(nextFriday)} at 10:00 AM EST`;
-    const day2Full = `${getDayName(nextSaturday)}, ${formatDateWithOrdinal(nextSaturday)} at 10:00 AM EST`;
-    const day3Full = `${getDayName(nextSunday)}, ${formatDateWithOrdinal(nextSunday)} at 10:00 AM EST`;
+    const dateRangeShort = `${formatDateShort(eventStart)} - ${formatDateShort(eventEnd)}`;
+    const dateRangeFull = `${getDayName(eventStart)}, ${formatDateWithOrdinal(eventStart)} - ${getDayName(eventEnd)}, ${formatDateWithOrdinal(eventEnd)}, ${eventEnd.getFullYear()}`;
+    const day1Full = `${getDayName(eventStart)}, ${formatDateWithOrdinal(eventStart)} at 10:00 AM ${CONFIG.timezone}`;
+    const day2Full = `${getDayName(eventDay2)}, ${formatDateWithOrdinal(eventDay2)} at 10:00 AM ${CONFIG.timezone}`;
+    const day3Full = `${getDayName(eventEnd)}, ${formatDateWithOrdinal(eventEnd)} at 10:00 AM ${CONFIG.timezone}`;
 
     // Update data attributes for CSS/JS reference
     document.documentElement.setAttribute('data-event-day-1', day1Full);
     document.documentElement.setAttribute('data-event-day-2', day2Full);
     document.documentElement.setAttribute('data-event-day-3', day3Full);
     document.documentElement.setAttribute('data-event-range', dateRangeShort);
+    document.documentElement.setAttribute('data-event-start-iso', CONFIG.eventStartIso);
+    document.documentElement.setAttribute('data-event-end-iso', CONFIG.eventEndIso);
 
     // Find and update specific elements by class or ID
     updateElementsByClass('event-date-range', dateRangeShort);
@@ -133,7 +122,7 @@
     });
 
     // Update countdown timer target
-    updateCountdownTarget(nextFriday);
+    updateCountdownTarget(eventStart);
 
     console.log('Event dates updated:', dateRangeFull);
   }
@@ -231,7 +220,7 @@
   }
 
   // Make target date available immediately for page-level countdown scripts.
-  window.eventTargetDate = getNextEventDate().getTime();
+  window.eventTargetDate = getEventStartDate().getTime();
 
   // Run when DOM is ready
   if (document.readyState === 'loading') {
@@ -243,7 +232,8 @@
   // Expose to global scope for manual triggering
   window.EventAutomation = {
     updateDates: updateAllDates,
-    getNextEventDate: getNextEventDate,
+    getEventStartDate: getEventStartDate,
+    getEventEndDate: getEventEndDate,
     refresh: init
   };
 
