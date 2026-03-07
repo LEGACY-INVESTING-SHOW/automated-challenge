@@ -11,8 +11,8 @@
 
   // Configuration
   const CONFIG = {
-    eventStartIso: '2026-03-06T10:00:00-05:00',
-    eventEndIso: '2026-03-08T16:00:00-04:00',
+    eventStartIso: '2026-03-13T10:00:00-04:00',
+    eventEndIso: '2026-03-15T16:00:00-04:00',
     timezone: 'EST'
   };
 
