@@ -55,6 +55,10 @@
       "destination": "/taxreport.html"
     },
     {
+      "source": "/taxreportsa",
+      "destination": "/taxreportsa.html"
+    },
+    {
       "source": "/challengeconfirmation",
       "destination": "/challengeconfirmation.html"
     },
@@ -127,6 +131,11 @@
     {
       "source": "/taxreport.html",
       "destination": "/taxreport",
+      "permanent": false
+    },
+    {
+      "source": "/taxreportsa.html",
+      "destination": "/taxreportsa",
       "permanent": false
     },
     {
