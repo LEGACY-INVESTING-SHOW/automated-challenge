@@ -1,0 +1,1429 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Overpaying: Your Personalized Tax Strategy Report | Legacy Investing Show</title>
+    <meta name="description" content="Discover exactly how much you're losing to taxes. Get a personalized 24-page tax strategy report based on 300+ reports generated. Just $47.">
+    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://tracking.joinlwb.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KQ4R2LKP');</script>
+    <!-- End Google Tag Manager -->
+
+    <script>
+    var head = document.head;
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = "https://212809.t.hyros.com/v1/lst/universal-script?ph=99701b257ae8a5117ba5d7b516261da603bc86a49c0c42f398c619e251026c05&tag=!clicked&ref_url=" + encodeURI(document.URL) ;
+    head.appendChild(script);
+    </script>
+
+    <!-- Spiffy Checkout -->
+    <script>
+    "use strict";!function(i,t){var f=t.spiffy=t.spiffy||[];if(!f.init){
+    if(f.invoked)return void(t.console&&console.error&&console.warn("Spiffy Elements included twice."))
+    ;f.invoked=!0,f.methods=["identify","config","debug","off","on"],f.factory=function(i){
+    return function(){var t=Array.prototype.slice.call(arguments);return t.unshift(i),f.push(t),f}},
+    f.methods.forEach(function(i){spiffy[i]=f.factory(i)}),f.load=function(t,f){if(!spiffy.ACCOUNT){
+    spiffy.ACCOUNT=t,spiffy.DOMAIN=f;var e=i.createElement("script");e.type="text/javascript",
+    e.async=!0,e.crossorigin="anonymous",e.src="https://js.static.spiffy.co/spiffy.js?a="+t
+    ;var n=i.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)}}}}(document,window),
+    spiffy.SNIPPET_VERSION="1.1.0";
+    spiffy.config({
+        hideSidebar: true,
+    })
+    spiffy.load("legacyinvestingshow");
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Design System -->
+    <link rel="stylesheet" href="design-system.css">
+    
+    <style type="text/tailwindcss">
+        @layer base {
+            :root {
+                --bg-primary: #0a0a0b;
+                --bg-secondary: #121214;
+                --bg-tertiary: #1a1a1d;
+                --accent-gold: #c9a962;
+                --accent-gold-light: #e0c078;
+                --accent-gold-dark: #a68b4b;
+                --accent-copper: #b87333;
+                --text-primary: #fafafa;
+                --text-secondary: #a1a1aa;
+                --text-muted: #71717a;
+                --danger: #dc2626;
+                --success: #16a34a;
+            }
+        }
+        
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+            max-width: 100vw;
+        }
+        
+        body {
+            font-family: 'Sora', system-ui, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+        }
+        
+        * {
+            box-sizing: border-box;
+            max-width: 100%;
+        }
+        
+        /* Aggressive mobile overflow prevention */
+        img, video, iframe, svg {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            hyphens: auto;
+        }
+        
+        p {
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        
+        /* Ensure all sections are contained */
+        section {
+            width: 100%;
+            max-width: 100vw;
+            overflow-x: hidden;
+        }
+        
+        /* Fix any remaining flex issues */
+        .flex {
+            min-width: 0;
+        }
+        
+        .font-serif {
+            font-family: 'Crimson Pro', Georgia, serif;
+        }
+        
+        .font-mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+        
+        /* Noise texture overlay */
+        .noise-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1000;
+            opacity: 0.03;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+        }
+        
+        /* Gold gradient text */
+        .text-gold-gradient {
+            background: linear-gradient(135deg, #e0c078 0%, #c9a962 50%, #a68b4b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* Editorial drop cap */
+        .drop-cap::first-letter {
+            float: left;
+            font-family: 'Crimson Pro', serif;
+            font-size: 5rem;
+            line-height: 0.8;
+            padding-right: 0.5rem;
+            padding-top: 0.2rem;
+            color: var(--accent-gold);
+            font-weight: 600;
+        }
+        
+        /* Asymmetric grid layouts */
+        .editorial-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+        
+        .editorial-grid-reverse {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+        
+        @media (min-width: 768px) {
+            .editorial-grid {
+                grid-template-columns: 2fr 1fr;
+                gap: 4rem;
+            }
+            
+            .editorial-grid-reverse {
+                grid-template-columns: 1fr 2fr;
+                gap: 4rem;
+            }
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: var(--bg-secondary);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: var(--accent-gold-dark);
+            border-radius: 4px;
+        }
+        
+        /* Hide scrollbar for horizontal scroll containers */
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        
+        /* Magnetic button effect */
+        .magnetic-btn {
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        
+        .magnetic-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            transition: left 0.5s;
+        }
+        
+        .magnetic-btn:hover::before {
+            left: 100%;
+        }
+        
+        /* Strikethrough money leak animation */
+        .money-leak {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .money-leak::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #dc2626, transparent);
+            animation: leakPulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes leakPulse {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+        
+        /* Reveal animations: visible by default for resilience */
+        .reveal {
+            opacity: 1;
+            transform: translateY(0);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Stagger children */
+        .stagger-children > * {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .stagger-children.active > *:nth-child(1) { animation: staggerIn 0.6s 0.1s forwards; }
+        .stagger-children.active > *:nth-child(2) { animation: staggerIn 0.6s 0.2s forwards; }
+        .stagger-children.active > *:nth-child(3) { animation: staggerIn 0.6s 0.3s forwards; }
+        .stagger-children.active > *:nth-child(4) { animation: staggerIn 0.6s 0.4s forwards; }
+        .stagger-children.active > *:nth-child(5) { animation: staggerIn 0.6s 0.5s forwards; }
+        .stagger-children.active > *:nth-child(6) { animation: staggerIn 0.6s 0.6s forwards; }
+        
+        @keyframes staggerIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Editorial quote styling */
+        .editorial-quote {
+            position: relative;
+            padding-left: 2rem;
+            border-left: 3px solid var(--accent-gold);
+            font-family: 'Crimson Pro', serif;
+            font-style: italic;
+            font-size: 1.25rem;
+            line-height: 1.6;
+            color: var(--text-secondary);
+        }
+        
+        /* Data visualization cards */
+        .data-card {
+            background: linear-gradient(145deg, rgba(201,169,98,0.05) 0%, rgba(18,18,20,0.8) 100%);
+            border: 1px solid rgba(201,169,98,0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        /* Large background numbers */
+        .bg-number {
+            position: absolute;
+            font-family: 'Crimson Pro', serif;
+            font-size: 20rem;
+            font-weight: 700;
+            color: rgba(201,169,98,0.03);
+            line-height: 1;
+            z-index: 0;
+            pointer-events: none;
+            max-width: 100%;
+            overflow: hidden;
+        }
+        
+        @media (max-width: 768px) {
+            .bg-number {
+                font-size: 10rem;
+                opacity: 0.02;
+            }
+        }
+        
+        /* Comparison table styling */
+        .comparison-table {
+            border-collapse: separate;
+            border-spacing: 0;
+            width: 100%;
+            min-width: 600px;
+        }
+        
+        .comparison-table th {
+            background: var(--bg-tertiary);
+            border-bottom: 2px solid var(--accent-gold);
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-size: 0.75rem;
+            padding: 1rem 0.75rem;
+        }
+        
+        .comparison-table td {
+            border-bottom: 1px solid rgba(201,169,98,0.1);
+            padding: 1rem 0.75rem;
+            white-space: nowrap;
+        }
+        
+        .comparison-table tr:hover td {
+            background: rgba(201,169,98,0.02);
+        }
+        
+        .comparison-table .highlight-row {
+            background: linear-gradient(90deg, rgba(201,169,98,0.1) 0%, transparent 100%);
+            border-left: 3px solid var(--accent-gold);
+        }
+        
+        /* Table container for mobile scrolling */
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: thin;
+            scrollbar-color: var(--accent-gold-dark) var(--bg-tertiary);
+        }
+        
+        .table-container::-webkit-scrollbar {
+            height: 6px;
+        }
+        
+        .table-container::-webkit-scrollbar-track {
+            background: var(--bg-tertiary);
+        }
+        
+        .table-container::-webkit-scrollbar-thumb {
+            background: var(--accent-gold-dark);
+            border-radius: 3px;
+        }
+        
+        /* FAQ accordion */
+        .faq-item {
+            background: linear-gradient(180deg, rgba(18, 18, 20, 0.85), rgba(10, 10, 11, 0.95));
+            border: 1px solid rgba(201, 169, 98, 0.14);
+            border-radius: 18px;
+            overflow: hidden;
+            transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+        }
+
+        .faq-item:hover {
+            border-color: rgba(201, 169, 98, 0.35);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+            transform: translateY(-1px);
+        }
+
+        .faq-item.active {
+            border-color: rgba(201, 169, 98, 0.45);
+            box-shadow: 0 14px 34px rgba(201, 169, 98, 0.12);
+        }
+        
+        .faq-question {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            padding: 1.35rem 1.5rem;
+            background: rgba(255, 255, 255, 0.01);
+            border: 0;
+            color: var(--text-primary);
+            cursor: pointer;
+            text-align: left;
+            transition: background 0.25s ease;
+        }
+
+        .faq-question:hover {
+            background: rgba(201, 169, 98, 0.04);
+        }
+
+        .faq-question:focus-visible {
+            outline: 2px solid rgba(201, 169, 98, 0.7);
+            outline-offset: -2px;
+        }
+
+        .faq-question-title {
+            font-family: 'Crimson Pro', Georgia, serif;
+            font-size: clamp(1.1rem, 1.9vw, 1.85rem);
+            font-weight: 600;
+            color: var(--text-primary);
+            line-height: 1.35;
+            margin: 0;
+            padding-right: 1rem;
+        }
+
+        .faq-icon-wrap {
+            width: 38px;
+            height: 38px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 999px;
+            border: 1px solid rgba(201, 169, 98, 0.35);
+            background: rgba(201, 169, 98, 0.06);
+            flex-shrink: 0;
+            transition: border-color 0.25s ease, background 0.25s ease;
+        }
+
+        .faq-item.active .faq-icon-wrap {
+            border-color: rgba(201, 169, 98, 0.8);
+            background: rgba(201, 169, 98, 0.14);
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 420px;
+        }
+
+        .faq-answer-text {
+            padding: 0.25rem 1.5rem 1.5rem;
+            color: var(--text-secondary);
+            font-size: 1rem;
+            line-height: 1.75;
+            border-top: 1px solid rgba(201, 169, 98, 0.1);
+            margin-top: 0.25rem;
+        }
+        
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+        
+        .faq-icon {
+            transition: transform 0.25s ease;
+        }
+        
+        /* Diagonal section divider */
+        .diagonal-divider {
+            position: relative;
+            height: 100px;
+            overflow: hidden;
+            width: 100%;
+        }
+        
+        .diagonal-divider::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -10%;
+            width: 120%;
+            height: 100%;
+            background: var(--bg-secondary);
+            transform: skewY(-2deg);
+            transform-origin: top left;
+        }
+        
+        /* Section labels */
+        .section-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--accent-gold);
+        }
+    </style>
+
+  <!-- Aevent Dynamic Fields & Countdown -->
+  <script defer type="application/javascript" src="https://35063397.aevent.online/getscript?page=registration&wtl=vhmriHXslxTC43K"></script>
+</head>
+<body class="antialiased overflow-x-hidden">
+    <script>
+        (function breakoutFromEmbeddedCheckoutFrame() {
+            if (window.top === window.self) return;
+            try {
+                window.top.location.href = window.location.href;
+            } catch (err) {
+                window.location.href = window.location.href;
+            }
+        })();
+    </script>
+    <!-- Noise overlay -->
+    <div class="noise-overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0b]/90 backdrop-blur-md border-b border-[#c9a962]/10">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <div class="w-8 h-8 border border-[#c9a962] flex items-center justify-center">
+                        <span class="font-serif text-[#c9a962] text-lg font-bold">L</span>
+                    </div>
+                    <span class="font-serif text-[#fafafa] text-lg tracking-wide">Legacy Investing Show</span>
+                </div>
+                <a href="#report" class="hidden sm:inline-flex items-center px-5 py-2.5 bg-[#c9a962] hover:bg-[#e0c078] text-[#0a0a0b] font-medium text-sm transition-all duration-300 magnetic-btn">
+                    Yes, Add Report For $47
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Upsell Alert Bar -->
+    <section class="pt-20 pb-4 px-6 bg-[#0a0a0b]">
+        <div class="max-w-6xl mx-auto">
+            <div class="data-card rounded-xl border border-[#dc2626]/30 px-5 py-4 text-center">
+                <p class="font-mono text-xs sm:text-sm uppercase tracking-wider text-[#dc2626]">
+                    IMPORTANT! Don't close this window or tap the back button or it might mess with your order.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="relative flex items-center pt-2 overflow-hidden">
+        <!-- Background elements -->
+        <div class="absolute top-0 right-0 w-full md:w-1/2 h-full opacity-30 overflow-hidden pointer-events-none">
+            <div class="absolute top-1/4 right-0 md:right-1/4 w-48 md:w-96 h-48 md:h-96 bg-[#c9a962] rounded-full blur-[100px] md:blur-[150px]"></div>
+            <div class="absolute bottom-1/4 right-0 md:right-1/3 w-32 md:w-64 h-32 md:h-64 bg-[#b87333] rounded-full blur-[80px] md:blur-[100px]"></div>
+        </div>
+        
+        <!-- Large background number -->
+        <div class="bg-number top-20 -right-5 md:-right-20 hidden sm:block">$</div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-6 py-20">
+            <div class="editorial-grid items-center">
+                <div class="space-y-8">
+                    <div class="reveal">
+                        <p class="section-label mb-4">You're In For The Challenge • Personalized Tax Analysis</p>
+                        <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] text-[#fafafa]">
+                            Know Your Exact<br>
+                            <span class="text-gold-gradient">Tax Savings Before Day 1</span>
+                        </h1>
+                    </div>
+                    
+                    <p class="text-xl text-[#a1a1aa] max-w-xl leading-relaxed reveal" style="animation-delay: 0.2s">
+                        For 3 days, we're walking through strategies that could save you $20K, $40K, maybe $60K+ this year. This report tells you exactly what applies to your situation before the challenge starts.
+                    </p>
+                    
+                    <div class="flex flex-wrap items-center gap-4 reveal" style="animation-delay: 0.4s">
+                        <a href="#vsl" class="inline-flex items-center px-8 py-4 bg-[#c9a962] hover:bg-[#e0c078] text-[#0a0a0b] font-semibold text-lg transition-all duration-300 magnetic-btn">
+                            Watch The Video
+                            <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i>
+                        </a>
+                        <span class="text-[#71717a] font-mono text-sm">$47 • Personalized 40+ page report</span>
+                    </div>
+                    
+                    <div class="flex items-center gap-6 pt-4 text-sm text-[#71717a] reveal" style="animation-delay: 0.6s">
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="check-circle" class="w-4 h-4 text-[#16a34a]"></i>
+                            <span>Challenge-Aligned Report</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="check-circle" class="w-4 h-4 text-[#16a34a]"></i>
+                            <span>IRS-Approved Strategies</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Visual element -->
+                <div class="relative hidden lg:block reveal" style="animation-delay: 0.3s">
+                    <div class="data-card rounded-2xl p-8 space-y-6">
+                        <div class="flex items-center justify-between">
+                            <span class="font-mono text-xs uppercase tracking-widest text-[#71717a]">Tax Leakage Analysis</span>
+                            <span class="font-mono text-xs text-[#dc2626]">● ACTIVE</span>
+                        </div>
+                        
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center py-3 border-b border-[#c9a962]/10">
+                                <span class="text-[#a1a1aa]">Current Annual Overpayment</span>
+                                <span class="font-serif text-2xl text-[#dc2626]">$34,200</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3 border-b border-[#c9a962]/10">
+                                <span class="text-[#a1a1aa]">20-Year Compound Loss</span>
+                                <span class="font-serif text-2xl text-[#dc2626]">$1.2M</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3">
+                                <span class="text-[#a1a1aa]">Potential Recovery</span>
+                                <span class="font-serif text-2xl text-gold-gradient">$43,500/yr</span>
+                            </div>
+                        </div>
+                        
+                        <div class="pt-4 border-t border-[#c9a962]/10">
+                            <div class="flex items-center gap-2 text-sm text-[#71717a]">
+                                <i data-lucide="clock" class="w-4 h-4"></i>
+                                <span>Analysis complete in 2 minutes</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ManageMoney VSL Section -->
+    <section id="vsl" class="py-16 bg-[#121214]">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-8">
+                <h2 class="font-serif text-4xl sm:text-5xl font-bold text-[#fafafa] reveal">⚠️ STOP! Watch This Video Before You Exit</h2>
+                <p class="text-[#a1a1aa] text-xl mt-4 reveal"><span class="text-[#fafafa] font-semibold">ATTENTION:</span> Once You Leave This Page, The Video Below Disappears...</p>
+                <div class="max-w-xl mx-auto mt-6 reveal">
+                    <p class="font-mono text-xs uppercase tracking-[0.2em] text-[#71717a] mb-2">Order Processing</p>
+                    <div class="w-full h-2 rounded-full bg-[#1f1f23] overflow-hidden">
+                        <div class="h-full bg-gradient-to-r from-[#c9a962] to-[#e0c078]" style="width:56%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative rounded-2xl overflow-hidden border border-[#c9a962]/20 shadow-2xl reveal">
+                <div class="aspect-video bg-black">
+                    <iframe class="w-full h-full" src="https://player.vimeo.com/video/1151644607?autoplay=0&title=0&byline=0" title="Upsell Video" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="relative py-32 bg-[#121214]">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-20">
+                <p class="section-label mb-4 reveal">The Hidden Cost</p>
+                <h2 class="font-serif text-4xl sm:text-5xl font-bold text-[#fafafa] reveal">
+                    The Tax You're Paying<br>That Nobody Talks About
+                </h2>
+            </div>
+            
+            <div class="editorial-grid-reverse items-center">
+                <div class="order-2 md:order-1 space-y-8">
+                    <div class="editorial-quote reveal">
+                        "Every year, the IRS collects $4.9 trillion. A significant portion comes from people who simply don't know the legal strategies available to them."
+                    </div>
+                    
+                    <div class="space-y-6 reveal">
+                        <p class="text-lg text-[#a1a1aa] leading-relaxed drop-cap">
+                            You're not underpaying. You're not cheating. You're simply overpaying because no one taught you the rules. The tax code has over 70,000 pages of incentives, deductions, and strategies—but your CPA only uses the same dozen every year.
+                        </p>
+                        
+                        <p class="text-lg text-[#a1a1aa] leading-relaxed">
+                            We analyzed 300+ tax returns and found the same pattern: <span class="text-[#fafafa] font-semibold">94% of high earners were overpaying by $22,000-$57,000</span> simply because they didn't know what they didn't know.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="order-1 md:order-2 space-y-4 reveal">
+                    <div class="data-card rounded-xl p-6 border-l-4 border-[#dc2626]">
+                        <div class="flex items-start justify-between mb-2">
+                            <span class="font-mono text-xs uppercase tracking-widest text-[#71717a]">Lost Wealth</span>
+                            <i data-lucide="trending-down" class="w-5 h-5 text-[#dc2626]"></i>
+                        </div>
+                        <p class="font-serif text-4xl text-[#dc2626] mb-1">$1,240,000</p>
+                        <p class="text-sm text-[#71717a]">20-year compound loss on $40K annual overpayment</p>
+                    </div>
+                    
+                    <div class="data-card rounded-xl p-6 border-l-4 border-[#c9a962]">
+                        <div class="flex items-start justify-between mb-2">
+                            <span class="font-mono text-xs uppercase tracking-widest text-[#71717a]">Recovery Rate</span>
+                            <i data-lucide="trending-up" class="w-5 h-5 text-[#16a34a]"></i>
+                        </div>
+                        <p class="font-serif text-4xl text-gold-gradient mb-1">94%</p>
+                        <p class="text-sm text-[#71717a]">Of clients found $20K+ in recoverable savings</p>
+                    </div>
+                    
+                    <div class="data-card rounded-xl p-6 border-l-4 border-[#71717a]">
+                        <div class="flex items-start justify-between mb-2">
+                            <span class="font-mono text-xs uppercase tracking-widest text-[#71717a]">Monthly Loss</span>
+                            <i data-lucide="clock" class="w-5 h-5 text-[#a1a1aa]"></i>
+                        </div>
+                        <p class="font-serif text-4xl text-[#a1a1aa] mb-1">$3,300</p>
+                        <p class="text-sm text-[#71717a]">Average monthly overpayment you can never recover</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diagonal Divider -->
+    <div class="diagonal-divider bg-[#121214]"></div>
+
+    <!-- Proprietary System Section -->
+    <section class="relative py-32 bg-[#0a0a0b]">
+        <div class="bg-number top-40 -left-10 md:-left-40">01</div>
+        
+        <div class="relative z-10 max-w-6xl mx-auto px-6">
+            <div class="editorial-grid items-start">
+                <div class="space-y-8">
+                    <div>
+                        <p class="section-label mb-4 reveal">The Proprietary System</p>
+                        <h2 class="font-serif text-4xl sm:text-5xl font-bold text-[#fafafa] leading-tight reveal">
+                            How We Discovered the 37 Strategies Most Taxpayers Miss
+                        </h2>
+                    </div>
+                    
+                    <div class="space-y-6 text-lg text-[#a1a1aa] leading-relaxed reveal">
+                        <p>
+                            Over the past 5 years, our team analyzed over <span class="text-[#fafafa] font-semibold">1,000 tax returns</span> from high earners, business owners, and real estate investors. We weren't looking for errors. We were looking for patterns.
+                        </p>
+                        <p>
+                            What we found was staggering: the same opportunities missed again and again. S-Corp elections never filed. Retirement accounts underfunded. Real estate strategies completely unknown. Business deductions left on the table.
+                        </p>
+                        <p>
+                            We distilled everything into a <span class="text-gold-gradient font-semibold">12-question diagnostic</span> that identifies exactly which of the 37 IRS-approved strategies apply to YOUR situation—and calculates your specific savings potential.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="space-y-4 reveal">
+                    <h3 class="font-mono text-xs uppercase tracking-widest text-[#71717a] mb-4">What We Found in 300+ Returns</h3>
+                    
+                    <div class="data-card rounded-xl p-4 md:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                        <span class="text-[#a1a1aa] text-sm md:text-base">Avg. Undiscovered Overpayment</span>
+                        <span class="font-serif text-xl md:text-2xl text-[#dc2626]">$34,200/yr</span>
+                    </div>
+                    
+                    <div class="data-card rounded-xl p-4 md:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                        <span class="text-[#a1a1aa] text-sm md:text-base">Missing S-Corp Election</span>
+                        <span class="font-serif text-xl md:text-2xl text-gold-gradient">73%</span>
+                    </div>
+                    
+                    <div class="data-card rounded-xl p-4 md:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                        <span class="text-[#a1a1aa] text-sm md:text-base">Underfunded Retirement</span>
+                        <span class="font-serif text-xl md:text-2xl text-gold-gradient">81%</span>
+                    </div>
+                    
+                    <div class="data-card rounded-xl p-4 md:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                        <span class="text-[#a1a1aa] text-sm md:text-base">Missed Real Estate Strategies</span>
+                        <span class="font-serif text-xl md:text-2xl text-gold-gradient">89%</span>
+                    </div>
+                    
+                    <div class="data-card rounded-xl p-4 md:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                        <span class="text-[#a1a1aa] text-sm md:text-base">Could Use Augusta Rule</span>
+                        <span class="font-serif text-xl md:text-2xl text-gold-gradient">67%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="py-32 bg-[#121214]">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-20">
+                <p class="section-label mb-4 reveal">The Process</p>
+                <h2 class="font-serif text-4xl sm:text-5xl font-bold text-[#fafafa] reveal">
+                    Your Personalized Report in 3 Steps
+                </h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 stagger-children">
+                <div class="data-card rounded-2xl p-8 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 font-serif text-8xl text-[#c9a962]/5 font-bold leading-none">01</div>
+                    <div class="relative z-10">
+                        <div class="w-12 h-12 border border-[#c9a962] flex items-center justify-center mb-6">
+                            <span class="font-serif text-[#c9a962] text-xl font-bold">1</span>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-[#fafafa] mb-3">We Ask About Your Situation</h3>
+                        <p class="text-[#a1a1aa]">Income and state, W-2 or side income, filing status, homeowner status, current strategies, and risk tolerance.</p>
+                    </div>
+                </div>
+                
+                <div class="data-card rounded-2xl p-8 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 font-serif text-8xl text-[#c9a962]/5 font-bold leading-none">02</div>
+                    <div class="relative z-10">
+                        <div class="w-12 h-12 border border-[#c9a962] flex items-center justify-center mb-6">
+                            <span class="font-serif text-[#c9a962] text-xl font-bold">2</span>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-[#fafafa] mb-3">AI Analysis</h3>
+                        <p class="text-[#a1a1aa]">Our system cross-references your answers against 37 IRS-approved strategies.</p>
+                    </div>
+                </div>
+                
+                <div class="data-card rounded-2xl p-8 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 font-serif text-8xl text-[#c9a962]/5 font-bold leading-none">03</div>
+                    <div class="relative z-10">
+                        <div class="w-12 h-12 border border-[#c9a962] flex items-center justify-center mb-6">
+                            <span class="font-serif text-[#c9a962] text-xl font-bold">3</span>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-[#fafafa] mb-3">Get A Custom 40+ Page Report</h3>
+                        <p class="text-[#a1a1aa]">See your marginal tax rate breakdown, missed strategies with projected savings, and your action plan.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's Inside -->
+    <section class="py-32 bg-[#0a0a0b]">
+        <div class="bg-number bottom-20 -right-10 md:-right-20">02</div>
+        
+        <div class="relative z-10 max-w-6xl mx-auto px-6">
+            <div class="text-center mb-20">
+                <p class="section-label mb-4 reveal">The Deliverable</p>
+                <h2 class="font-serif text-4xl sm:text-5xl font-bold text-[#fafafa] reveal">
+                    What's Inside Your Report
+                </h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6 stagger-children">
+                <div class="data-card rounded-xl p-6 flex items-start gap-4">
+                    <div class="w-10 h-10 bg-[#c9a962]/10 flex items-center justify-center flex-shrink-0">
+                        <i data-lucide="pie-chart" class="w-5 h-5 text-[#c9a962]"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-serif text-lg font-bold text-[#fafafa] mb-2">Tax Snapshot</h3>
+                        <p class="text-[#71717a] text-sm">Current marginal rate vs. optimized rate. See exactly how much you're overpaying as a percentage of income.</p>
+                    </div>
+                </div>
+                
+                <div class="data-card rounded-xl p-6 flex items-start gap-4">
+                    <div class="w-10 h-10 bg-[#c9a962]/10 flex items-center justify-center flex-shrink-0">
+                        <i data-lucide="droplets" class="w-5 h-5 text-[#c9a962]"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-serif text-lg font-bold text-[#fafafa] mb-2">Money Leakage Analysis</h3>
+                        <p class="text-[#71717a] text-sm">Category-by-category breakdown: business deductions, retirement, real estate, and more.</p>
+                    </div>
+                </div>
+                
+                <div class="data-card rounded-xl p-6 flex items-start gap-4">
+                    <div class="w-10 h-10 bg-[#c9a962]/10 flex items-center justify-center flex-shrink-0">
+                        <i data-lucide="trending-up" class="w-5 h-5 text-[#c9a962]"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-serif text-lg font-bold text-[#fafafa] mb-2">Maximum Upside Potential</h3>
+                        <p class="text-[#71717a] text-sm">Two scenarios: Conservative (immediate wins) vs. Aggressive (all strategies implemented).</p>
+                    </div>
+                </div>
+                
+                <div class="data-card rounded-xl p-6 flex items-start gap-4">
+                    <div class="w-10 h-10 bg-[#c9a962]/10 flex items-center justify-center flex-shrink-0">
+                        <i data-lucide="layers" class="w-5 h-5 text-[#c9a962]"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-serif text-lg font-bold text-[#fafafa] mb-2">6-8 Strategy Cards</h3>
+                        <p class="text-[#71717a] text-sm">Each includes: savings calculation, implementation steps, IRS code reference, common mistakes.</p>
+                    </div>
+                </div>
+                
+                <div class="data-card rounded-xl p-6 flex items-start gap-4">
+                    <div class="w-10 h-10 bg-[#c9a962]/10 flex items-center justify-center flex-shrink-0">
+                        <i data-lucide="search" class="w-5 h-5 text-[#c9a962]"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-serif text-lg font-bold text-[#fafafa] mb-2">20+ Hidden Opportunities</h3>
+                        <p class="text-[#71717a] text-sm">Strategies you may qualify for as your situation evolves. Your 2-3 year roadmap.</p>
+                    </div>
+                </div>
+                
+                <div class="data-card rounded-xl p-6 flex items-start gap-4">
+                    <div class="w-10 h-10 bg-[#c9a962]/10 flex items-center justify-center flex-shrink-0">
+                        <i data-lucide="calendar" class="w-5 h-5 text-[#c9a962]"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-serif text-lg font-bold text-[#fafafa] mb-2">30-Day Implementation Plan</h3>
+                        <p class="text-[#71717a] text-sm">Step-by-step action items prioritized by ease and impact. Start with quick wins this week.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sample Strategy -->
+    <section class="py-32 bg-[#121214]">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <p class="section-label mb-4 reveal">Sample From Real Report</p>
+                <h2 class="font-serif text-4xl font-bold text-[#fafafa] reveal">Here's What One Strategy Looks Like</h2>
+            </div>
+            
+            <div class="data-card rounded-2xl p-6 md:p-8 border border-[#c9a962]/20 reveal">
+                <div class="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-6 pb-6 border-b border-[#c9a962]/10">
+                    <div class="flex-1">
+                        <span class="inline-block px-3 py-1 bg-[#c9a962]/10 text-[#c9a962] font-mono text-xs uppercase tracking-wider mb-3">Real Estate Strategy</span>
+                        <h3 class="font-serif text-xl md:text-2xl font-bold text-[#fafafa]">Short-Term Rental Loophole</h3>
+                    </div>
+                    <div class="md:text-right">
+                        <p class="font-serif text-2xl md:text-3xl text-gold-gradient">$25K-$75K</p>
+                        <p class="text-[#71717a] text-sm">Annual Tax Savings</p>
+                    </div>
+                </div>
+                
+                <div class="space-y-4 text-[#a1a1aa]">
+                    <p><strong class="text-[#fafafa]">What it is:</strong> Rent a property for an average of 7 days or less per tenant, materially participate in management, and the IRS classifies it as "non-passive"—allowing you to deduct up to $25,000 in losses against your W-2 income.</p>
+                    
+                    <p><strong class="text-[#fafafa]">Your situation:</strong> You mentioned interest in real estate and have $150K+ W-2 income. With bonus depreciation now permanent (2025), a $400K property could generate $100K+ in first-year losses.</p>
+                    
+                    <div class="bg-[#dc2626]/5 border-l-4 border-[#dc2626] p-4 my-6">
+                        <p class="text-[#dc2626] font-semibold text-sm mb-1">⚠️ Common Mistake</p>
+                        <p class="text-[#a1a1aa] text-sm">Most people try to average 7+ days to avoid "hotel" classification. You want the OPPOSITE—keep it under 7 days to qualify as non-passive.</p>
+                    </div>
+                    
+                    <div class="flex flex-wrap gap-4 text-sm font-mono text-[#71717a]">
+                        <span>IRC §469(c)(7)(A)</span>
+                        <span>•</span>
+                        <span>5-10 hrs/week</span>
+                        <span>•</span>
+                        <span>Low audit risk</span>
+                    </div>
+                </div>
+            </div>
+            
+            <p class="text-center text-[#71717a] mt-6 reveal">Your report includes 6-8 strategies like this, tailored to your exact situation.</p>
+        </div>
+    </section>
+
+    <!-- Real Report Screenshots -->
+    <section class="py-20 bg-[#0a0a0b]">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <p class="section-label mb-4 reveal">Authentic Report Samples</p>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-[#fafafa] reveal">
+                    Sneak Peek Inside Your Report
+                </h2>
+                <p class="text-[#71717a] mt-4 max-w-xl mx-auto reveal">
+                    Real screenshots from actual reports. Every report is personalized to your specific situation.
+                </p>
+            </div>
+            
+            <!-- Horizontal Scroll Gallery -->
+            <div class="relative reveal">
+                <!-- Scroll Container -->
+                <div class="flex gap-6 overflow-x-auto pb-6 snap-x snap-mandatory scrollbar-hide" 
+                     style="-webkit-overflow-scrolling: touch; scrollbar-width: none; -ms-overflow-style: none;">
+                    
+                    <!-- Card 1: Cover -->
+                    <div class="flex-shrink-0 w-80 snap-center">
+                        <div class="bg-[#121214] rounded-xl p-3 border border-[#c9a962]/10 h-full">
+                            <div class="relative overflow-hidden rounded-lg" style="height: 322px;">
+                                <img src="screenshots/report-sneakpeek/report-page-1.png" 
+                                     alt="Executive summary with total tax optimization potential" 
+                                     class="w-full h-full object-cover object-top">
+                            </div>
+                            <div class="mt-3 px-1">
+                                <span class="text-[#c9a962] font-mono text-[10px] uppercase tracking-wider">EXECUTIVE SUMMARY</span>
+                                <p class="text-[#a1a1aa] text-xs mt-1">Total optimization potential for your profile</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 2: Savings Amount -->
+                    <div class="flex-shrink-0 w-80 snap-center">
+                        <div class="bg-[#121214] rounded-xl p-3 border border-[#c9a962]/10 h-full">
+                            <div class="relative overflow-hidden rounded-lg" style="height: 322px;">
+                                <img src="screenshots/report-sneakpeek/report-page-2.png" 
+                                     alt="Comparison benchmark against similar earners" 
+                                     class="w-full h-full object-cover object-top">
+                            </div>
+                            <div class="mt-3 px-1">
+                                <span class="text-[#c9a962] font-mono text-[10px] uppercase tracking-wider">PEER BENCHMARK</span>
+                                <p class="text-[#a1a1aa] text-xs mt-1">Optimization score vs similar earners</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 3: Strategy Detail 1 -->
+                    <div class="flex-shrink-0 w-80 snap-center">
+                        <div class="bg-[#121214] rounded-xl p-3 border border-[#c9a962]/10 h-full">
+                            <div class="relative overflow-hidden rounded-lg" style="height: 322px;">
+                                <img src="screenshots/report-sneakpeek/report-page-3.png" 
+                                     alt="Gap analysis of missing tax strategies" 
+                                     class="w-full h-full object-cover object-top">
+                            </div>
+                            <div class="mt-3 px-1">
+                                <span class="text-[#c9a962] font-mono text-[10px] uppercase tracking-wider">GAP ANALYSIS</span>
+                                <p class="text-[#a1a1aa] text-xs mt-1">What you're missing and what it's costing</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 4: Strategy Detail 2 -->
+                    <div class="flex-shrink-0 w-80 snap-center">
+                        <div class="bg-[#121214] rounded-xl p-3 border border-[#c9a962]/10 h-full">
+                            <div class="relative overflow-hidden rounded-lg" style="height: 322px;">
+                                <img src="screenshots/report-sneakpeek/report-page-4.png" 
+                                     alt="14-day quick wins implementation checklist" 
+                                     class="w-full h-full object-cover object-top">
+                            </div>
+                            <div class="mt-3 px-1">
+                                <span class="text-[#c9a962] font-mono text-[10px] uppercase tracking-wider">QUICK WINS</span>
+                                <p class="text-[#a1a1aa] text-xs mt-1">Actions you can start this week</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <!-- Scroll Hint -->
+                <div class="flex justify-center mt-4 text-[#71717a] text-xs">
+                    <span class="flex items-center gap-2">
+                        <i data-lucide="arrow-left" class="w-3 h-3"></i>
+                        Swipe to explore
+                        <i data-lucide="arrow-right" class="w-3 h-3"></i>
+                    </span>
+                </div>
+            </div>
+            
+            <!-- Trust Indicators -->
+            <div class="mt-12 flex flex-wrap justify-center gap-6 text-xs text-[#71717a]">
+                <div class="flex items-center gap-1.5">
+                    <i data-lucide="file-text" class="w-3 h-3 text-[#c9a962]"></i>
+                    <span>24 Pages</span>
+                </div>
+                <div class="flex items-center gap-1.5">
+                    <i data-lucide="download" class="w-3 h-3 text-[#c9a962]"></i>
+                    <span>PDF Download</span>
+                </div>
+                <div class="flex items-center gap-1.5">
+                    <i data-lucide="smartphone" class="w-3 h-3 text-[#c9a962]"></i>
+                    <span>Mobile-Friendly</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison -->
+    <section class="py-32 bg-[#0a0a0b]">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <p class="section-label mb-4 reveal">$47 vs. The Alternatives</p>
+                <h2 class="font-serif text-4xl font-bold text-[#fafafa] reveal">How We Compare</h2>
+            </div>
+            
+            <div class="table-container reveal">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th class="px-6 py-4 text-left">Option</th>
+                            <th class="px-6 py-4 text-center">Cost</th>
+                            <th class="px-6 py-4 text-center">Time</th>
+                            <th class="px-6 py-4 text-center">Personalized</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="px-6 py-4 text-[#a1a1aa]">DIY Research</td>
+                            <td class="px-6 py-4 text-center text-[#71717a]">Free</td>
+                            <td class="px-6 py-4 text-center text-[#71717a]">40+ hours</td>
+                            <td class="px-6 py-4 text-center"><i data-lucide="x" class="w-4 h-4 text-[#dc2626] mx-auto"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 text-[#a1a1aa]">Tax Book</td>
+                            <td class="px-6 py-4 text-center text-[#71717a]">$30</td>
+                            <td class="px-6 py-4 text-center text-[#71717a]">8+ hours</td>
+                            <td class="px-6 py-4 text-center"><i data-lucide="x" class="w-4 h-4 text-[#dc2626] mx-auto"></i></td>
+                        </tr>
+                        <tr class="highlight-row">
+                            <td class="px-6 py-4 text-[#fafafa] font-semibold">This Report</td>
+                            <td class="px-6 py-4 text-center text-gold-gradient font-bold">$47</td>
+                            <td class="px-6 py-4 text-center text-[#16a34a]">2 minutes</td>
+                            <td class="px-6 py-4 text-center"><i data-lucide="check" class="w-4 h-4 text-[#16a34a] mx-auto"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 text-[#a1a1aa]">CPA Consultation</td>
+                            <td class="px-6 py-4 text-center text-[#71717a]">$500-2,000</td>
+                            <td class="px-6 py-4 text-center text-[#71717a]">1-2 weeks</td>
+                            <td class="px-6 py-4 text-center"><i data-lucide="check" class="w-4 h-4 text-[#16a34a] mx-auto"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 text-[#a1a1aa]">Tax Attorney</td>
+                            <td class="px-6 py-4 text-center text-[#71717a]">$2,000-10,000</td>
+                            <td class="px-6 py-4 text-center text-[#71717a]">2-4 weeks</td>
+                            <td class="px-6 py-4 text-center"><i data-lucide="check" class="w-4 h-4 text-[#16a34a] mx-auto"></i></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-32 bg-[#121214]">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <p class="section-label mb-4 reveal">Results</p>
+                <h2 class="font-serif text-4xl font-bold text-[#fafafa] reveal">What People Are Saying</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6 stagger-children">
+                <div class="data-card rounded-xl p-8">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-12 h-12 bg-[#c9a962] flex items-center justify-center text-[#0a0a0b] font-serif font-bold text-lg">M</div>
+                        <div>
+                            <p class="text-[#fafafa] font-semibold">Michael R.</p>
+                            <p class="text-[#71717a] text-sm">Software Engineer, $185K</p>
+                        </div>
+                    </div>
+                    <p class="text-[#a1a1aa] mb-4">"I thought I was being smart maxing out my 401k. The report showed me $43,000 in additional savings I was missing—S-Corp election, Augusta Rule, and a backdoor Roth."</p>
+                    <p class="text-gold-gradient font-serif text-lg">Saved: $43,000/year</p>
+                </div>
+                
+                <div class="data-card rounded-xl p-8">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-12 h-12 bg-[#c9a962] flex items-center justify-center text-[#0a0a0b] font-serif font-bold text-lg">S</div>
+                        <div>
+                            <p class="text-[#fafafa] font-semibold">Sarah T.</p>
+                            <p class="text-[#71717a] text-sm">Agency Owner, $320K</p>
+                        </div>
+                    </div>
+                    <p class="text-[#a1a1aa] mb-4">"I was skeptical about the $47 price. Then I got my report and realized I'd been overpaying by $67,000 annually. The report paid for itself 1,400x over."</p>
+                    <p class="text-gold-gradient font-serif text-lg">Saved: $67,000/year</p>
+                </div>
+                
+                <div class="data-card rounded-xl p-8">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-12 h-12 bg-[#c9a962] flex items-center justify-center text-[#0a0a0b] font-serif font-bold text-lg">D</div>
+                        <div>
+                            <p class="text-[#fafafa] font-semibold">David K.</p>
+                            <p class="text-[#71717a] text-sm">Physician, $450K</p>
+                        </div>
+                    </div>
+                    <p class="text-[#a1a1aa] mb-4">"As a high-income W-2 employee, I thought my options were limited. The report showed me 7 strategies including the short-term rental loophole and defined benefit plan."</p>
+                    <p class="text-gold-gradient font-serif text-lg">Saved: $89,000/year</p>
+                </div>
+                
+                <div class="data-card rounded-xl p-8">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-12 h-12 bg-[#c9a962] flex items-center justify-center text-[#0a0a0b] font-serif font-bold text-lg">J</div>
+                        <div>
+                            <p class="text-[#fafafa] font-semibold">Jennifer L.</p>
+                            <p class="text-[#71717a] text-sm">Consultant, $125K</p>
+                        </div>
+                    </div>
+                    <p class="text-[#a1a1aa] mb-4">"I almost didn't buy because I thought 'I'm not rich enough for tax strategies.' Wrong. The report found $18,500 in savings from just the home office deduction and HSA optimization."</p>
+                    <p class="text-gold-gradient font-serif text-lg">Saved: $18,500/year</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-32 bg-[#0a0a0b]">
+        <div class="max-w-3xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <p class="section-label mb-4 reveal">Questions</p>
+                <h2 class="font-serif text-4xl font-bold text-[#fafafa] reveal">Answers</h2>
+            </div>
+            
+            <div class="space-y-4 stagger-children" id="faq-container">
+                <div class="faq-item">
+                    <button type="button" class="faq-question" aria-expanded="false">
+                        <h3 class="faq-question-title">Can't I just Google this for free?</h3>
+                        <span class="faq-icon-wrap">
+                            <i data-lucide="plus" class="w-5 h-5 text-[#c9a962] faq-icon"></i>
+                        </span>
+                    </button>
+                    <div class="faq-answer">
+                        <p class="faq-answer-text">You can find generic tax tips. What you WON'T find is a personalized analysis of YOUR specific situation showing exactly which strategies apply to YOUR income, state, and business structure—along with dollar amounts. This report does in 2 minutes what takes 40+ hours of research.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button type="button" class="faq-question" aria-expanded="false">
+                        <h3 class="faq-question-title">Are these strategies legal?</h3>
+                        <span class="faq-icon-wrap">
+                            <i data-lucide="plus" class="w-5 h-5 text-[#c9a962] faq-icon"></i>
+                        </span>
+                    </button>
+                    <div class="faq-answer">
+                        <p class="faq-answer-text">100% legal. These are IRS-approved tax code provisions—created by Congress to incentivize business ownership, real estate investment, and retirement savings. We're not helping you evade taxes; we're helping you use the tax code as designed.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button type="button" class="faq-question" aria-expanded="false">
+                        <h3 class="faq-question-title">I already have a CPA. Do I need this?</h3>
+                        <span class="faq-icon-wrap">
+                            <i data-lucide="plus" class="w-5 h-5 text-[#c9a962] faq-icon"></i>
+                        </span>
+                    </button>
+                    <div class="faq-answer">
+                        <p class="faq-answer-text">Most CPAs are reactive—they file based on what happened. This report is PROACTIVE—it shows strategies to implement NOW to reduce next year's tax bill. Many customers share their report with their CPA to execute.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button type="button" class="faq-question" aria-expanded="false">
+                        <h3 class="faq-question-title">What if the report says I can't save much?</h3>
+                        <span class="faq-icon-wrap">
+                            <i data-lucide="plus" class="w-5 h-5 text-[#c9a962] faq-icon"></i>
+                        </span>
+                    </button>
+                    <div class="faq-answer">
+                        <p class="faq-answer-text">We show both your CURRENT situation and MAXIMUM POTENTIAL. Even W-2 employees typically find $5K-$15K. If your report doesn't identify at least $5,000 in savings, you get a full refund.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guarantee -->
+    <section class="py-32 bg-[#121214]">
+        <div class="max-w-3xl mx-auto px-6 text-center">
+            <div class="data-card rounded-2xl p-12 border border-[#16a34a]/20 reveal">
+                <div class="w-16 h-16 bg-[#16a34a]/10 border border-[#16a34a] flex items-center justify-center mx-auto mb-6">
+                    <i data-lucide="shield-check" class="w-8 h-8 text-[#16a34a]"></i>
+                </div>
+                <h2 class="font-serif text-3xl font-bold text-[#fafafa] mb-4">30-Day "Show Me the Savings" Guarantee</h2>
+                <p class="text-[#a1a1aa] text-lg mb-6">
+                    If your report doesn't identify at least <span class="text-[#16a34a] font-semibold">$5,000 in potential tax savings</span> specific to your situation, or if you're unsatisfied for any reason, email us within 30 days for a full refund. No questions asked.
+                </p>
+                <p class="text-[#71717a] text-sm">We're taking all the risk because we know the value is real.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section id="report" class="py-32 bg-[#0a0a0b] relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-[#c9a962]/5 to-transparent"></div>
+        
+        <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
+            <p class="text-[#dc2626] font-mono text-sm uppercase tracking-widest mb-6 reveal">
+                ⚠️ Every Month You Wait Costs $1,600-$8,000
+            </p>
+            <h2 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-[#fafafa] mb-6 reveal">
+                Stop Overpaying.<br>
+                <span class="text-gold-gradient">Start Saving.</span>
+            </h2>
+            <p class="text-[#a1a1aa] text-lg mb-10 max-w-2xl mx-auto reveal">
+                Based on 300+ reports generated. Personalized to your exact situation. Delivered instantly.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10 reveal">
+                <a href="https://legacyinvestingshow.spiffy.co/offer/bvoVvcauz" id="tax-accept-btn" class="inline-flex items-center px-10 py-5 bg-[#c9a962] hover:bg-[#e0c078] text-[#0a0a0b] font-bold text-lg transition-all duration-300 magnetic-btn">
+                    Yes, Add The Personalized Tax Analysis Report For $47
+                    <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i>
+                </a>
+            </div>
+            <p class="text-[#a1a1aa] text-sm reveal">
+                <a href="https://legacyinvestingshow.spiffy.co/offer/MB70BSYuY" id="tax-decline-btn" class="underline underline-offset-4 hover:text-[#fafafa]">No thanks, I'll figure out what applies to me on my own</a>
+            </p>
+            
+            <div class="flex flex-wrap justify-center items-center gap-6 text-sm text-[#71717a] reveal">
+                <div class="flex items-center gap-2">
+                    <i data-lucide="check-circle" class="w-4 h-4 text-[#16a34a]"></i>
+                    <span>30-Day Guarantee</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i data-lucide="check-circle" class="w-4 h-4 text-[#16a34a]"></i>
+                    <span>2-Minute Quiz</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i data-lucide="check-circle" class="w-4 h-4 text-[#16a34a]"></i>
+                    <span>Instant PDF Delivery</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-[#121214] border-t border-[#c9a962]/10">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex items-center space-x-3">
+                    <div class="w-8 h-8 border border-[#c9a962] flex items-center justify-center">
+                        <span class="font-serif text-[#c9a962] text-lg font-bold">L</span>
+                    </div>
+                    <span class="font-serif text-[#fafafa] text-lg">Legacy Investing Show</span>
+                </div>
+                <div class="text-[#71717a] text-sm text-center md:text-right">
+                    <p>© 2025 Legacy Investing Show. All rights reserved.</p>
+                    <p class="mt-1">Educational information, not personalized tax advice.</p>
+                    <p class="mt-1"><a class="hover:text-[#fafafa]" href="https://managemoney101.com/challengeterms" target="_blank" rel="noopener noreferrer">Terms and Conditions</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        if (window.lucide && typeof window.lucide.createIcons === 'function') {
+            window.lucide.createIcons();
+        }
+
+        // Preserve flow/session query params across upsell CTA clicks.
+        const incomingParams = new URLSearchParams(window.location.search);
+        if ([...incomingParams.keys()].length) {
+            const allowedHosts = new Set([
+                'legacyinvestingshow.spiffy.co',
+                'www.joinlwb.com'
+            ]);
+            const selector = [
+                'a[href*="legacyinvestingshow.spiffy.co/offer/"]',
+                'a[href*="www.joinlwb.com/upgradevip"]',
+                'a[href*="www.joinlwb.com/prepkit"]',
+                'a[href*="www.joinlwb.com/prepkitvip"]',
+                'a[href*="www.joinlwb.com/taxreport"]',
+                'a[href*="www.joinlwb.com/taxreportvip"]',
+                'a[href*="www.joinlwb.com/challengeconfirmation"]'
+            ].join(', ');
+
+            document.querySelectorAll(selector).forEach((link) => {
+                const href = link.getAttribute('href');
+                if (!href) return;
+
+                try {
+                    const url = new URL(href, window.location.origin);
+                    if (!allowedHosts.has(url.host)) return;
+
+                    incomingParams.forEach((value, key) => {
+                        if (!url.searchParams.has(key)) {
+                            url.searchParams.set(key, value);
+                        }
+                    });
+
+                    if (/^https?:\/\//i.test(href)) {
+                        link.setAttribute('href', url.toString());
+                    } else {
+                        link.setAttribute('href', `${url.pathname}${url.search}${url.hash}`);
+                    }
+                } catch (err) {
+                    // Ignore invalid href values.
+                }
+            });
+        }
+
+        // Reveal animations on scroll
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        if ('IntersectionObserver' in window) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.reveal, .stagger-children').forEach(el => {
+                observer.observe(el);
+            });
+        } else {
+            document.querySelectorAll('.reveal, .stagger-children').forEach(el => {
+                el.classList.add('active');
+            });
+        }
+
+        // FAQ accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                const isActive = item.classList.contains('active');
+                
+                // Close all
+                document.querySelectorAll('.faq-item').forEach(faq => {
+                    faq.classList.remove('active');
+                    const trigger = faq.querySelector('.faq-question');
+                    if (trigger) {
+                        trigger.setAttribute('aria-expanded', 'false');
+                    }
+                });
+                
+                // Open clicked if it wasn't active
+                if (!isActive) {
+                    item.classList.add('active');
+                    question.setAttribute('aria-expanded', 'true');
+                }
+            });
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+
+<script>
+"use strict";!function(i,t){var f=t.spiffy=t.spiffy||[];if(!f.init){
+if(f.invoked)return void(t.console&&console.error&&console.warn("Spiffy Elements included twice."))
+;f.invoked=!0,f.methods=["identify","config","debug","off","on"],f.factory=function(i){
+return function(){var t=Array.prototype.slice.call(arguments);return t.unshift(i),f.push(t),f}},
+f.methods.forEach(function(i){spiffy[i]=f.factory(i)}),f.load=function(t,f){if(!spiffy.ACCOUNT){
+spiffy.ACCOUNT=t,spiffy.DOMAIN=f;var e=i.createElement("script");e.type="text/javascript",
+e.async=!0,e.crossorigin="anonymous",e.src="https://js.static.spiffy.co/spiffy.js?a="+t
+;var n=i.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)}}}}(document,window),
+spiffy.SNIPPET_VERSION="1.1.0";
+spiffy.config({
+    hideSidebar: false,
+})
+spiffy.load("legacyinvestingshow");
+</script>
+
+</body>
+</html>
