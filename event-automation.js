@@ -11,8 +11,8 @@
 
   // Configuration
   const CONFIG = {
-    eventStartIso: '2026-02-27T10:00:00-05:00',
-    eventEndIso: '2026-03-01T16:00:00-05:00',
+    eventStartIso: '2026-03-13T10:00:00-04:00',
+    eventEndIso: '2026-03-15T16:00:00-04:00',
     timezone: 'EST'
   };
 
@@ -122,7 +122,7 @@
     });
 
     // Update countdown timer target
-    updateCountdownTarget(eventStart);
+    updateCountdownTarget(eventStart, eventEnd);
 
     console.log('Event dates updated:', dateRangeFull);
   }
@@ -141,12 +141,17 @@
   /**
    * Update countdown timer target date
    * @param {Date} targetDate - The target date for countdown
+   * @param {Date} eventEndDate - The end date for event calendar ranges
    */
-  function updateCountdownTarget(targetDate) {
+  function updateCountdownTarget(targetDate, eventEndDate) {
     // Store in window for access by other scripts
     window.eventTargetDate = targetDate.getTime();
+    window.eventEndDate = eventEndDate.getTime();
     window.dispatchEvent(new CustomEvent('event-target-updated', {
-      detail: { timestamp: window.eventTargetDate }
+      detail: {
+        timestamp: window.eventTargetDate,
+        endTimestamp: window.eventEndDate
+      }
     }));
     
     // Update existing countdown elements
@@ -221,6 +226,7 @@
 
   // Make target date available immediately for page-level countdown scripts.
   window.eventTargetDate = getEventStartDate().getTime();
+  window.eventEndDate = getEventEndDate().getTime();
 
   // Run when DOM is ready
   if (document.readyState === 'loading') {
